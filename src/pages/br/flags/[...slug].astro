@@ -1,0 +1,15 @@
+---
+import Page from "../../flags/[...slug].astro"
+import { getStaticPaths as proxyGetStaticPaths } from "../../flags/[...slug].astro"
+import { extractRouteLangCode } from "astro-i18n"
+
+/* @ts-ignore */
+export const getStaticPaths = (props) => proxyGetStaticPaths({
+	...props,
+	langCode: extractRouteLangCode(import.meta.url),
+})
+
+const { props } = Astro
+---
+
+<Page {...props} />
