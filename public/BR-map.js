@@ -32,7 +32,6 @@ function loadMap() {
         <ul>
             <li><b>Province: ${details.name.value}</b></li>
             <li>Local name: ${details.gn_name.value}</li>
-            <li>Country: ${details.admin.value}</li>
             <li>Postal: ${details.postal.value}</li>
         </ul>`;
     }
@@ -51,7 +50,7 @@ function loadMap() {
   function handleClick(e) {
     if (e.target.nodeName == "path") {
       var details = e.target.attributes;
-      window.location.href = `#${details.postal.value}`;
+      window.location.href = `/uf/${details.postal.value}`;
     }
   }
 }

@@ -1,0 +1,17 @@
+---
+export function getStaticPaths() {
+  // Array de UFs do Brasil
+  const ufs = ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO'];
+
+  // Mapeia o array de UFs para criar o array de `params`
+  const paths = ufs.map((uf) => ({ params: { UF: uf } }));
+  return paths;
+}
+const { UF } = Astro.params;
+
+import Estado from "~/layouts/Estado.astro";
+const post = Astro.props;
+---
+<Estado {...post.data}>
+  <div>{UF}!</div>
+</Estado>

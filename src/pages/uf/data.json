@@ -1,0 +1,21 @@
+[
+    {
+      "sigla": "AC",
+      "nome": "Acre",
+      "bandeiraUrl": "~/img/ac-bandeira.svg",
+      "brasaoUrl": "~/img/ac-brasao.svg",
+      "populacao": 881935,
+      "capital": "Rio Branco",
+      "regiao": "Norte"
+    },
+    {
+      "sigla": "AL",
+      "nome": "Alagoas",
+      "bandeiraUrl": "~/img/al-bandeira.svg",
+      "brasaoUrl": "~/img/al-brasao.svg",
+      "populacao": 3337357,
+      "capital": "Maceió",
+      "regiao": "Nordeste"
+    }
+  ]
+  
