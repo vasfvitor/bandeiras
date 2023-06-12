@@ -1,67 +1,87 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-body {
-	font-family: Verdana, sans-serif;
+
+/**
+   * Add the correct display in IE 10+.
+   */
+
+   template {
+	display: none;
+  }
+  
+  /**
+	 * Add the correct display in IE 10.
+	
+  
+  [hidden] {
+	display: none;
+  }
+  
+    /**
+  @media only screen and (min-width: 1200px) {
+	html,
+	body {
+	  width: 100%;
+	  height: 100%;
+	  overflow: hidden;
+	}
+  }
+  
+  @media only screen and (max-width: 859px) {
+	main {
+	  flex-direction: column;
+	}
+	section.sidebar {
+	  flex: 0 0 50%;
+	  order: 2;
+	}
+  
+	section.content {
+	  flex: 1 1 50%;
+	  order: 1;
+	}
+  }
+   */
+  main {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: 100%;
+  }
+  
+  section.content {
+	flex: 1 1 80%;
+	padding: 30px;
+	position: relative;
+  }
+  
+  .map-wrapper {
+	width: 100%;
+	height: 100%;
 	margin: auto;
-	padding: 20px;
-	max-width: 65ch;
-	text-align: left;
-	background-color: #fff;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	line-height: 1.5;
-	color: #444;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-	color: #222;
-}
-a {
-	color: #3273dc;
-}
-nav a {
-	margin-right: 10px;
-}
-textarea {
+  }
+  
+  object#map {
 	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-content {
-	line-height: 1.6;
-}
-table {
-	width: 100%;
-}
-img {
-	max-width: 100%;
-	height: auto;
-}
-code {
-	padding: 2px 5px;
-	background-color: #f2f2f2;
-}
-pre {
-	padding: 1rem;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border: 1px solid #999;
-	color: #222;
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
-	font-style: italic;
-}
+	height: 100%;
+	position: relative;
+	z-index: 998;
+  }
+  
+  div#toolTip {
+	position: absolute;
+	transition: 0.2s ease-out;
+	background-color: #ecf0f1;
+	border-radius: 3px;
+	z-index: 999;
+	pointer-events: none;
+  }
+  
+  div#toolTip ul {
+	font-family: sans-serif;
+	list-style: none;
+	padding: 15px;
+	margin: 0;
+  }
+  
+  div#toolTip ul li {
+	margin-bottom: 3px;
+  }

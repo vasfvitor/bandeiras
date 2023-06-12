@@ -2,6 +2,7 @@
 dist/
 # generated types
 .astro/
+/src/maps/maps/*
 
 # dependencies
 node_modules/
@@ -19,3 +20,4 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+src/maps/README.md
