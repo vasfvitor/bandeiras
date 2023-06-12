@@ -1,9 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
-import { astroI18n, t, l } from "astro-i18n";
-
-astroI18n.init(Astro);
 ---
 
 <header>
@@ -12,13 +9,13 @@ astroI18n.init(Astro);
   </h2>
   <nav>
     <HeaderLink href="/">
-      {t("page.Home")}
+      Home
     </HeaderLink>
-    <HeaderLink href={l("/flags")}>
-      {t("page.Flags")}
+    <HeaderLink href="/flags">
+      Flags
     </HeaderLink>
-    <HeaderLink href={l("/about")}>
-      { t("page.About") } 
+    <HeaderLink href="/about">
+      About
     </HeaderLink>
   </nav>
 </header>
