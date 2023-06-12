@@ -3,12 +3,21 @@ import { defineAstroI18nConfig } from "astro-i18n";
 export default defineAstroI18nConfig({
   defaultLangCode: "en",
   supportedLangCodes: ["br"],
-  showDefaultLangCode: true,
+  showDefaultLangCode: false,
   translations: {
+    en: {
+      page: {
+        About: "About",
+        Flags: "Flags",
+        Home: "Home",
+      },
+    },
     br: {
-      About: "Sobre",
-      Flags: "Bandeiras",
-      Home: "Início",
+      page: {
+        About: "Sobre",
+        Flags: "Bandeiras",
+        Home: "Início",
+      },
     },
   },
   routeTranslations: {

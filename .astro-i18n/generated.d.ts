@@ -3,8 +3,8 @@ type SupportedLangCode = "br"
 type LangCode = DefaultLangCode | SupportedLangCode
 type RouteUri = | "/flags" | "/flags/[...slug]" | "/about" | "/" 
 type RouteParams = {"/flags": undefined; "/flags/[...slug]": { "...slug": string; }; "/about": undefined; "/": undefined; }
-type TranslationPath = "About" | "Flags" | "Home"
-type TranslationOptions = { "About": {} | undefined; "Flags": {} | undefined; "Home": {} | undefined; }
+type TranslationPath = "page.About" | "page.Flags" | "page.Home"
+type TranslationOptions = { "page.About": {} | undefined; "page.Flags": {} | undefined; "page.Home": {} | undefined; }
 
 declare module "astro-i18n" {
 	export * from "astro-i18n/"
