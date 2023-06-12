@@ -6,7 +6,11 @@ function loadMap() {
   var toolTip = document.getElementById("toolTip");
 
   // Add event listeners to map element
-  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  if (
+    !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
     // If user agent is not mobile add click listener (for wikidata links)
     map.addEventListener("click", handleClick, false);
   }
