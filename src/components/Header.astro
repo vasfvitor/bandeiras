@@ -1,15 +1,24 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import { astroI18n, t, l } from "astro-i18n";
+
+astroI18n.init(Astro);
 ---
 
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-	</nav>
+  <h2>
+    {SITE_TITLE}
+  </h2>
+  <nav>
+    <HeaderLink href="/">
+      {t("page.Home")}
+    </HeaderLink>
+    <HeaderLink href={l("/flags")}>
+      {t("page.Flags")}
+    </HeaderLink>
+    <HeaderLink href={l("/about")}>
+      { t("page.about") } 
+    </HeaderLink>
+  </nav>
 </header>

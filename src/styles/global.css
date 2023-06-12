@@ -1,13 +1,12 @@
-
 /**
    * Add the correct display in IE 10+.
    */
 
-   template {
-	display: none;
-  }
-  
-  /**
+template {
+  display: none;
+}
+
+/**
 	 * Add the correct display in IE 10.
 	
   
@@ -40,48 +39,48 @@
 	}
   }
    */
-  main {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	height: 100%;
-  }
-  
-  section.content {
-	flex: 1 1 80%;
-	padding: 30px;
-	position: relative;
-  }
-  
-  .map-wrapper {
-	width: 100%;
-	height: 100%;
-	margin: auto;
-  }
-  
-  object#map {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	z-index: 998;
-  }
-  
-  div#toolTip {
-	position: absolute;
-	transition: 0.2s ease-out;
-	background-color: #ecf0f1;
-	border-radius: 3px;
-	z-index: 999;
-	pointer-events: none;
-  }
-  
-  div#toolTip ul {
-	font-family: sans-serif;
-	list-style: none;
-	padding: 15px;
-	margin: 0;
-  }
-  
-  div#toolTip ul li {
-	margin-bottom: 3px;
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+section.content {
+  flex: 1 1 80%;
+  padding: 30px;
+  position: relative;
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+object#map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 998;
+}
+
+div#toolTip {
+  position: absolute;
+  transition: 0.2s ease-out;
+  background-color: #ecf0f1;
+  border-radius: 3px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+div#toolTip ul {
+  font-family: sans-serif;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+
+div#toolTip ul li {
+  margin-bottom: 3px;
+}
