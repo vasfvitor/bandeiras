@@ -7,7 +7,7 @@ import FormattedDate from "~/components/FormattedDate.astro";
 import Maps from "~/maps/index.astro";
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, flagImage, coatImage } =
+const { title, description } =
   Astro.props;
 ---
 
@@ -15,17 +15,11 @@ const { title, description, pubDate, updatedDate, flagImage, coatImage } =
   <head>
     <BaseHead title={title} description={description} />
   </head>
-
   <body>
     <Header />
     <main>
       <article>
-        <div class="flex flex-row">
-          {flagImage && <img width={720} height={360} src={flagImage} alt="" />}
-          {coatImage && <img width={720} height={360} src={coatImage} alt="" />}
-        </div>
         <h1 class="title">{title}</h1>
-      
         <hr />
         <slot />
       </article>
