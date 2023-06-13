@@ -17,11 +17,9 @@ const { title, description } = Astro.props;
   <body>
     <Header />
     <main>
-      <article>
         <h1 class="title">{title}</h1>
         <hr />
         <slot />
-      </article>
       <Maps />
     </main>
     <Footer />
