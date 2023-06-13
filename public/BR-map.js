@@ -1,6 +1,3 @@
-// Global variable of maplist
-var mapList;
-
 function loadMap() {
   var map = document.getElementById("map").contentDocument.querySelector("svg");
   var toolTip = document.getElementById("toolTip");
@@ -31,10 +28,12 @@ function loadMap() {
       toolTip.innerHTML = `
         <ul class="text-left">
             <li><b>${details.name.value} - ${details.postal.value}</b></li>
-        </ul>`;
+        </ul>
+        `;
     }
   }
   //  <li>Full name: ${details.gn_name.value}</li>
+
   // Clear tooltip on mouseout
   function mouseGone(e) {
     var target = e.target;
@@ -44,7 +43,7 @@ function loadMap() {
     }
   }
 
-  // Go to wikidata page onclick
+  // Go to uf page onclick
   function handleClick(e) {
     if (e.target.nodeName == "path") {
       var details = e.target.attributes;
@@ -55,85 +54,6 @@ function loadMap() {
 
 // Calls init function on window load
 window.onload = function () {
-  var changeSelector = document.getElementById("mapChange");
-
-  /*
-   // Get JSON file containing map list
-   getData("mapList.json").then(function (res) {
-     mapList = res;
-     res.map(function (item) {
-       var option = document.createElement("option");
-       option.text = item[0] + " - " + item[1];
-       option.value = item[3];
-       changeSelector.appendChild(option);
-     });
-     changeSelector.options[149].selected = "selected";
-   });
- */
   // Init map
   loadMap();
 };
-
-function randomMap() {
-  var random = Math.floor(Math.random() * mapList.length);
-  changeMap(random);
-}
-
-// Calls map change function on button click
-function changeMap(random) {
-  var map = document.getElementById("map");
-  var changeSelector = document.getElementById("mapChange");
-  var downloadLink = document.querySelector("a.download");
-  var countryName = document.getElementById("country-name");
-
-  // Get value of dropdown selection
-  var selectedValue;
-
-  if (random) {
-    // Random map generated
-    selectedValue = mapList[random][3];
-    changeSelector.options[random].selected = "selected";
-  } else {
-    // Selected from dropdown
-    selectedValue = changeSelector.options[changeSelector.selectedIndex].value;
-  }
-
-  // Get details of selected country
-  var details = mapList.filter(function (item) {
-    return item[3] == selectedValue;
-  });
-
-  // Set country title
-  countryName.innerHTML = details[0][2];
-
-  // Load new map
-  map.data = `maps/${selectedValue}`;
-  downloadLink.href = `maps/${selectedValue}`;
-
-  // Re-init map on map load
-  map.onload = function () {
-    loadMap();
-  };
-}
-
-// Load external data
-function getData(e) {
-  var request = new XMLHttpRequest();
-  return new Promise((resolve, reject) => {
-    request.open("GET", e);
-
-    request.onload = function () {
-      if (request.status >= 200 && request.status < 400) {
-        resolve(JSON.parse(request.responseText));
-      } else {
-        console.error("Cant reach the file!");
-      }
-    };
-
-    request.onerror = function () {
-      console.error("Cant reach the file!");
-    };
-
-    request.send();
-  });
-}
