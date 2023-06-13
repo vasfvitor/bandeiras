@@ -1,9 +1,8 @@
+[hidden] {
+  display: none;
+}
 
-  [hidden] {
-	display: none;
-  }
-  
-    /**
+/**
   @media only screen and (min-width: 1200px) {
 	html,
 	body {
@@ -72,4 +71,22 @@ div#toolTip ul {
 
 div#toolTip ul li {
   margin-bottom: 3px;
+}
+
+@keyframes color-change {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: transparent;
+  }
+}
+.animate-text {
+  animation-name: color-change;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }

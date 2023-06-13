@@ -2,7 +2,7 @@
 dist/
 # generated types
 .astro/
-/src/maps/maps/*
+/src/components/maps/maps/*
 
 # dependencies
 node_modules/

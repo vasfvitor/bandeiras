@@ -2,12 +2,17 @@
 const today = new Date();
 ---
 
-<footer>
-  &copy; {today.getFullYear()} I ❤️ BRAZIL. All rights reserved.
+<footer class="mx-auto mt-auto rounded border border-gray-200 p-4">
+  <div
+    class="aspect-[10/7] max-w-screen-sm bg-[url('/Brazil.svg')] bg-contain bg-clip-text bg-center bg-no-repeat font-black leading-none text-transparent drop-shadow"
+  >
+    <br />
+    <br />
+    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓<br />
+    <p class="animate-text font-serif text-xl">I ❤️ BRAZIL</p>
+    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓<br />
+    <br />
+    <br />
+  </div>
+  <small>&copy; {today.getFullYear()} All rights reserved.</small>
 </footer>
-<style>
-  footer {
-    padding: 25px;
-    text-align: center;
-  }
-</style>

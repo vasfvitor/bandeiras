@@ -1,7 +1,10 @@
 ---
-import BR from "~/maps/BR.svg";
+import BR from "~/components/maps/BR.svg";
 ---
-<section class="content drop-shadow-lg bg-transparent h-[75vh] bg-blue-900 fill-zinc-800">
+
+<section
+  class="content h-[75vh] bg-blue-900 bg-transparent fill-zinc-800 drop-shadow-lg"
+>
   <div class="map-wrapper">
     <div id="toolTip"></div>
     <object id="map" data={BR} type="image/svg+xml"></object>
@@ -10,6 +13,5 @@ import BR from "~/maps/BR.svg";
   <div class="h-8 bg-blue-800"></div>
   <div class="h-8 bg-white"></div>
   <div class="h-8 bg-green-800"></div>
-  
 </section>
 <script is:inline src="/BR-map.js"></script>
