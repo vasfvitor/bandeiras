@@ -29,14 +29,12 @@ function loadMap() {
 
       // Tooltip data
       toolTip.innerHTML = `
-        <ul>
-            <li><b>Province: ${details.name.value}</b></li>
-            <li>Local name: ${details.gn_name.value}</li>
-            <li>Postal: ${details.postal.value}</li>
+        <ul class="text-left">
+            <li><b>${details.name.value} - ${details.postal.value}</b></li>
         </ul>`;
     }
   }
-
+  //  <li>Full name: ${details.gn_name.value}</li>
   // Clear tooltip on mouseout
   function mouseGone(e) {
     var target = e.target;
