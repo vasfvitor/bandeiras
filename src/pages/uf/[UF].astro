@@ -1,7 +1,6 @@
 ---
 import ufData from "./data.json";
 import Estado from "~/layouts/Estado.astro";
-
 export function getStaticPaths() {
   // Mapeie os dados do JSON para criar o array de `params`
   const paths = ufData.map((uf) => ({ params: { UF: uf.sigla } }));
@@ -21,33 +20,35 @@ export function getStaticProps({ params }) {
 
 const { UF } = Astro.params;
 const post = Astro.props;
-console.log(UF);
+//console.log(UF);
 const index = ufData.findIndex((uf) => uf.sigla === UF);
 const uf = ufData[index];
-console.log(index);
+//console.log(index);
 ---
 
 <Estado {...post.data}>
+
   <div class="prose mx-auto p-4 text-left font-bold">
     <h1 class="">{uf.nome} - {UF}</h1>
     <h2>Capital: {uf.capital}</h2>
     <h2>{uf.regiao}</h2>
   </div>
-
+ 
   <script>
-    console.log({ ufff });
+  
   </script>
-  <div class="mx-auto grid grid-cols-4 justify-center bg-gray-100 p-8">
-    <div class="col-start-2 grid place-items-center text-center">
+  <div class="mx-auto flex flex-col lg:flex-row gap-4 justify-around bg-gray-100 p-8">
+    <div class="grid place-items-center text-center">
       <img
-        class="h-64 drop-shadow-xl"
+        class="h-48 w-auto drop-shadow active:scale-[1.6] hover:scale-[1.6] transition-all"
         src=`/src/img/${UF}-bandeira.svg`
         alt=""
       />
       <p class="prose mt-8 font-black">Flag</p>
+      <p>x</p>
     </div>
     <div class="grid place-items-center text-center">
-      <img class="h-64 drop-shadow-xl" src=`/src/img/${UF}-brasao.svg` alt="" />
+      <img class="h-48 drop-shadow active:scale-[1.6] hover:scale-[1.6] transition-all" src=`/src/img/${UF}-brasao.svg` alt="" />
       <p class="prose mt-8 font-black">Coat of Arms</p>
     </div>
   </div>
