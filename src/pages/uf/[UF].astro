@@ -6,6 +6,7 @@ export function getStaticPaths() {
 }
 */
 //console.log(UF);
+import Maps from "~/components/maps/Brazil.astro";
 import Estado from "~/layouts/Estado.astro";
 import { db } from "~/supa";
 
@@ -13,38 +14,49 @@ export function getStaticPaths() {
   const paths = db?.map((db) => ({ params: { UF: db.UF } }));
   return paths;
 }
-console.log(Astro.params);
+//console.log(Astro.params);
 const { UF } = Astro.params;
 //const index = ufData.findIndex((uf) => uf.sigla === UF);
 const index: any = db?.findIndex((item) => item.UF === UF);
 const uf = db[index];
+
+import * as Turbo from "@hotwired/turbo"
 ---
 
 <Estado>
-  <div class="prose mx-auto p-4 text-left font-bold">
+  <div class="mx-auto prose prose-sm p-4 text-left">
     <h1 class="">{uf.Name} - {uf.UF}</h1>
-    <h2>Capital: {uf.Capital}</h2>
-    <h3>{uf.Region} region</h3>
+    <small>Capital: {uf.Capital}</small> <br>
+    <small>{uf.Region} region</small>
   </div>
-
-  <div
-    class="mx-auto flex flex-col justify-around gap-4 bg-gray-100 p-8 lg:flex-row"
+  <section
+    class="flex lg:flex-row flex-col bg-gray-100 px-4 lg:px-0 mx-auto justify-center"
   >
-    <div class="grid place-items-center text-center">
-      <img
-        class="h-48 w-auto drop-shadow transition-all hover:scale-[1.6] active:scale-[1.6]"
-        src=`/src/img/${uf.UF}-bandeira.svg`
-        alt=""
-      />
-      <p class="prose mt-8 font-black">Flag</p>
-    </div>
-    <div class="grid place-items-center text-center">
-      <img
-        class="h-48 drop-shadow transition-all hover:scale-[1.6] active:scale-[1.6]"
-        src=`/src/img/${uf.UF}-brasao.svg`
-        alt=""
-      />
-      <p class="prose mt-8 font-black">Coat of Arms</p>
-    </div>
-  </div>
+    <section class="flex flex-col p-8 gap-8">
+      <div class="prose prose-sm">
+        <h4>Motto: {uf.Motto}</h4>
+      </div>
+      <div class="grid place-items-center text-center">
+        <img
+          class="h-48 w-auto drop-shadow transition-all hover:z-10 hover:scale-[1.6] active:scale-[1.6] active:z-10"
+          src=`/src/img/${uf.UF}-bandeira.svg`
+          alt=`Flag of ${uf.UF}`
+        />
+        <p class="prose mt-8 font-black">Flag</p>
+        <p>Meaning:</p>
+      </div>
+      <div class="grid place-items-center text-center">
+        <img
+          class="h-48 drop-shadow transition-all hover:scale-[1.6] active:scale-[1.6]"
+          src=`/src/img/${uf.UF}-brasao.svg`
+          alt=`Coat of Arms of ${uf.UF}`
+        />
+        <p class="prose mt-8 font-black">Coat of Arms</p>
+        <p>Meaning:</p>
+      </div>
+    </section>
+    <section data-turbo-permanent id="BrazilMap">
+      <Maps />
+    </section>
+  </section>
 </Estado>
