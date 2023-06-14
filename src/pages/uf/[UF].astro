@@ -19,26 +19,25 @@ const { UF } = Astro.params;
 //const index = ufData.findIndex((uf) => uf.sigla === UF);
 const index: any = db?.findIndex((item) => item.UF === UF);
 const uf = db[index];
-
-import * as Turbo from "@hotwired/turbo"
 ---
 
 <Estado>
-  <div class="mx-auto prose prose-sm p-4 text-left">
+  <div class="prose prose-sm mx-auto p-4 text-left">
     <h1 class="">{uf.Name} - {uf.UF}</h1>
-    <small>Capital: {uf.Capital}</small> <br>
+    <small>Capital: {uf.Capital}</small>
+    <br />
     <small>{uf.Region} region</small>
   </div>
   <section
-    class="flex lg:flex-row flex-col bg-gray-100 px-4 lg:px-0 mx-auto justify-center"
+    class="mx-auto flex flex-col justify-center bg-gray-100 px-4 lg:flex-row lg:px-0"
   >
-    <section class="flex flex-col p-8 gap-8">
+    <section class="flex flex-col gap-8 p-8">
       <div class="prose prose-sm">
         <h4>Motto: {uf.Motto}</h4>
       </div>
       <div class="grid place-items-center text-center">
         <img
-          class="h-48 w-auto drop-shadow transition-all hover:z-10 hover:scale-[1.6] active:scale-[1.6] active:z-10"
+          class="h-48 w-auto drop-shadow transition-all hover:z-10 hover:scale-[1.6] active:z-10 active:scale-[1.6]"
           src=`/src/img/${uf.UF}-bandeira.svg`
           alt=`Flag of ${uf.UF}`
         />
@@ -55,7 +54,7 @@ import * as Turbo from "@hotwired/turbo"
         <p>Meaning:</p>
       </div>
     </section>
-    <section data-turbo-permanent id="BrazilMap">
+    <section>
       <Maps />
     </section>
   </section>

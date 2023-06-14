@@ -13,12 +13,14 @@ function loadMap() {
   }
   map.addEventListener("mousemove", mouseEntered, false);
   map.addEventListener("mouseout", mouseGone, false);
-
   // Show tooltip on mousemove
   function mouseEntered(e) {
     var target = e.target;
     if (target.nodeName == "path") {
-      target.style.opacity = 0.6;
+      //console.log(target);
+      target.style.fill = "green";
+      //target.style.opacity = 0.6;
+      target.style.cursor = "pointer";
       var details = e.target.attributes;
 
       // Follow cursor
@@ -38,6 +40,7 @@ function loadMap() {
   function mouseGone(e) {
     var target = e.target;
     if (target.nodeName == "path") {
+      target.style.fill = "black";
       target.style.opacity = 1;
       toolTip.innerHTML = "";
     }

@@ -34,6 +34,19 @@ main {
   height: 100%;
 }
  */
+
+body {
+  @apply bg-white;
+}
+
+div#toolTip ul {
+  @apply m-0 list-none p-4 font-sans;
+}
+
+div#toolTip {
+  @apply pointer-events-none absolute z-[999] rounded border bg-white shadow transition-all duration-500 ease-out;
+}
+
 section.content {
   flex: 1 1 80%;
   padding: 30px;
@@ -51,26 +64,6 @@ object#map {
   height: 100%;
   position: relative;
   z-index: 998;
-}
-
-div#toolTip {
-  position: absolute;
-  transition: 0.2s ease-out;
-  background-color: #ecf0f1;
-  border-radius: 3px;
-  z-index: 999;
-  pointer-events: none;
-}
-
-div#toolTip ul {
-  font-family: sans-serif;
-  list-style: none;
-  padding: 15px;
-  margin: 0;
-}
-
-div#toolTip ul li {
-  margin-bottom: 3px;
 }
 
 @keyframes color-change {
