@@ -28,9 +28,7 @@ function loadMap() {
 
       // Tooltip data
       toolTip.innerHTML = `
-        <ul class="text-left">
-            <li><b>${details.name.value} - ${details.postal.value}</b></li>
-        </ul>
+            <p><strong>${details.name.value} - ${details.postal.value}</strong></p>
         `;
     }
   }

@@ -22,13 +22,15 @@ const uf = db[index];
 ---
 
 <Estado>
-  <div class="prose prose-sm mx-auto p-4 text-left">
+  <div class="prose prose-sm mx-auto p-4 text-left" >
+   
     <h1 class="">{uf.Name} - {uf.UF}</h1>
     <small>Capital: {uf.Capital}</small>
     <br />
+  
     <small>{uf.Region} region</small>
   </div>
-  <section
+  <section 
     class="mx-auto flex flex-col justify-center bg-gray-100 px-4 lg:flex-row lg:px-0"
   >
     <section class="flex flex-col gap-8 p-8">
@@ -54,7 +56,10 @@ const uf = db[index];
         <p>Meaning:</p>
       </div>
     </section>
-    <section>
+    
+     
+    
+    <section >
       <Maps />
     </section>
   </section>
