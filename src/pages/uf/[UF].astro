@@ -7,7 +7,7 @@ export function getStaticPaths() {
 */
 //console.log(UF);
 import Maps from "~/components/maps/Brazil.astro";
-import Estado from "~/layouts/EstadoLayout.astro";
+import EstadoLayout from "~/layouts/EstadoLayout.astro";
 import { db } from "~/supa";
 
 export function getStaticPaths() {
@@ -20,44 +20,66 @@ const { UF } = Astro.params;
 const index: any = db?.findIndex((item) => item.UF === UF);
 const uf = db[index];
 
+const bandeira = `/states/${uf.UF}-bandeira.svg`;
+const brasao = `/states/${uf.UF}-brasao.svg`;
+
+// import styles
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
 ---
 
-<Estado>
-  <div class="prose prose-sm mx-auto p-4 text-center" >
+<EstadoLayout>
+  <div class="prose prose-sm mx-auto p-4 text-center">
     <h1 class="">{uf.Name} - {uf.UF}</h1>
     <small>Capital: {uf.Capital}</small>
     <br />
     <small>{uf.Region} region</small>
   </div>
-  <section 
-    class="flex flex-col justify-center  px-4 lg:flex-row lg:px-0"
-  >
-    <section class="flex flex-col gap-8 p-8 lg:w-1/3">
-      <div class="">
-        <a href=`/states/${uf.UF}-bandeira.svg` data-lightbox="bandeira">
+  <section class="flex flex-col justify-center px-4 lg:flex-row lg:px-0">
+    <section class="flex flex-col p-8 lg:w-1/3">
+      <p class="prose mt-8 font-black">Flag</p>
+      <p>Meaning:</p>
+      <div id="lightgallery">
+        <a href={bandeira} data-lg-size="1600-2400">
           <img
             class="drop-shadow transition-all hover:z-10 w-64 max-w-screen-lg hover:scale-110 active:z-10 active:scale-110"
-            src=`/states/${uf.UF}-bandeira.svg`
+            src={bandeira}
             alt=`Flag of ${uf.UF}`
           />
         </a>
-        <p class="prose mt-8 font-black">Flag</p>
-        <p>Meaning:</p>
       </div>
-      <div class="">
-        <a href=`/states/${uf.UF}-brasao.svg` data-lightbox="bandeira">
+      <p class="prose mt-8 font-black">Coat of Arms</p>
+      <p>Meaning:</p>
+      <div id="lightgallery2">
+        <a href={brasao} data-lg-size="1600-2400">
           <img
             class="drop-shadow transition-all hover:scale-110 active:scale-110 w-64 max-w-screen-lg"
-            src=`/states/${uf.UF}-brasao.svg`
+            src={brasao}
             alt=`Coat of Arms of ${uf.UF}`
           />
         </a>
-        <p class="prose mt-8 font-black">Coat of Arms</p>
-        <p>Meaning:</p>
       </div>
     </section>
     <section>
       <Maps />
     </section>
   </section>
-</Estado>
+  <script>
+    import lightGallery from "lightgallery";
+
+    // Plugins
+    import lgThumbnail from "lightgallery/plugins/thumbnail";
+    import lgZoom from "lightgallery/plugins/zoom";
+    lightGallery(document.getElementById("lightgallery"), {
+      plugins: [lgZoom, lgThumbnail],
+      licenseKey: "0000-0000-000-0000",
+      speed: 500,
+    });
+    lightGallery(document.getElementById("lightgallery2"), {
+      plugins: [lgZoom, lgThumbnail],
+      licenseKey: "0000-0000-000-0000",
+      speed: 500,
+    });
+  </script>
+</EstadoLayout>
