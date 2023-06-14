@@ -18,14 +18,12 @@ function loadMap() {
     var target = e.target;
     if (target.nodeName == "path") {
       //console.log(target);
-      target.style.fill = "green";
       //target.style.opacity = 0.6;
+      target.style.fill = "green";
       target.style.cursor = "pointer";
       var details = e.target.attributes;
-
       // Follow cursor
       toolTip.style.transform = `translate(${e.offsetX}px, ${e.offsetY}px)`;
-
       // Tooltip data
       toolTip.innerHTML = `
             <p><strong>${details.name.value} - ${details.postal.value}</strong></p>

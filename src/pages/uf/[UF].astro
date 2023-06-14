@@ -33,22 +33,22 @@ const uf = db[index];
   <section 
     class="mx-auto flex flex-col justify-center bg-gray-100 px-4 lg:flex-row lg:px-0"
   >
-    <section class="flex flex-col gap-8 p-8">
+    <section class="flex flex-col gap-8 p-8 w-1/2">
       <div class="prose prose-sm">
         <h4>Motto: {uf.Motto}</h4>
       </div>
-      <div class="grid place-items-center text-center">
+      <div class="">
         <img
-          class="h-48 w-auto drop-shadow transition-all hover:z-10 hover:scale-[1.6] active:z-10 active:scale-[1.6]"
+          class="drop-shadow aspect-auto transition-all hover:z-10 hover:scale-[1.6] active:z-10 active:scale-[1.6]"
           src=`/src/img/${uf.UF}-bandeira.svg`
           alt=`Flag of ${uf.UF}`
         />
         <p class="prose mt-8 font-black">Flag</p>
         <p>Meaning:</p>
       </div>
-      <div class="grid place-items-center text-center">
+      <div class="">
         <img
-          class="h-48 drop-shadow transition-all hover:scale-[1.6] active:scale-[1.6]"
+          class="h-48 w-fit drop-shadow transition-all hover:scale-[1.6] active:scale-[1.6]"
           src=`/src/img/${uf.UF}-brasao.svg`
           alt=`Coat of Arms of ${uf.UF}`
         />
@@ -56,10 +56,7 @@ const uf = db[index];
         <p>Meaning:</p>
       </div>
     </section>
-    
-     
-    
-    <section >
+    <section>
       <Maps />
     </section>
   </section>
