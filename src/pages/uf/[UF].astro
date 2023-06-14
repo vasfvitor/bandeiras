@@ -7,16 +7,16 @@ export function getStaticPaths() {
 */
 //console.log(UF);
 import Estado from "~/layouts/Estado.astro";
-import { db } from "~/scripts/supa.js";
+import { db } from "~/supa";
 
 export function getStaticPaths() {
-  const paths = db.map((db) => ({ params: { UF: db.UF } }));
+  const paths = db?.map((db) => ({ params: { UF: db.UF } }));
   return paths;
 }
-console.log(Astro.params)
+console.log(Astro.params);
 const { UF } = Astro.params;
 //const index = ufData.findIndex((uf) => uf.sigla === UF);
-const index = db.findIndex((item) => item.UF === UF);
+const index: any = db?.findIndex((item) => item.UF === UF);
 const uf = db[index];
 ---
 
@@ -24,20 +24,26 @@ const uf = db[index];
   <div class="prose mx-auto p-4 text-left font-bold">
     <h1 class="">{uf.Name} - {uf.UF}</h1>
     <h2>Capital: {uf.Capital}</h2>
-    <h3>{uf.Region} region</h2>
+    <h3>{uf.Region} region</h3>
   </div>
 
-  <div class="mx-auto flex flex-col lg:flex-row gap-4 justify-around bg-gray-100 p-8">
+  <div
+    class="mx-auto flex flex-col justify-around gap-4 bg-gray-100 p-8 lg:flex-row"
+  >
     <div class="grid place-items-center text-center">
       <img
-        class="h-48 w-auto drop-shadow active:scale-[1.6] hover:scale-[1.6] transition-all"
+        class="h-48 w-auto drop-shadow transition-all hover:scale-[1.6] active:scale-[1.6]"
         src=`/src/img/${uf.UF}-bandeira.svg`
         alt=""
       />
       <p class="prose mt-8 font-black">Flag</p>
     </div>
-   <div class="grid place-items-center text-center">
-      <img class="h-48 drop-shadow active:scale-[1.6] hover:scale-[1.6] transition-all" src=`/src/img/${uf.UF}-brasao.svg` alt="" />
+    <div class="grid place-items-center text-center">
+      <img
+        class="h-48 drop-shadow transition-all hover:scale-[1.6] active:scale-[1.6]"
+        src=`/src/img/${uf.UF}-brasao.svg`
+        alt=""
+      />
       <p class="prose mt-8 font-black">Coat of Arms</p>
     </div>
   </div>

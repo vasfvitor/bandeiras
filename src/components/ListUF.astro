@@ -29,29 +29,30 @@ const ufs = [
   { sigla: "TO", nomePt: "Tocantins", nomeEn: "Tocantins" },
 ];
 ---
-<form id="estadoForm" action="/uf/estados">
-    <label for="estados">Choose a state:</label>
-    <select name="estados" id="estadoSelect">
-      <option value="" selected disabled>Select a province</option>
-      {
-        ufs.map((ufs) => (
-          <option value={ufs.sigla}>
-            {ufs.nomePt} - {ufs.sigla}
-          </option>
-        ))
-      }
-    </select>
-    <input type="submit" value="View" />
-  </form>
-  <script>
-    const estadoForm = document.getElementById("estadoForm");
-    const estadoSelect = document.getElementById("estadoSelect");
 
-    estadoForm.addEventListener("submit", function (event) {
-      // Impede o envio padrão do formulário
-      event.preventDefault(); 
-      const uf = estadoSelect.value;
-      const url = `/uf/${uf}`;
-      window.location.href = url;
-    });
-  </script>
+<form id="estadoForm" action="/uf/estados">
+  <label for="estados">Choose a state:</label>
+  <select name="estados" id="estadoSelect">
+    <option value="" selected disabled>Select a province</option>
+    {
+      ufs.map((ufs) => (
+        <option value={ufs.sigla}>
+          {ufs.nomePt} - {ufs.sigla}
+        </option>
+      ))
+    }
+  </select>
+  <input type="submit" value="View" />
+</form>
+<script>
+  const estadoForm = document.getElementById("estadoForm");
+  const estadoSelect = document.getElementById("estadoSelect");
+
+  estadoForm.addEventListener("submit", function (event) {
+    // Impede o envio padrão do formulário
+    event.preventDefault();
+    const uf = estadoSelect.value;
+    const url = `/uf/${uf}`;
+    window.location.href = url;
+  });
+</script>
