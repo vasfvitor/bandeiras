@@ -30,19 +30,21 @@ const ufs = [
 ];
 ---
 
-<form id="estadoForm" action="/uf/estados">
-  <label for="estados">Choose a state:</label>
-  <select name="estados" id="estadoSelect">
-    <option value="" selected disabled>Select a state</option>
-    {
-      ufs.map((ufs) => (
-        <option value={ufs.sigla}>
-          {ufs.nomePt} - {ufs.sigla}
-        </option>
-      ))
-    }
-  </select>
-  <input class="bg-azul px-6 py-1 m-2 rounded shadow hover:opacity-80 active:opacity-50 text-white" type="submit" value="View" />
+<form id="estadoForm" class="max-w-sm mx-auto text-white bg-azul p-4 rounded text-center my-8" action="/uf/estados">
+  <div>
+    <label for="estados">Choose a state:</label>
+    <select name="estados" class="w-full bg-verde text-white p-2 rounded" id="estadoSelect">
+      <option value="" selected disabled>Select a state</option>
+      {
+        ufs.map((ufs) => (
+          <option value={ufs.sigla}>
+            {ufs.nomePt} - {ufs.sigla}
+          </option>
+        ))
+      }
+    </select>
+  </div>
+  <input class="hover:cursor-pointer bg-amarelo block w-full py-1 my-2 rounded shadow hover:opacity-80 active:opacity-50 font-bold uppercase text-black" type="submit" value="View" />
 </form>
 <script>
   const estadoForm = document.getElementById("estadoForm");
