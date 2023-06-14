@@ -27,6 +27,9 @@ const brasao = `/states/${uf.UF}-brasao.svg`;
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
+
+
+import ListUF from "~/components/ListUF.astro";
 ---
 
 <EstadoLayout>
@@ -61,7 +64,9 @@ import "lightgallery/css/lg-thumbnail.css";
         </a>
       </div>
     </section>
-    <section>
+    <section><ListUF /></section>
+    <section class="hidden lg:block">
+      
       <Maps />
     </section>
   </section>

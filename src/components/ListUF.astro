@@ -33,7 +33,7 @@ const ufs = [
 <form id="estadoForm" action="/uf/estados">
   <label for="estados">Choose a state:</label>
   <select name="estados" id="estadoSelect">
-    <option value="" selected disabled>Select a province</option>
+    <option value="" selected disabled>Select a state</option>
     {
       ufs.map((ufs) => (
         <option value={ufs.sigla}>
@@ -42,7 +42,7 @@ const ufs = [
       ))
     }
   </select>
-  <input type="submit" value="View" />
+  <input class="bg-azul px-6 py-1 m-2 rounded shadow hover:opacity-80 active:opacity-50 text-white" type="submit" value="View" />
 </form>
 <script>
   const estadoForm = document.getElementById("estadoForm");
