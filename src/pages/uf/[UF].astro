@@ -19,6 +19,7 @@ const { UF } = Astro.params;
 //const index = ufData.findIndex((uf) => uf.sigla === UF);
 const index: any = db?.findIndex((item) => item.UF === UF);
 const uf = db[index];
+
 ---
 
 <Estado>
@@ -39,8 +40,8 @@ const uf = db[index];
       </div>
       <div class="">
         <img
-          class="drop-shadow aspect-auto transition-all hover:z-10 hover:scale-[1.6] active:z-10 active:scale-[1.6]"
-          src=`/src/img/${uf.UF}-bandeira.svg`
+          class="drop-shadow aspect-auto transition-all hover:z-10  hover:scale-[1.6] active:z-10 active:scale-[1.6]"
+          src=`/states/${uf.UF}-bandeira.svg`
           alt=`Flag of ${uf.UF}`
         />
         <p class="prose mt-8 font-black">Flag</p>
@@ -49,7 +50,7 @@ const uf = db[index];
       <div class="">
         <img
           class="h-48 w-fit drop-shadow transition-all hover:scale-[1.6] active:scale-[1.6]"
-          src=`/src/img/${uf.UF}-brasao.svg`
+          src=`/states/${uf.UF}-brasao.svg`
           alt=`Coat of Arms of ${uf.UF}`
         />
         <p class="prose mt-8 font-black">Coat of Arms</p>
