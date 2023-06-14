@@ -1,50 +1,43 @@
 ---
-import ufData from "./data.json";
-import Estado from "~/layouts/Estado.astro";
+/*
 export function getStaticPaths() {
-  // Mapeie os dados do JSON para criar o array de `params`
   const paths = ufData.map((uf) => ({ params: { UF: uf.sigla } }));
   return paths;
 }
-/*
-export function getStaticProps({ params }) {
-  // Encontre os dados específicos para a UF com base no parâmetro
-  const uf = ufData.find((uf) => uf.sigla === params.UF);
-  return {
-    props: {
-      uf,
-    },
-  };
-}
 */
-
-const { UF } = Astro.params;
-const post = Astro.props;
 //console.log(UF);
-const index = ufData.findIndex((uf) => uf.sigla === UF);
-const uf = ufData[index];
-//console.log(index);
+import Estado from "~/layouts/Estado.astro";
+import { db } from "~/scripts/supa.js";
+
+export function getStaticPaths() {
+  const paths = db.map((db) => ({ params: { UF: db.UF } }));
+  return paths;
+}
+console.log(Astro.params)
+const { UF } = Astro.params;
+//const index = ufData.findIndex((uf) => uf.sigla === UF);
+const index = db.findIndex((item) => item.UF === UF);
+const uf = db[index];
 ---
 
 <Estado>
   <div class="prose mx-auto p-4 text-left font-bold">
-    <h1 class="">{uf.nome} - {UF}</h1>
-    <h2>Capital: {uf.capital}</h2>
-    <h3>{uf.regiao} region</h2>
+    <h1 class="">{uf.Name} - {uf.UF}</h1>
+    <h2>Capital: {uf.Capital}</h2>
+    <h3>{uf.Region} region</h2>
   </div>
 
   <div class="mx-auto flex flex-col lg:flex-row gap-4 justify-around bg-gray-100 p-8">
     <div class="grid place-items-center text-center">
       <img
         class="h-48 w-auto drop-shadow active:scale-[1.6] hover:scale-[1.6] transition-all"
-        src=`/src/img/${UF}-bandeira.svg`
+        src=`/src/img/${uf.UF}-bandeira.svg`
         alt=""
       />
       <p class="prose mt-8 font-black">Flag</p>
-      <p>x</p>
     </div>
-    <div class="grid place-items-center text-center">
-      <img class="h-48 drop-shadow active:scale-[1.6] hover:scale-[1.6] transition-all" src=`/src/img/${UF}-brasao.svg` alt="" />
+   <div class="grid place-items-center text-center">
+      <img class="h-48 drop-shadow active:scale-[1.6] hover:scale-[1.6] transition-all" src=`/src/img/${uf.UF}-brasao.svg` alt="" />
       <p class="prose mt-8 font-black">Coat of Arms</p>
     </div>
   </div>
