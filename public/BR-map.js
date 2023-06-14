@@ -19,9 +19,29 @@ function loadMap() {
     if (target.nodeName == "path") {
       //console.log(target);
       //target.style.opacity = 0.6;
-      target.style.fill = "green";
-      target.style.cursor = "pointer";
       var details = e.target.attributes;
+      switch (details.region.value) {
+        case "North":
+          target.style.fill = "green";
+          break;
+        case "South":
+          target.style.fill = "orange";
+          break;
+        case "Northeast":
+          target.style.fill = "blue";
+          break;
+        case "Southeast":
+          target.style.fill = "red";
+          break;
+        case "Central-West":
+          target.style.fill = "yellow";
+          break;
+        default:
+          target.style.opacity = 0.6;
+          break;
+      }
+      target.style.cursor = "pointer";
+
       // Follow cursor
       toolTip.style.transform = `translate(${e.offsetX}px, ${e.offsetY}px)`;
       // Tooltip data
