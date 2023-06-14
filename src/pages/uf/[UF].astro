@@ -7,7 +7,7 @@ export function getStaticPaths() {
 */
 //console.log(UF);
 import Maps from "~/components/maps/Brazil.astro";
-import Estado from "~/layouts/Estado.astro";
+import Estado from "~/layouts/EstadoLayout.astro";
 import { db } from "~/supa";
 
 export function getStaticPaths() {
@@ -23,36 +23,35 @@ const uf = db[index];
 ---
 
 <Estado>
-  <div class="prose prose-sm mx-auto p-4 text-left" >
-   
+  <div class="prose prose-sm mx-auto p-4 text-center" >
     <h1 class="">{uf.Name} - {uf.UF}</h1>
     <small>Capital: {uf.Capital}</small>
     <br />
-  
     <small>{uf.Region} region</small>
   </div>
   <section 
-    class="mx-auto flex flex-col justify-center bg-gray-100 px-4 lg:flex-row lg:px-0"
+    class="flex flex-col justify-center  px-4 lg:flex-row lg:px-0"
   >
-    <section class="flex flex-col gap-8 p-8 w-1/2">
-      <div class="prose prose-sm">
-        <h4>Motto: {uf.Motto}</h4>
-      </div>
+    <section class="flex flex-col gap-8 p-8 lg:w-1/3">
       <div class="">
-        <img
-          class="drop-shadow aspect-auto transition-all hover:z-10  hover:scale-[1.6] active:z-10 active:scale-[1.6]"
-          src=`/states/${uf.UF}-bandeira.svg`
-          alt=`Flag of ${uf.UF}`
-        />
+        <a href=`/states/${uf.UF}-bandeira.svg` data-lightbox="bandeira">
+          <img
+            class="drop-shadow transition-all hover:z-10 w-64 max-w-screen-lg hover:scale-110 active:z-10 active:scale-110"
+            src=`/states/${uf.UF}-bandeira.svg`
+            alt=`Flag of ${uf.UF}`
+          />
+        </a>
         <p class="prose mt-8 font-black">Flag</p>
         <p>Meaning:</p>
       </div>
       <div class="">
-        <img
-          class="h-48 w-fit drop-shadow transition-all hover:scale-[1.6] active:scale-[1.6]"
-          src=`/states/${uf.UF}-brasao.svg`
-          alt=`Coat of Arms of ${uf.UF}`
-        />
+        <a href=`/states/${uf.UF}-brasao.svg` data-lightbox="bandeira">
+          <img
+            class="drop-shadow transition-all hover:scale-110 active:scale-110 w-64 max-w-screen-lg"
+            src=`/states/${uf.UF}-brasao.svg`
+            alt=`Coat of Arms of ${uf.UF}`
+          />
+        </a>
         <p class="prose mt-8 font-black">Coat of Arms</p>
         <p>Meaning:</p>
       </div>
