@@ -1,4 +1,4 @@
-# BRASILERO
+# BRASILEIRO
 
 #### Video Demo: <URL HERE>
 
@@ -52,7 +52,7 @@ Soon I needed to add more information as for example details from the symbols an
 
 That would add at minimum 216 lines to manage with possible much more due to longer lines in meaning section.
 
-For this reason I decided to use a database and found out about Xata on Astro.js documentation, so I gave it a try. Note:
+For this reason I decided to use a database and found out about Supabase lol on Astro.js documentation, so I gave it a try. Note:
 
 Another challenge was to make the project mobile friendly.
 
