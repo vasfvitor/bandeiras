@@ -8,7 +8,6 @@ const { title, description } = Astro.props;
 
 <html lang="en">
   <head>
-    <link href="/lightbox/lightbox.css" rel="stylesheet" />
     <BaseHead title={title} description={description} />
   </head>
   <body class="bg-white">
@@ -20,15 +19,5 @@ const { title, description } = Astro.props;
       <hr />
     </main>
     <Footer />
-    <script is:inline src="/lightbox/lightbox-plus-jquery.js"></script>
-
-    <script>
-      lightbox.option({
-        resizeDuration: 150,
-        fadeDuration: 200,
-        positionFromTop: 0,
-        wrapAround: true,
-      });
-    </script>
   </body>
 </html>
