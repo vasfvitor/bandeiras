@@ -1,4 +1,4 @@
-<svg width="540" height="360" version="1.1" viewBox="0 0 540 360" xmlns="https://www.w3.org/2000/svg"><script xmlns=""/>
+<svg width="540" height="360" version="1.1" viewBox="0 0 540 360" xmlns="http://www.w3.org/2000/svg"><script xmlns=""/>
 <!-- 1 unidade = 9 pixels -->
 <path id="faixa_azul" fill="#3155A4" d="M0 0h540v216H0z"/>
 <path id="arco_vermelho" d="M69 270 A 129 129 202.5 0 1 471,270" style="fill:none;" stroke-width="12" stroke="#C34342"/>
