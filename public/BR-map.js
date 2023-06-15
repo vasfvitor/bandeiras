@@ -8,7 +8,6 @@ function loadMap() {
       navigator.userAgent
     )
   ) {
-    // If user agent is not mobile add click listener (for wikidata links)
     map.addEventListener("click", handleClick, false);
   }
   map.addEventListener("mousemove", mouseEntered, false);
