@@ -53,7 +53,6 @@ const ufs = [
     </select>
   </div>
   <input
-    disabled
     id="submitSel"
     class="hover:cursor-pointer bg-amarelo block w-full py-1 my-2 rounded shadow hover:opacity-80 active:opacity-50 font-bold uppercase text-black"
     type="submit"
@@ -64,13 +63,13 @@ const ufs = [
   const estadoForm = document.getElementById("estadoForm") as HTMLFormElement;;
   const estadoSelect = document.getElementById("estadoSelect") as HTMLSelectElement;;
   const submit = document.getElementById("submit") as HTMLInputElement;
-
+/*
   submit?.addEventListener("click", function (e) {
     if (submit.disabled == true) {
       console.log("Error");
     }
   });
-
+*/
   estadoForm?.addEventListener("change", function (e) {
     if (estadoSelect.value) {
       submit.disabled = false;
