@@ -32,7 +32,7 @@ const ufs = [
 
 <form
   id="estadoForm"
-  class="max-w-sm mx-auto text-white bg-azul p-4 rounded text-center my-8"
+  class="mx-auto my-8 max-w-sm rounded bg-azul p-4 text-center text-white"
   action="/uf"
   method="get"
 >
@@ -40,7 +40,7 @@ const ufs = [
     <label for="estadoSelect">Choose a state:</label>
     <select
       name="estados"
-      class="w-full bg-verde text-white p-2 rounded"
+      class="w-full rounded bg-verde p-2 text-white"
       id="estadoSelect"
     >
       <option value="" selected disabled>Select a state</option>
@@ -55,7 +55,7 @@ const ufs = [
   </div>
   <input
     id="submitSel"
-    class="hover:cursor-pointer bg-amarelo block w-full py-1 my-2 rounded shadow hover:opacity-80 active:opacity-50 font-bold uppercase text-black"
+    class="my-2 block w-full rounded bg-amarelo py-1 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50"
     type="submit"
     value="View"
   />
