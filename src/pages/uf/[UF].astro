@@ -76,22 +76,5 @@ import ListUF from "~/components/ListUF.astro";
       <Maps />
     </section>
   </section>
-  <script>
-    import lightGallery from "lightgallery";
-
-    // Plugins
-    import lgThumbnail from "lightgallery/plugins/thumbnail";
-    import lgZoom from "lightgallery/plugins/zoom";
-    import lgMediumZoom from "lightgallery/plugins/mediumZoom";
-    lightGallery(document.getElementById("lightgallery"), {
-      plugins: [lgZoom, lgThumbnail],
-      licenseKey: "0000-0000-000-0000",
-      speed: 500,
-    });
-    lightGallery(document.getElementById("lightgallery2"), {
-      plugins: [lgZoom, lgThumbnail],
-      licenseKey: "0000-0000-000-0000",
-      speed: 500,
-    });
-  </script>
+ 
 </EstadoLayout>
