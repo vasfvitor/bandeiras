@@ -7,6 +7,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^3.1.3
     version: 3.1.3(astro@2.5.6)(tailwindcss@3.3.2)
+  '@fancyapps/ui':
+    specifier: ^5.0.19
+    version: 5.0.19
   '@supabase/supabase-js':
     specifier: ^2.25.0
     version: 2.25.0
@@ -16,6 +19,9 @@ dependencies:
   astro:
     specifier: ^2.5.6
     version: 2.5.6
+  baguettebox.js:
+    specifier: ^1.11.1
+    version: 1.11.1
   lightgallery:
     specifier: ^2.7.1
     version: 2.7.1
@@ -645,6 +651,10 @@ packages:
     resolution: {integrity: sha512-LxcyMGxwmTh2lY9FwHPGWOHmYFCZvbrFCBZL4FzSSsxsRPuhrYUg/49/0KDfW8tnIEaEHtfmn6+NPN+1DqaNmA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fancyapps/ui@5.0.19:
+    resolution: {integrity: sha512-/DDmO+9wnlXkk9oimwg7eT7Wo8qKuW4XU6NgJtqdJ/GOZvEPq5ozLEqSKy9Z4pa4RkLwtbcTgBixP7f0C+6kVw==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.10:
     resolution: {integrity: sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ==}
@@ -1286,6 +1296,10 @@ packages:
       picocolors: 1.0.0
       postcss: 8.4.24
       postcss-value-parser: 4.2.0
+    dev: false
+
+  /baguettebox.js@1.11.1:
+    resolution: {integrity: sha512-0HnUVs+xaqwQOVbfi0kwZnZ1fJNWE5vJLCoCAtgQBtPmOJa1fhN8gubaBFOBGDkQy/vz6PWSr7B3WilhQKjyeQ==}
     dev: false
 
   /bail@2.0.2:

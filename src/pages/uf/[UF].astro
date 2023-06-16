@@ -42,7 +42,7 @@ import ListUF from "~/components/ListUF.astro";
     <section class="flex flex-col gap-y-8 p-8 xl:w-1/3">
       <article class="flex flex-col gap-8">
         <div>
-          <a href={bandeira} id="lightgallery">
+          <a href={bandeira} data-fancybox="gallery" id="lightgallery">
             <img
               class="float-left w-64 max-w-screen-lg p-4 drop-shadow transition-all hover:z-10 hover:scale-105 active:z-10 active:scale-105"
               src={bandeira}
@@ -56,8 +56,8 @@ import ListUF from "~/components/ListUF.astro";
         </div>
       </article>
       <article class="flex flex-row justify-start gap-8 xl:flex-col">
-        <div>
-          <a href={brasao} id="lightgallery2">
+        <div class="gallerye">
+          <a href={brasao} data-fancybox="gallery" id="lightgallery2">
             <img
               class="float-right w-64 max-w-screen-lg drop-shadow transition-all hover:z-10 hover:scale-105 active:z-10 active:scale-105"
               src={brasao}
@@ -76,5 +76,25 @@ import ListUF from "~/components/ListUF.astro";
       <Maps />
     </section>
   </section>
- 
+
+  <script>
+    import { Fancybox } from "@fancyapps/ui";
+    import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+    const options = {
+      Images: {
+        initialSize: "full",
+      },
+    };
+
+    Fancybox.bind("[data-fancybox]", {
+      Images: {
+        initialSize: "fit",
+        Panzoom: {
+          maxScale: 1.50,
+          decelFriction: 0.25,
+        },
+      },
+    });
+  </script>
 </EstadoLayout>
