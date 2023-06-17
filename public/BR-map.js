@@ -1,70 +1,92 @@
 function loadMap() {
-  var map = document.getElementById("map").contentDocument.querySelector("svg");
-  var toolTip = document.getElementById("toolTip");
-
+  let map = document.getElementById("map").contentDocument.querySelector("svg");
+  let toolTip = document.getElementById("toolTip");
+  let mapWidth = document.getElementById("map").offsetWidth;
+  let toolTipW, toolTipH, x_offset, y_offset, region, currentRegion;
+  let shouldRecalculate = true;
   // Add event listeners to map element
   if (
     !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     )
   ) {
+    // Mouse events
     map.addEventListener("click", handleClick, false);
+    map.addEventListener("mousemove", mouseEntered, false);
+    map.addEventListener("mouseout", mouseGone, false);
+  } else {
+    // Touch events
+    map.addEventListener("touchstart", mouseEntered, false);
+    map.addEventListener("touchmove", mouseEntered, false);
+    map.addEventListener("touchend", mobileGone, false);
   }
-  map.addEventListener("mousemove", mouseEntered, false);
-  map.addEventListener("mouseout", mouseGone, false);
+
+  function mobileGone(e) {
+    setTimeout(() => {
+      mouseGone(e);
+    }, 1000);
+  }
   // Show tooltip on mousemove
   function mouseEntered(e) {
-    var target = e.target;
+    let target = e.target;
+    let details = target.attributes;
+    // Paint according to each region
     if (target.nodeName == "path") {
-      //console.log(target);
-      //target.style.opacity = 0.6;
-      var details = e.target.attributes;
-      switch (details.region.value) {
-        case "North":
-          target.style.fill = "green";
-          break;
-        case "South":
-          target.style.fill = "orange";
-          break;
-        case "Northeast":
-          target.style.fill = "blue";
-          break;
-        case "Southeast":
-          target.style.fill = "red";
-          break;
-        case "Central-West":
-          target.style.fill = "yellow";
-          break;
-        default:
-          target.style.opacity = 0.6;
-          break;
-      }
       target.style.cursor = "pointer";
-
-      // Follow cursor
-      toolTip.style.transform = `translate(${e.offsetX}px, ${e.offsetY}px)`;
+      paintRegion(details.region.value, target);
+      toolTipW = toolTip.offsetWidth;
+      toolTipH = toolTip.offsetHeight;
+      y_offset = e.offsetY - toolTipH - 20;
+      x_offset = e.offsetX - (toolTipW / 2);
+      // CSS
+      toolTip.style.transform = `translate(${x_offset}px, ${y_offset}px)`;
+      toolTip.classList.remove("toolTip-hidden");
       // Tooltip data
       toolTip.innerHTML = `
             <p><strong>${details.name.value} - ${details.postal.value}</strong></p>
         `;
     }
   }
-  //  <li>Full name: ${details.gn_name.value}</li>
 
-  // Clear tooltip on mouseout
-  function mouseGone(e) {
-    var target = e.target;
-    if (target.nodeName == "path") {
-      target.style.fill = "black";
-      target.style.opacity = 1;
-      toolTip.innerHTML = "";
+
+
+  function paintRegion(region, t) {
+    switch (region) {
+      case "North":
+        t.style.fill = "#a99ada";
+        break;
+      case "South":
+        t.style.fill = "#c8dc9a";
+        break;
+      case "Northeast":
+        t.style.fill = "#eaba66";
+        break;
+      case "Southeast":
+        t.style.fill = "#77b8cb";
+        break;
+      case "Central-West":
+        t.style.fill = "#fb9a99";
+        break;
+      default:
+        t.style.opacity = 0.6;
+        break;
     }
   }
 
+  // Remove tooltip on mouseout
+  function mouseGone(e) {
+    let target = e.target;
+    if (target.nodeName == "path") {
+      target.style.fill = "black";
+      target.style.opacity = 1;
+      toolTip.classList.add("toolTip-hidden");
+      //toolTip.innerHTML = "";
+    }
+  }
   // Go to uf page onclick
   function handleClick(e) {
     if (e.target.nodeName == "path") {
-      var details = e.target.attributes;
+      let details = e.target.attributes;
       window.location.href = `/uf/${details.postal.value}`;
     }
   }
