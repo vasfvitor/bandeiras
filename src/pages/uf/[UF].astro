@@ -25,53 +25,63 @@ const brasao = `/states/${uf.UF}-brasao.svg`;
 
 // import styles
 
+const regionBr = {
+  North: "Norte",
+  Northeast: "Nordeste",
+  CentralWest: "Centro-Oeste",
+  Southeast: "Sudeste",
+  South: "Sul",
+};
+const regiao = regionBr[uf.Region];
 
 import ListUF from "~/components/ListUF.astro";
 ---
 
 <EstadoLayout>
-  <div class="prose prose-sm mx-auto p-4 text-center">
-    <h1 class="">{uf.Name} - {uf.UF}</h1>
-    <small>Capital: {uf.Capital}</small>
-    <br />
-    <small>{uf.Region} region</small>
+  <div class="prose prose-sm mx-auto p-4 text-center font-black leading-none">
+    <h1 class="mb-0">{uf.Name} - {uf.UF}</h1>
+    <span>
+      <small>Capital: {uf.Capital}</small>
+      <br />
+      <small>Região {regiao}</small>
+    </span>
   </div>
   <section class="flex flex-col justify-center px-4 xl:flex-row xl:px-0">
     <section class="flex flex-col gap-y-8 p-8 xl:w-1/3">
       <article class="flex flex-col gap-8">
         <div>
-          <a href={bandeira} data-fancybox="gallery" id="lightgallery">
+          <a href={bandeira} data-fancybox="gallery">
             <img
               class="float-left w-64 max-w-screen-lg p-4 drop-shadow transition-all hover:z-10 hover:scale-105 active:z-10 active:scale-105"
               src={bandeira}
-              alt=`Flag of ${uf.UF}`
+              alt=`Bandeira ${uf.UF}`
             />
           </a>
-          <div>
-            <p class="prose font-black xl:mt-8">Flag</p>
-            <p>Meaning: {uf.Flag}</p>
+          <div class="prose xl:mt-8">
+            <p><strong>Bandeira</strong><br />Significado: {uf.Flag}</p>
           </div>
         </div>
       </article>
       <article class="flex flex-row justify-start gap-8 xl:flex-col">
         <div class="gallerye">
-          <a href={brasao} data-fancybox="gallery" id="lightgallery2">
+          <a href={brasao} data-fancybox="gallery">
             <img
               class="float-right w-64 max-w-screen-lg drop-shadow transition-all hover:z-10 hover:scale-105 active:z-10 active:scale-105"
               src={brasao}
-              alt=`Coat of Arms of ${uf.UF}`
+              alt=`Brasão ${uf.UF}`
             />
           </a>
-          <div class="z-10">
-            <p class="prose font-black xl:mt-8">Coat of Arms</p>
-            <p>Meaning: {uf.Coat}</p>
+          <div class="prose xl:mt-8">
+            <p><strong>Brasão</strong><br />Significado: {uf.Coat}</p>
           </div>
         </div>
       </article>
     </section>
-    <section class="block xl:hidden"><ListUF /></section>
-    <section class="hidden xl:block">
-      <Maps />
+    <section id="selectState">
+      <div class="eblock exl:hidden"><ListUF /></div>
+      <div class="ehidden exl:block">
+        <Maps />
+      </div>
     </section>
   </section>
 
@@ -89,7 +99,7 @@ import ListUF from "~/components/ListUF.astro";
       Images: {
         initialSize: "fit",
         Panzoom: {
-          maxScale: 1.50,
+          maxScale: 1.5,
           decelFriction: 0.25,
         },
       },

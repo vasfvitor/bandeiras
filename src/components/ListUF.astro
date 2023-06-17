@@ -1,32 +1,32 @@
 ---
 const ufs = [
-  { sigla: "AC", nomePt: "Acre", nomeEn: "Acre" },
-  { sigla: "AL", nomePt: "Alagoas", nomeEn: "Alagoas" },
-  { sigla: "AM", nomePt: "Amazonas", nomeEn: "Amazonas" },
-  { sigla: "AP", nomePt: "Amapá", nomeEn: "Amapá" },
-  { sigla: "BA", nomePt: "Bahia", nomeEn: "Bahia" },
-  { sigla: "CE", nomePt: "Ceará", nomeEn: "Ceará" },
-  { sigla: "DF", nomePt: "Distrito Federal", nomeEn: "Federal District" },
-  { sigla: "ES", nomePt: "Espírito Santo", nomeEn: "Espírito Santo" },
-  { sigla: "GO", nomePt: "Goiás", nomeEn: "Goiás" },
-  { sigla: "MA", nomePt: "Maranhão", nomeEn: "Maranhão" },
-  { sigla: "MG", nomePt: "Minas Gerais", nomeEn: "Minas Gerais" },
-  { sigla: "MS", nomePt: "Mato Grosso do Sul", nomeEn: "Mato Grosso do Sul" },
-  { sigla: "MT", nomePt: "Mato Grosso", nomeEn: "Mato Grosso" },
-  { sigla: "PA", nomePt: "Pará", nomeEn: "Pará" },
-  { sigla: "PB", nomePt: "Paraíba", nomeEn: "Paraíba" },
-  { sigla: "PE", nomePt: "Pernambuco", nomeEn: "Pernambuco" },
-  { sigla: "PI", nomePt: "Piauí", nomeEn: "Piauí" },
-  { sigla: "PR", nomePt: "Paraná", nomeEn: "Paraná" },
-  { sigla: "RJ", nomePt: "Rio de Janeiro", nomeEn: "Rio de Janeiro" },
-  { sigla: "RN", nomePt: "Rio Grande do Norte", nomeEn: "Rio Grande do Norte" },
-  { sigla: "RO", nomePt: "Rondônia", nomeEn: "Rondônia" },
-  { sigla: "RR", nomePt: "Roraima", nomeEn: "Roraima" },
-  { sigla: "RS", nomePt: "Rio Grande do Sul", nomeEn: "Rio Grande do Sul" },
-  { sigla: "SC", nomePt: "Santa Catarina", nomeEn: "Santa Catarina" },
-  { sigla: "SE", nomePt: "Sergipe", nomeEn: "Sergipe" },
-  { sigla: "SP", nomePt: "São Paulo", nomeEn: "São Paulo" },
-  { sigla: "TO", nomePt: "Tocantins", nomeEn: "Tocantins" },
+  { sigla: "AC", nomePt: "Acre" },
+  { sigla: "AL", nomePt: "Alagoas" },
+  { sigla: "AM", nomePt: "Amazonas" },
+  { sigla: "AP", nomePt: "Amapá" },
+  { sigla: "BA", nomePt: "Bahia" },
+  { sigla: "CE", nomePt: "Ceará" },
+  { sigla: "DF", nomePt: "Distrito Federal" },
+  { sigla: "ES", nomePt: "Espírito Santo" },
+  { sigla: "GO", nomePt: "Goiás" },
+  { sigla: "MA", nomePt: "Maranhão" },
+  { sigla: "MG", nomePt: "Minas Gerais" },
+  { sigla: "MS", nomePt: "Mato Grosso do Sul" },
+  { sigla: "MT", nomePt: "Mato Grosso" },
+  { sigla: "PA", nomePt: "Pará" },
+  { sigla: "PB", nomePt: "Paraíba" },
+  { sigla: "PE", nomePt: "Pernambuco" },
+  { sigla: "PI", nomePt: "Piauí" },
+  { sigla: "PR", nomePt: "Paraná" },
+  { sigla: "RJ", nomePt: "Rio de Janeiro" },
+  { sigla: "RN", nomePt: "Rio Grande do Norte" },
+  { sigla: "RO", nomePt: "Rondônia" },
+  { sigla: "RR", nomePt: "Roraima" },
+  { sigla: "RS", nomePt: "Rio Grande do Sul" },
+  { sigla: "SC", nomePt: "Santa Catarina" },
+  { sigla: "SE", nomePt: "Sergipe" },
+  { sigla: "SP", nomePt: "São Paulo" },
+  { sigla: "TO", nomePt: "Tocantins" },
 ];
 ---
 
@@ -37,13 +37,13 @@ const ufs = [
   method="get"
 >
   <div>
-    <label for="estadoSelect">Choose a state:</label>
+    <label for="estadoSelect">Escolha um estado:</label>
     <select
       name="estados"
       class="w-full rounded bg-verde p-2 text-white"
       id="estadoSelect"
     >
-      <option value="" selected disabled>Select a state</option>
+      <option value="" selected disabled>Escolha um estado</option>
       {
         ufs.map((ufs) => (
           <option value={ufs.sigla}>
@@ -60,6 +60,10 @@ const ufs = [
     value="View"
   />
 </form>
+<p class="prose mx-auto lg:prose-lg">
+  O Brasil é composto por 27 unidades federativas - UF - das quais 26 estados e
+  o distrito federal, Brasilía, a capital.
+</p>
 <script>
   const estadoForm = document.getElementById("estadoForm") as HTMLFormElement;
   const estadoSelect = document.getElementById(
