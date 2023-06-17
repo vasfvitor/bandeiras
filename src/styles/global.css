@@ -1,7 +1,9 @@
 [hidden] {
   display: none;
 }
-
+body {
+  font-family: "Assistant Variable", sans-serif;
+}
 /**
   @media only screen and (min-width: 1200px) {
 	html,
@@ -44,7 +46,11 @@ div#toolTip > * {
 }
 
 div#toolTip {
-  @apply pointer-events-none absolute z-[999] rounded border bg-white shadow transition-all duration-500 ease-out;
+  @apply pointer-events-none absolute z-[999] rounded border bg-white opacity-100 shadow transition-all duration-500 ease-out;
+}
+
+.toolTip-hidden {
+  @apply opacity-0  !important;
 }
 
 section.content {
