@@ -40,7 +40,7 @@ const ufs = [
     <label for="estadoSelect">Escolha um estado:</label>
     <select
       name="estados"
-      class="w-full rounded bg-verde p-2 text-white"
+      class="w-full rounded bg-verde px-4 py-2 text-white"
       id="estadoSelect"
     >
       <option value="" selected disabled>Escolha um estado</option>
@@ -54,10 +54,11 @@ const ufs = [
     </select>
   </div>
   <input
-    id="submitSel"
-    class="my-2 block w-full rounded bg-amarelo py-1 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50"
+    id="submitSel" autocomplete="off"
+    class="my-2 block w-full rounded bg-amarelo py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50 disabled"
     type="submit"
-    value="View"
+    disabled
+    value="Abrir"
   />
 </form>
 <p class="prose mx-auto lg:prose-lg">
@@ -69,23 +70,24 @@ const ufs = [
   const estadoSelect = document.getElementById(
     "estadoSelect"
   ) as HTMLSelectElement;
-  const submit = document.getElementById("submit") as HTMLInputElement;
-  /*
+  const submit = document.getElementById("submitSel") as HTMLInputElement;
+
   submit?.addEventListener("click", function (e) {
     if (submit.disabled == true) {
       console.log("Error");
     }
   });
-*/
+
   estadoForm?.addEventListener("change", function (e) {
     if (estadoSelect.value) {
       submit.disabled = false;
+      submit.classList.remove("disabled");
     } else {
       submit.disabled = true;
+
     }
   });
   estadoForm?.addEventListener("submit", function (event) {
-    // Impede o envio padrão do formulário
     event.preventDefault();
     const uf = estadoSelect.value;
     const url = `/uf/${uf}`;
