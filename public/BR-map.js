@@ -3,7 +3,7 @@ function loadMap() {
   let toolTip = document.getElementById("toolTip");
   let mapWidth = document.getElementById("map").offsetWidth;
   let toolTipW, toolTipH, x_offset, y_offset, region, currentRegion;
-  let shouldRecalculate = true;
+
   // Add event listeners to map element
   if (
     !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -16,16 +16,30 @@ function loadMap() {
     map.addEventListener("mouseout", mouseGone, false);
   } else {
     // Touch events
-    map.addEventListener("touchstart", mouseEntered, false);
-    map.addEventListener("touchmove", mouseEntered, false);
-    map.addEventListener("touchend", mobileGone, false);
+    map.addEventListener("touchstart", touchStart, false);
+    map.addEventListener("touchmove", touchStart, false);
+    //map.addEventListener("touchend", mobileGone, false);
   }
-
+  let active = false;
+  let id = 0;
   function mobileGone(e) {
-    setTimeout(() => {
+    active = true;
+    id = setTimeout(() => {
+      mouseGone(e);
+    }, 1000);
+    if (!active) {
+      mouseGone(e);
+    }
+  }
+  function touchStart(e) {
+
+    mouseEntered(e);
+    id = setTimeout(() => {
       mouseGone(e);
     }, 1000);
   }
+
+
   // Show tooltip on mousemove
   function mouseEntered(e) {
     let target = e.target;
@@ -47,9 +61,6 @@ function loadMap() {
         `;
     }
   }
-
-
-
   function paintRegion(region, t) {
     switch (region) {
       case "North":
