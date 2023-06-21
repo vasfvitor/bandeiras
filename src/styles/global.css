@@ -53,6 +53,11 @@ div#toolTip {
   @apply opacity-0  !important;
 }
 
+.disabled {
+  @apply bg-gray-400 text-gray-500 hover:opacity-100 active:opacity-100 cursor-not-allowed !important;
+
+}
+
 section.content {
   flex: 1 1 80%;
   padding: 30px;
