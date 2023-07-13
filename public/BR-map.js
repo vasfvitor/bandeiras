@@ -45,7 +45,7 @@ function loadMap() {
     let target = e.target;
     let details = target.attributes;
     // Paint according to each region
-    if (target.nodeName == "path") {
+    if (target.nodeName === "path") {
       target.style.cursor = "pointer";
       paintRegion(details.region.value, target);
       toolTipW = toolTip.offsetWidth;
@@ -87,7 +87,7 @@ function loadMap() {
   // Remove tooltip on mouseout
   function mouseGone(e) {
     let target = e.target;
-    if (target.nodeName == "path") {
+    if (target.nodeName === "path") {
       target.style.fill = "black";
       target.style.opacity = 1;
       toolTip.classList.add("toolTip-hidden");
@@ -96,7 +96,7 @@ function loadMap() {
   }
   // Go to uf page onclick
   function handleClick(e) {
-    if (e.target.nodeName == "path") {
+    if (e.target.nodeName === "path") {
       let details = e.target.attributes;
       window.location.href = `/uf/${details.postal.value}`;
     }

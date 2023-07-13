@@ -27,3 +27,4 @@ console.log(reg[1].Regions.region_br);
 export { db };
 //console.log('uf:', ufs);
 //console.log('error:', error);
+

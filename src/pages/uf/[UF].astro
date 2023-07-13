@@ -1,38 +1,22 @@
 ---
-/*
-export function getStaticPaths() {
-  const paths = ufData.map((uf) => ({ params: { UF: uf.sigla } }));
-  return paths;
-}
-*/
-//console.log(UF);
 import Maps from "~/components/maps/Brazil.astro";
 import EstadoLayout from "~/layouts/EstadoLayout.astro";
-import { db } from "~/supa";
+import db from "./estados.json";
 
+//console.log(JSON.stringify(db));
 export function getStaticPaths() {
   const paths = db?.map((db) => ({ params: { UF: db.UF } }));
   return paths;
 }
 //console.log(Astro.params);
 const { UF } = Astro.params;
+
 //const index = ufData.findIndex((uf) => uf.sigla === UF);
 const index: any = db?.findIndex((item) => item.UF === UF);
 const uf = db[index];
 
 const bandeira = `/states/${uf.UF}-bandeira.svg`;
 const brasao = `/states/${uf.UF}-brasao.svg`;
-
-// import styles
-
-const regionBr = {
-  North: "Norte",
-  Northeast: "Nordeste",
-  CentralWest: "Centro-Oeste",
-  Southeast: "Sudeste",
-  South: "Sul",
-};
-const regiao = regionBr[uf.Region];
 
 import ListUF from "~/components/ListUF.astro";
 ---
@@ -43,7 +27,7 @@ import ListUF from "~/components/ListUF.astro";
     <span>
       <small>Capital: {uf.Capital}</small>
       <br />
-      <small>Região {regiao}</small>
+      <small>Região {uf.Region}</small>
     </span>
   </div>
   <section class="flex flex-col justify-center px-4 xl:flex-row xl:px-0">
