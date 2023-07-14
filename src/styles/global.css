@@ -54,15 +54,15 @@ div#toolTip {
 }
 
 .disabled {
-  @apply bg-gray-400 text-gray-500 hover:opacity-100 active:opacity-100 cursor-not-allowed !important;
+  @apply cursor-not-allowed bg-gray-400 text-gray-500 hover:opacity-100 active:opacity-100 !important;
 }
 
 .q-disabled {
-  @apply scale-100 hover:cursor-not-allowed hover:scale-100 active:scale-100 opacity-40 !important;
+  @apply scale-100 opacity-40 hover:scale-100 hover:cursor-not-allowed active:scale-100 !important;
 }
 
 .q-tip {
-  @apply scale-[1.1] border-red-500 border-2 p-0;
+  @apply scale-[1.1] border-2 border-red-500 p-0;
 }
 
 .q-tip-animation {

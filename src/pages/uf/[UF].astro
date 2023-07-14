@@ -23,10 +23,10 @@ import ListUF from "~/components/ListUF.astro";
 
 <EstadoLayout>
   <div
-    class="prose prose-sm mx-auto p-4 text-center font-black leading-none font-hand"
+    class="prose prose-sm mx-auto p-4 text-center font-hand font-black leading-none"
   >
     <h1 class="b-0 mt-4">{uf.Name} - {uf.UF}</h1>
-    <p class="text-lg m-0">
+    <p class="m-0 text-lg">
       <span>Capital: {uf.Capital}</span> -
       <span>Região {uf.Region}</span>
     </p>
@@ -45,7 +45,7 @@ import ListUF from "~/components/ListUF.astro";
           <div class="prose xl:mt-8">
             <p>
               <span
-                class="font-hand font-black tracking-widest border-b bg-white shadow-sm px-3 rounded mx-2"
+                class="mx-2 rounded border-b bg-white px-3 font-hand font-black tracking-widest shadow-sm"
                 >Bandeira</span
               >{uf.Flag}
             </p>
@@ -64,7 +64,7 @@ import ListUF from "~/components/ListUF.astro";
           <div class="prose xl:mt-8">
             <p>
               <span
-                class="font-hand font-black tracking-widest border-b bg-white shadow-sm px-3 rounded mx-2"
+                class="mx-2 rounded border-b bg-white px-3 font-hand font-black tracking-widest shadow-sm"
                 >Brasão</span
               >{uf.Coat}
             </p>

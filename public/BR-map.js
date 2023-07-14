@@ -32,13 +32,11 @@ function loadMap() {
     }
   }
   function touchStart(e) {
-
     mouseEntered(e);
     id = setTimeout(() => {
       mouseGone(e);
     }, 1000);
   }
-
 
   // Show tooltip on mousemove
   function mouseEntered(e) {
@@ -51,7 +49,7 @@ function loadMap() {
       toolTipW = toolTip.offsetWidth;
       toolTipH = toolTip.offsetHeight;
       y_offset = e.offsetY - toolTipH - 20;
-      x_offset = e.offsetX - (toolTipW / 2);
+      x_offset = e.offsetX - toolTipW / 2;
       // CSS
       toolTip.style.transform = `translate(${x_offset}px, ${y_offset}px)`;
       toolTip.classList.remove("toolTip-hidden");

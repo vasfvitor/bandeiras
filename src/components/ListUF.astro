@@ -54,8 +54,9 @@ const ufs = [
     </select>
   </div>
   <input
-    id="submitSel" autocomplete="off"
-    class="my-2 block w-full rounded bg-amarelo py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50 disabled"
+    id="submitSel"
+    autocomplete="off"
+    class="disabled my-2 block w-full rounded bg-amarelo py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50"
     type="submit"
     disabled
     value="Abrir"
@@ -84,7 +85,6 @@ const ufs = [
       submit.classList.remove("disabled");
     } else {
       submit.disabled = true;
-
     }
   });
   estadoForm?.addEventListener("submit", function (event) {

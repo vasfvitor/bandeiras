@@ -43,7 +43,6 @@ Another challenge was to make the project mobile friendly.
 
 The Brazil map (BR.svg) came [from this project](https://github.com/ahuseyn/interactive-svg-maps). The logic came from the same mentioned project script but it was heavily modified to match the current projects idea.
 
-
 at least be several hundred words that describe things in detail!
 
 Your README.md file should be minimally multiple paragraphs in length,
@@ -77,7 +76,7 @@ bandeiras
 │  ├─ components
 │  │  ├─ BaseHead.astro
 │  │  ├─ Footer.astro
-│  │  ├─ Header.astro     
+│  │  ├─ Header.astro
 │  │  ├─ HeaderLink.astro
 │  │  ├─ ListUF.astro     // Select component for each state
 │  │  └─ maps

@@ -12,24 +12,24 @@ adicionar listener pra cada bandeira, se for errada, ficar vermelho e/ou treme. 
 ---
 
 <Layout>
-    <main class="font-serif">
-        <section class="prose my-8 md:prose-lg mx-auto">
-            <h1 class="font-hand -mb-12 leading-none">Quiz das Bandeiras</h1>
-            <p class="m-0 leading-none">
-                Vamos ver se você consegue identificar as 27!
-            </p>
-        </section>
-        <section class="container mx-auto max-w-screen-lg" id="quiz">
-            <div class="flex flex-col md:flex-row justify-around">
-                <span class="my-6 px-8 font-bold" id="q-question"></span>
-                <button
-                    id="q-restart"
-                    class="px-8 rounded py-2 my-4 bg-amarelo font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50"
-                    value="Reiniciar">Reiniciar</button
-                >
-            </div>
-            <div class="m-0" id="q-bandeiras"></div>
-        </section>
-    </main>
-    <script src="~/scripts/quiz.ts"></script>
+  <main class="font-serif">
+    <section class="prose mx-auto my-8 md:prose-lg">
+      <h1 class="-mb-12 font-hand leading-none">Quiz das Bandeiras</h1>
+      <p class="m-0 leading-none">
+        Vamos ver se você consegue identificar as 27!
+      </p>
+    </section>
+    <section class="container mx-auto max-w-screen-lg" id="quiz">
+      <div class="flex flex-col justify-around md:flex-row">
+        <span class="my-6 px-8 font-bold" id="q-question"></span>
+        <button
+          id="q-restart"
+          class="my-4 rounded bg-amarelo px-8 py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50"
+          value="Reiniciar">Reiniciar</button
+        >
+      </div>
+      <div class="m-0" id="q-bandeiras"></div>
+    </section>
+  </main>
+  <script src="~/scripts/quiz.ts"></script>
 </Layout>
