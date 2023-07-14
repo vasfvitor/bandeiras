@@ -58,11 +58,18 @@ div#toolTip {
 }
 
 .q-disabled {
-  @apply scale-100 hover:scale-100 active:scale-100 opacity-40 !important;
+  @apply scale-100 hover:cursor-not-allowed hover:scale-100 active:scale-100 opacity-40 !important;
 }
 
 .q-tip {
   @apply scale-[1.1] border-red-500 border-2 p-0;
+}
+
+.q-tip-animation {
+  animation-name: tip;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 @keyframes tip {
@@ -77,13 +84,6 @@ div#toolTip {
   100% {
     border-color: transparent;
   }
-}
-
-.q-tip-animation {
-  animation-name: tip;
-  animation-duration: 500ms;
-  animation-iteration-count: 2;
-  animation-fill-mode: forwards;
 }
 
 section.content {

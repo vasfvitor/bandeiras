@@ -16,7 +16,6 @@
     "@astrojs/tailwind": "^3.1.3",
     "@fancyapps/ui": "^5.0.19",
     "@fontsource-variable/assistant": "^5.0.5",
-
     "@fontsource/homemade-apple": "^5.0.5",
     "@supabase/supabase-js": "^2.25.0",
     "@tailwindcss/typography": "^0.5.9",
