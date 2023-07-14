@@ -22,27 +22,33 @@ import ListUF from "~/components/ListUF.astro";
 ---
 
 <EstadoLayout>
-  <div class="prose prose-sm mx-auto p-4 text-center font-black leading-none">
-    <h1 class="mb-0">{uf.Name} - {uf.UF}</h1>
-    <span>
-      <small>Capital: {uf.Capital}</small>
-      <br />
-      <small>Região {uf.Region}</small>
-    </span>
+  <div
+    class="prose prose-sm mx-auto p-4 text-center font-black leading-none font-hand"
+  >
+    <h1 class="b-0 mt-4">{uf.Name} - {uf.UF}</h1>
+    <p class="text-lg m-0">
+      <span>Capital: {uf.Capital}</span> -
+      <span>Região {uf.Region}</span>
+    </p>
   </div>
   <section class="flex flex-col justify-center px-4 xl:flex-row xl:px-0">
-    <section class="flex flex-col gap-y-8 p-8 xl:w-1/3">
-      <article class="flex flex-col gap-8">
+    <section class="flex flex-row gap-x-8 p-6 xl:w-1/3">
+      <article class="flex flex-col">
         <div>
           <a href={bandeira} data-fancybox="gallery">
             <img
-              class="float-left w-64 max-w-screen-lg p-4 drop-shadow transition-all hover:z-10 hover:scale-105 active:z-10 active:scale-105"
+              class="float-left w-64 max-w-screen-lg px-4 py-2 drop-shadow transition-all hover:z-10 hover:scale-105 active:z-10 active:scale-105"
               src={bandeira}
               alt=`Bandeira ${uf.UF}`
             />
           </a>
           <div class="prose xl:mt-8">
-            <p><strong>Bandeira</strong><br />Significado: {uf.Flag}</p>
+            <p>
+              <span
+                class="font-hand font-black tracking-widest border-b bg-white shadow-sm px-3 rounded mx-2"
+                >Bandeira</span
+              >{uf.Flag}
+            </p>
           </div>
         </div>
       </article>
@@ -50,13 +56,18 @@ import ListUF from "~/components/ListUF.astro";
         <div class="gallerye">
           <a href={brasao} data-fancybox="gallery">
             <img
-              class="float-right w-64 max-w-screen-lg drop-shadow transition-all hover:z-10 hover:scale-105 active:z-10 active:scale-105"
+              class="float-right w-64 max-w-screen-lg px-4 py-2 drop-shadow transition-all hover:z-10 hover:scale-105 active:z-10 active:scale-105"
               src={brasao}
               alt=`Brasão ${uf.UF}`
             />
           </a>
           <div class="prose xl:mt-8">
-            <p><strong>Brasão</strong><br />Significado: {uf.Coat}</p>
+            <p>
+              <span
+                class="font-hand font-black tracking-widest border-b bg-white shadow-sm px-3 rounded mx-2"
+                >Brasão</span
+              >{uf.Coat}
+            </p>
           </div>
         </div>
       </article>

@@ -1,0 +1,127 @@
+---
+import Layout from "~/layouts/BaseLayout.astro";
+//import Quiz from "~/components/Quiz.astro";
+/*
+rascunho:
+
+clicar na bandeira do estado {estado}
+
+adicionar listener pra cada bandeira, se for errada, ficar vermelho e/ou treme. Se for certo, fica verde e depois diminui opacidade, ai atualiza o desafio no topo. Até 3 tentativas antes de resetar ou mostrar a certa.
+
+*/
+---
+
+<Layout>
+    <main class="prose my-8 font-hand md:prose-lg mx-auto">
+        <h1 class="-mb-12 leading-none">Quiz</h1>
+        <p class="m-0 leading-none">
+            Vamos ver se você consegue identificar as 27 bandeiras
+        </p>
+    </main><div class="container mx-auto max-w-screen-lg" id="quiz">
+        <div><span id="question"></span></div>
+        <div class="m-0" id="bandeiras"></div>
+    </div>
+</Layout>
+
+<script>
+    import db from "~/pages/uf/estados.json";
+    window.onload = function () {
+        //function shuffe() {
+        //const estado: string[] = new Array(27);
+        const uf = db?.map((db) => db.UF);
+        const uf_name = db?.map((db) => db.Name);
+        const ufs = { short: uf, long: uf_name };
+        console.log(`${ufs.short[4]} + ${ufs.long[4]}`);
+        //console.log("UFBO " + ufs.short[0]);
+        //const brasao: any[] = new Array(27);
+        /*
+    for (let i = 0; i < uf.length; i++) {
+        estado[i] = uf_name[i];
+        console.log(estado[i]);
+    }*/
+
+        function shuffle(arr: any[]) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function placeFlags(shuffledFlags: string[]) {
+            for (const flag of shuffledFlags) {
+                const img = document.createElement("img");
+                img.className =
+                    "w-32 m-2 inline drop-shadow transition-all  hover:scale-105 active:scale-110";
+                img.src = `/states/${flag}-bandeira.svg`;
+                img.alt = `Bandeira ${flag}`;
+                img.id = flag;
+                document.getElementById("bandeiras")?.appendChild(img);
+                document
+                    .getElementById(flag)
+                    ?.addEventListener("click", Cclick);
+                //document.getElementById("bandeiras")?.appendChild(img);
+            }
+        }
+
+        //
+
+        function generateQuestion(idx: number | undefined) {
+            if (!idx) {
+                return 0;
+            }
+            const span = document.getElementById("question");
+            span.textContent = `Clique na bandeira: ${ufs.long[idx]}`;
+            console.log(`${ufs.short[idx]} - ${ufs.long[idx]} - ${idx}`);
+            return idx;
+        }
+
+        function randomNums(): number[] {
+            let nums = Array(27)
+                .fill(0)
+                .map((_: any, i: number) => i);
+            return shuffle(nums);
+        }
+        let flags = [...ufs.short];
+        const shuffledFlags = shuffle(flags);
+        placeFlags(shuffledFlags);
+        const rndInt: number[] = randomNums();
+
+        let q = generateQuestion(rndInt.shift());
+
+        //console.log(rndInt);
+        let count = 0;
+        function Cclick(this: any) {
+            let nthFlag = this.id;
+            let qFlag = ufs.short[q]
+            let flag = document.getElementById(qFlag);
+            console.log("current:" + qFlag);
+            //console.log(this.id + ufs.long[currentQuestion]);
+            if (nthFlag === qFlag) {
+                document
+                    .getElementById(nthFlag)
+                    ?.removeEventListener("click", Cclick);
+                count = 0;
+                console.log("Right!");
+                fadeFlag(nthFlag);
+                q = generateQuestion(rndInt.shift());
+                flag.classList.remove("q-tip");
+                flag.classList.remove("q-tip-animation");
+            } else if (count == 5) {
+                count = 0;
+                flag.classList.add("q-tip");
+                flag.classList.add("q-tip-animation");
+            }
+            count++;
+            return count;
+        }
+
+        function fadeFlag(id: string) {
+            let flag = document.getElementById(id);
+            flag.style.opacity = "0.3";
+            flag.classList.add("q-disabled");
+        }
+    };
+
+    //console.log(rndInt);
+</script>
