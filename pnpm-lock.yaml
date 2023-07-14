@@ -10,6 +10,9 @@ dependencies:
   '@fancyapps/ui':
     specifier: ^5.0.19
     version: 5.0.19
+  '@fontsource-variable/assistant':
+    specifier: ^5.0.5
+    version: 5.0.5
   '@fontsource/assistant':
     specifier: latest
     version: 5.0.5
@@ -654,6 +657,10 @@ packages:
 
   /@fancyapps/ui@5.0.19:
     resolution: {integrity: sha512-/DDmO+9wnlXkk9oimwg7eT7Wo8qKuW4XU6NgJtqdJ/GOZvEPq5ozLEqSKy9Z4pa4RkLwtbcTgBixP7f0C+6kVw==}
+    dev: false
+
+  /@fontsource-variable/assistant@5.0.5:
+    resolution: {integrity: sha512-1/uZOqqMIxQHO/pHh0FT0WRI55u518/qTu3i23LdXzeorapdbpQU4BL5H2ymXVmtKrcUUHvSIKSU76WRv0ASVA==}
     dev: false
 
   /@fontsource/assistant@5.0.5:
