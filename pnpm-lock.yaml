@@ -10,13 +10,10 @@ dependencies:
   '@fancyapps/ui':
     specifier: ^5.0.19
     version: 5.0.19
-  '@fontsource-variable/assistant':
+  '@fontsource/assistant':
     specifier: latest
     version: 5.0.5
   '@fontsource/homemade-apple':
-    specifier: ^5.0.5
-    version: 5.0.5
-  '@fontsource/pacifico':
     specifier: ^5.0.5
     version: 5.0.5
   '@supabase/supabase-js':
@@ -659,16 +656,12 @@ packages:
     resolution: {integrity: sha512-/DDmO+9wnlXkk9oimwg7eT7Wo8qKuW4XU6NgJtqdJ/GOZvEPq5ozLEqSKy9Z4pa4RkLwtbcTgBixP7f0C+6kVw==}
     dev: false
 
-  /@fontsource-variable/assistant@5.0.5:
-    resolution: {integrity: sha512-1/uZOqqMIxQHO/pHh0FT0WRI55u518/qTu3i23LdXzeorapdbpQU4BL5H2ymXVmtKrcUUHvSIKSU76WRv0ASVA==}
+  /@fontsource/assistant@5.0.5:
+    resolution: {integrity: sha512-Aj/vecVt1QBy75y6ENprw+QQXabeWnVhz4pGUSy5XqPdnjGUSN+dmAdH3YBR6fRTboDUI4WUIs5bHFY+XuFfCQ==}
     dev: false
 
   /@fontsource/homemade-apple@5.0.5:
     resolution: {integrity: sha512-az1Z3YiWgn1NQxeXUKB1LInuvGViQp5SoQgvqCnwNmWRSR53kobxvbPxAIv/i+ustSCMygaWlHlY9rcEsO6VrA==}
-    dev: false
-
-  /@fontsource/pacifico@5.0.5:
-    resolution: {integrity: sha512-/CRTtYwrC5M0DV1Ojp9dUMHim2+KMXiEKGCNAm0HzgOuZk8swEAYMoNBBY6BYi6CijcG6FZQQPq1Z1EgYRNmrg==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:
