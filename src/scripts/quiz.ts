@@ -1,7 +1,7 @@
 import db from "~/pages/uf/estados.json";
 
 interface TheQuiz {
-  q: number;
+  score: number;
   guesses: number;
   sequence: number[];
   currentAns: number;
@@ -30,33 +30,41 @@ function randomNums(n: number): number[] {
 }
 //
 //
-window.onload = function () {
+window.addEventListener("load", function () {
+  //window.onload = function () {
   document.getElementById("q-restart")?.addEventListener("click", reset);
   //
+  let score = document.getElementById("q-score");
+
   let theGame: TheQuiz = {
-    q: 0,
+    score: 14,
     guesses: 0,
     sequence: randomNums(27),
     currentAns: 0,
   };
 
-  function start(): TheQuiz {
+  function start(): void {
     let shuffledFlags = shuffle([...ufs.short]);
     placeFlags(shuffledFlags);
-    randomizeQuestion();
-    return theGame;
+    initGame();
   }
 
-  function reset() {
-    theGame.guesses = 0;
-    console.log("before = " + theGame.currentAns);
-    randomizeQuestion();
-    console.log("after  = " + theGame.currentAns);
+  function reset(): void {
+    let restarting = document.getElementById("q-restarting");
+    restarting.classList.remove("hidden");
+    restarting.classList.add("q-restart", "scale-out-center");
+    restarting.addEventListener("animationend", () => {
+      restarting.classList.remove("q-restart", "scale-out-center");
+      restarting.classList.add("hidden");
+    });
+    initGame();
     restartFlags();
-    return theGame;
   }
 
-  function randomizeQuestion() {
+  function initGame(): void {
+    theGame.guesses = 0;
+    theGame.score = 14;
+    score.innerHTML = ` ${theGame.score}`;
     theGame.sequence = randomNums(27);
     theGame.currentAns = generateQuestion(theGame.sequence.shift());
   }
@@ -67,17 +75,22 @@ window.onload = function () {
       for (const UF of shuffledFlags) {
         const flag = document.createElement("img");
         flag.className =
-          "w-32 m-3 inline transition-all shadow hover:cursor-pointer q-flag hover:scale-105 active:scale-110";
+          "w-20 md:w-32 m-2 md:m-3 inline relative transition-all shadow hover:cursor-pointer q-flag hover:scale-105 active:scale-110";
         flag.src = `/states/${UF}-bandeira.svg`;
         flag.alt = `Bandeira ${UF}`;
         flag.id = UF;
         flag.addEventListener("click", guess);
+        flag.addEventListener("click", animate);
         div?.appendChild(flag);
       }
     }
+    let flags = Array.from(document.getElementsByClassName("q-flag"));
+    flags.forEach((flag) => {
+      createAnimation(flag);
+    });
   }
 
-  function restartFlags() {
+  function restartFlags(): void {
     let flags = Array.from(document.getElementsByClassName("q-flag"));
     flags.forEach((flag) => {
       flag.removeEventListener("click", guess);
@@ -88,12 +101,13 @@ window.onload = function () {
 
   function generateQuestion(idx: number | undefined): number {
     if (idx === undefined) {
-      document.getElementById("q-question").textContent = `Fim de jogo`;
+      document.getElementById("q-chal").innerHTML = `Fim de jogo`;
+      document.getElementById("q-question").innerHTML = ``;
       endGame();
       return 0;
     }
     const p = document.getElementById("q-question");
-    p.textContent = `Clique na bandeira: ${ufs.long[idx]}`;
+    p.innerHTML = `${ufs.long[idx]}`;
     return idx;
   }
   //
@@ -102,7 +116,7 @@ window.onload = function () {
   start();
   //
   //
-  function guess(this: any) {
+  function guess(this: any): void {
     console.log(theGame.currentAns);
     const tryFlagId = this.id;
     const ansFlagId = ufs.short[theGame.currentAns];
@@ -114,6 +128,7 @@ window.onload = function () {
 
     if (tryFlagId === ansFlagId) {
       this.removeEventListener("click", guess);
+      theGame.score += Math.floor(12 / (theGame.guesses || 1));
       theGame.guesses = 0;
       theGame.currentAns = generateQuestion(theGame.sequence.shift());
       console.log("curr = " + theGame.currentAns);
@@ -121,12 +136,46 @@ window.onload = function () {
       ansFlag.classList.add("q-disabled");
     } else if (theGame.guesses === 4) {
       theGame.guesses = 0;
+      theGame.score -= 9;
       ansFlag.classList.add("q-tip", "q-tip-animation");
+    } else {
+      theGame.score -= 1;
     }
     theGame.guesses++;
+    if (theGame.score < 0) {
+      reset();
+    }
+    score.innerHTML = ` ${theGame.score}`;
   }
 
-  function endGame() {
-    document.getElementById("question").textContent = `Fim de jogo`;
+  function endGame(): void {
+    document.getElementById("q-question").textContent = `Fim de jogo`;
   }
-};
+
+  function createAnimation(flag: any) {
+    const options = document.querySelectorAll(".q-flag");
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        option.classList.add("pulse");
+        setTimeout(() => {
+          option.classList.remove("pulse");
+        }, 1000); // Tempo de duração da animação em milissegundos
+      });
+    });
+    //ufs.long
+
+    console.log(flag);
+    if (!document.getElementById(`${flag.id}-tooltip`)) {
+      const tooltip = document.createElement("span");
+      tooltip.className = "bg-black absolute z-10 text-white";
+      tooltip.textContent = `${flag.id}`;
+      tooltip.id = `${flag.id}-tooltip`;
+      console.log(flag);
+      flag.appendChild(tooltip);
+    }
+  }
+  function animate() {
+    return 0;
+  }
+});

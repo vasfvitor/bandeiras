@@ -1,5 +1,6 @@
 ---
 import Layout from "~/layouts/BaseLayout.astro";
+import "../styles/quiz.css";
 //import Quiz from "~/components/Quiz.astro";
 /*
 rascunho:
@@ -17,19 +18,47 @@ adicionar listener pra cada bandeira, se for errada, ficar vermelho e/ou treme. 
             <h1 class="-mb-6 font-hand text-gray-300 -z-10">
                 Quiz das Bandeiras
             </h1>
-            <span class="mt-4"> Identifique cada uma das 27 bandeiras!</span>
+            <p class="font-sans tracking-tight leading-none">
+                <span class="mt-4 underline">
+                    Identifique cada uma das 27 bandeiras!</span
+                >
+                <br /><br />
+                <small>A cada 3 erros será mostrado a resposta.</small>
+                <br />
+                <small
+                    >Você começa com 14 pontos, se chegar em 0 você perde.</small
+                >
+            </p>
         </section>
-        <section class="container mx-auto max-w-screen-lg" id="quiz">
+        <section
+            class="container text-center mx-auto max-w-screen-lg"
+            id="quiz"
+        >
             <div
-                class="w-auto relative flex flex-col justify-around md:flex-row"
+                class="my-6 w-auto items-center grid md:grid-cols-3 justify-around border rounded"
             >
-                <span class="my-6 px-8 font-bold" id="q-question"></span>
+                <span class="order-2 md:order-1">
+                    Pontuação<span id="q-score"> 0</span>
+                </span>
+                <span class="order-3 md:order-2" id="q-chal"
+                    >Clique na bandeira:
+                    <br />
+                    <span
+                        class="font-bold uppercase font-mono underline shadow-inner bg-red-200 block rounded py-px"
+                        id="q-question"></span>
+                </span>
                 <button
                     id="q-restart"
-                    class="my-4 absolute right-20 rounded bg-amarelo px-8 py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50"
+                    class="order-1 md:order-3 my-4 rounded bg-amarelo mx-8 px-4 py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50"
                     value="Reiniciar">Reiniciar</button
                 >
             </div>
+            <aside
+                id="q-restarting"
+                class="absolute top-20 z-20 inset-x-1/3 self-center bg-gray-800 text-white rounded py-px hidden"
+            >
+                Reiniciando
+            </aside>
             <div class="m-0" id="q-bandeiras"></div>
         </section>
     </main>
