@@ -1,9 +1,9 @@
 .q-disabled {
-  @apply scale-100 opacity-40 shadow-none grayscale hover:scale-100 hover:cursor-not-allowed active:scale-100 !important;
+  @apply scale-90 opacity-40 shadow-none grayscale hover:scale-90 hover:cursor-not-allowed active:scale-90 !important;
 }
 
 .q-tip {
-  @apply scale-[1.1] border-2 border-red-500 p-0;
+  @apply scale-[1.1]  border-red-500;
 }
 
 .q-tip-animation {

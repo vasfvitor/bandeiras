@@ -14,7 +14,8 @@ adicionar listener pra cada bandeira, se for errada, ficar vermelho e/ou treme. 
 
 <Layout>
     <main class="font-serif">
-        <section class="prose tracking-widest mx-auto mt-8">
+        
+        <section class="prose  tracking-widest mx-auto mt-8">
             <h1 class="-mb-6 font-hand text-gray-300 -z-10">
                 Quiz das Bandeiras
             </h1>
@@ -31,10 +32,12 @@ adicionar listener pra cada bandeira, se for errada, ficar vermelho e/ou treme. 
             id="quiz"
         >
             <div
-                id=""
-                class="my-6 w-auto items-center grid md:grid-cols-3 justify-around border rounded"
+                id="q-head"
+                class="my-6 w-auto items-center grid md:grid-cols-3 justify-around border border-gray-400/20 mx-auto rounded"
             >
-                <span class="order-2 md:order-1">
+                <span
+                    class="order-2 rounded bg-gray-100 w-fit mx-auto px-4 md:order-1"
+                >
                     Pontuação<span id="q-score"> 0</span>
                 </span>
                 <span class="order-3 md:order-2 relative" id="q-chal"
@@ -52,7 +55,7 @@ adicionar listener pra cada bandeira, se for errada, ficar vermelho e/ou treme. 
                 >
             </div>
 
-            <div class="m-0" id="q-bandeiras"></div>
+            <div class="m-0" id="q-flags"></div>
         </section>
     </main>
     <script src="~/scripts/quiz.ts"></script>

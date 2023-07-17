@@ -1,16 +1,46 @@
 export function ResetBtn() {
-  let q = document.getElementById("q-question");
+  const q = document.getElementById("q-head");
   q?.classList.add("animate-pulse", "contrast-0", "brightness-50");
   setTimeout(() => {
     q?.classList.remove("animate-pulse", "contrast-0", "brightness-50");
   }, 1000);
 
-  let btn = document.getElementById("q-restart");
+  const btn = document.getElementById("q-restart");
   btn?.classList.add("disabled");
   btn?.setAttribute("disabled", "");
   setTimeout(() => {
     btn?.classList.remove("disabled");
     btn?.removeAttribute("disabled");
+  }, 1000);
+
+  const flags = document.querySelectorAll(".q-flag");
+  flags.forEach((f) => {
+    f?.classList.add(
+      "animate-pulse",
+      "contrast-0",
+      "brightness-50",
+      "disabled",
+      "q-disabled"
+    );
+
+    setTimeout(() => {
+      f?.classList.remove(
+        "animate-pulse",
+        "contrast-0",
+        "brightness-50",
+        "disabled",
+        "q-disabled"
+      );
+    }, 1000);
+  });
+
+  const d_flag = document.getElementById("q-flags") as HTMLElement;
+  d_flag?.classList.add("animate-pulse", "contrast-0", "brightness-50");
+
+  setTimeout(() => {
+    d_flag?.classList.remove("disabled");
+    d_flag?.removeAttribute("disabled");
+    d_flag?.classList.remove("animate-pulse", "contrast-0", "brightness-50");
   }, 1000);
 }
 

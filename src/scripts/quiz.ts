@@ -13,12 +13,15 @@ window.addEventListener("load", function () {
   //window.onload = function () {
   document.getElementById("q-restart")?.addEventListener("click", reset);
 
-  let d_score = document.getElementById("q-score");
+  const d_score = document.getElementById("q-score");
+  const FLAG_COUNT = 27;
+
   let quizz = {
     Score: 14,
     Guess: 0,
-    Sequence: helper.randomNums(27),
+    Sequence: helper.randomNums(FLAG_COUNT),
     Ans: 0,
+    Started: false,
   };
 
   function start(): void {
@@ -38,14 +41,16 @@ window.addEventListener("load", function () {
     quizz.Score = 14;
     d_score.innerHTML = ` ${quizz.Score}`;
     quizz.Sequence = helper.randomNums(27);
-    quizz.Ans = getNewQuestion(quizz.Sequence.shift());
+    getNewQuestion(quizz.Sequence.shift());
   }
 
   function placeFlags(shuffledFlags: string[]) {
-    if (!document.getElementById(shuffledFlags[0])) {
-      const d_flag = document.getElementById("q-bandeiras");
-      for (const UF of shuffledFlags) {
+    if (!quizz.Started) {
+      const d_flag = document.getElementById("q-flags") as HTMLElement;
+      shuffledFlags.map((UF) => {
         const f = document.createElement("img");
+        const div = document.createElement("div");
+        div.className = `inline-flex flex-col after:content-['${UF}'] `
         f.className =
           "w-20 md:w-32 m-2 md:m-3 inline relative transition-all shadow hover:cursor-pointer q-flag hover:scale-105 active:scale-110";
         f.src = `/states/${UF}-bandeira.svg`;
@@ -53,12 +58,15 @@ window.addEventListener("load", function () {
         f.id = UF;
         f.addEventListener("click", guess);
         f.addEventListener("click", anim.animate);
-        d_flag?.appendChild(f);
-      }
+        div.appendChild(f);
+        d_flag.appendChild(div);
+      });
+      quizz.Started = true;
     }
-    let flags = Array.from(document.getElementsByClassName("q-flag"));
+
+    const flags = document.querySelectorAll(".q-flag");
     flags.forEach((f) => {
-      anim.Flags(f);
+      anim.Flags(f as HTMLElement);
     });
   }
 
@@ -71,7 +79,7 @@ window.addEventListener("load", function () {
     });
   }
 
-  function getNewQuestion(idx: number | undefined): number {
+  function getNewQuestion(idx: number | undefined) {
     if (idx === undefined) {
       document.getElementById("q-chal").innerHTML = `Fim de jogo`;
       document.getElementById("q-question").innerHTML = ``;
@@ -80,7 +88,7 @@ window.addEventListener("load", function () {
     }
     const p = document.getElementById("q-question");
     p.innerHTML = `${ufs.long[idx]}`;
-    return idx;
+    quizz.Ans = idx;
   }
   //
   //
@@ -88,21 +96,16 @@ window.addEventListener("load", function () {
   start();
   //
   //
-  function guess(this: any): void {
-    //console.log(quizz.Ans);
+  function guess(this: HTMLElement): void {
     const tryFlagId = this.id;
     const ansFlagId = ufs.short[quizz.Ans];
     const d_ansFlag = document.getElementById(ansFlagId) as HTMLImageElement;
-    /*if (!ansFlag) {
-      return;
-    } else
-    */
+
     if (tryFlagId === ansFlagId) {
       this.removeEventListener("click", guess);
       quizz.Score += Math.floor(12 / (quizz.Guess || 1));
       quizz.Guess = 0;
-      quizz.Ans = getNewQuestion(quizz.Sequence.shift());
-      //console.log("curr = " + quizz.Ans);
+      getNewQuestion(quizz.Sequence.shift());
       d_ansFlag.classList.remove("q-tip", "q-tip-animation");
       d_ansFlag.classList.add("q-disabled");
     } else if (quizz.Guess === 4) {
@@ -112,10 +115,15 @@ window.addEventListener("load", function () {
     } else {
       quizz.Score -= 1;
     }
+
     if (quizz.Score < 0) {
       reset();
     }
     quizz.Guess++;
+    updateScore();
+  }
+
+  function updateScore(): void {
     d_score.innerHTML = ` ${quizz.Score}`;
     anim.showScoreAnimation(d_score);
   }
@@ -124,5 +132,3 @@ window.addEventListener("load", function () {
     document.getElementById("q-question").textContent = `Fim de jogo`;
   }
 });
-
-function calcScore() {}
