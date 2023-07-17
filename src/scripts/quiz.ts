@@ -1,11 +1,6 @@
 import db from "~/pages/uf/estados.json";
-
-interface TheQuiz {
-  score: number;
-  guesses: number;
-  sequence: number[];
-  currentAns: number;
-}
+import * as helper from "~/scripts/quiz-helper";
+import * as anim from "~/scripts/quiz-animation";
 
 function getUfs() {
   const uf = db?.map((db) => db.UF);
@@ -13,93 +8,70 @@ function getUfs() {
   const ufs = { short: uf, long: uf_name };
   return ufs;
 }
-
-function shuffle(arr: any[]) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-function randomNums(n: number): number[] {
-  let nums = Array(n)
-    .fill(0)
-    .map((_: any, i: number) => i);
-  return shuffle(nums);
-}
-//
 //
 window.addEventListener("load", function () {
   //window.onload = function () {
   document.getElementById("q-restart")?.addEventListener("click", reset);
-  //
-  let score = document.getElementById("q-score");
 
-  let theGame: TheQuiz = {
-    score: 14,
-    guesses: 0,
-    sequence: randomNums(27),
-    currentAns: 0,
+  let d_score = document.getElementById("q-score");
+  let quizz = {
+    Score: 14,
+    Guess: 0,
+    Sequence: helper.randomNums(27),
+    Ans: 0,
   };
 
   function start(): void {
-    let shuffledFlags = shuffle([...ufs.short]);
-    placeFlags(shuffledFlags);
+    let ssFlags = helper.shuffle([...ufs.short]);
+    placeFlags(ssFlags);
     initGame();
   }
 
   function reset(): void {
-    let restarting = document.getElementById("q-restarting");
-    restarting.classList.remove("hidden");
-    restarting.classList.add("q-restart", "scale-out-center");
-    restarting.addEventListener("animationend", () => {
-      restarting.classList.remove("q-restart", "scale-out-center");
-      restarting.classList.add("hidden");
-    });
+    anim.ResetBtn();
     initGame();
     restartFlags();
   }
 
   function initGame(): void {
-    theGame.guesses = 0;
-    theGame.score = 14;
-    score.innerHTML = ` ${theGame.score}`;
-    theGame.sequence = randomNums(27);
-    theGame.currentAns = generateQuestion(theGame.sequence.shift());
+    quizz.Guess = 0;
+    quizz.Score = 14;
+    d_score.innerHTML = ` ${quizz.Score}`;
+    quizz.Sequence = helper.randomNums(27);
+    quizz.Ans = getNewQuestion(quizz.Sequence.shift());
   }
 
   function placeFlags(shuffledFlags: string[]) {
     if (!document.getElementById(shuffledFlags[0])) {
-      const div = document.getElementById("q-bandeiras");
+      const d_flag = document.getElementById("q-bandeiras");
       for (const UF of shuffledFlags) {
-        const flag = document.createElement("img");
-        flag.className =
+        const f = document.createElement("img");
+        f.className =
           "w-20 md:w-32 m-2 md:m-3 inline relative transition-all shadow hover:cursor-pointer q-flag hover:scale-105 active:scale-110";
-        flag.src = `/states/${UF}-bandeira.svg`;
-        flag.alt = `Bandeira ${UF}`;
-        flag.id = UF;
-        flag.addEventListener("click", guess);
-        flag.addEventListener("click", animate);
-        div?.appendChild(flag);
+        f.src = `/states/${UF}-bandeira.svg`;
+        f.alt = `Bandeira ${UF}`;
+        f.id = UF;
+        f.addEventListener("click", guess);
+        f.addEventListener("click", anim.animate);
+        d_flag?.appendChild(f);
       }
     }
     let flags = Array.from(document.getElementsByClassName("q-flag"));
-    flags.forEach((flag) => {
-      createAnimation(flag);
+    flags.forEach((f) => {
+      anim.Flags(f);
     });
   }
 
   function restartFlags(): void {
     let flags = Array.from(document.getElementsByClassName("q-flag"));
-    flags.forEach((flag) => {
-      flag.removeEventListener("click", guess);
-      flag.classList.remove("q-tip", "q-disabled", "q-tip-animation");
-      flag.addEventListener("click", guess);
+    flags.forEach((f) => {
+      f.removeEventListener("click", guess);
+      f.classList.remove("q-tip", "q-disabled", "q-tip-animation");
+      f.addEventListener("click", guess);
     });
   }
 
-  function generateQuestion(idx: number | undefined): number {
+  function getNewQuestion(idx: number | undefined): number {
     if (idx === undefined) {
       document.getElementById("q-chal").innerHTML = `Fim de jogo`;
       document.getElementById("q-question").innerHTML = ``;
@@ -117,65 +89,40 @@ window.addEventListener("load", function () {
   //
   //
   function guess(this: any): void {
-    console.log(theGame.currentAns);
+    //console.log(quizz.Ans);
     const tryFlagId = this.id;
-    const ansFlagId = ufs.short[theGame.currentAns];
-    const ansFlag = document.getElementById(ansFlagId) as HTMLImageElement;
+    const ansFlagId = ufs.short[quizz.Ans];
+    const d_ansFlag = document.getElementById(ansFlagId) as HTMLImageElement;
     /*if (!ansFlag) {
       return;
     } else
     */
-
     if (tryFlagId === ansFlagId) {
       this.removeEventListener("click", guess);
-      theGame.score += Math.floor(12 / (theGame.guesses || 1));
-      theGame.guesses = 0;
-      theGame.currentAns = generateQuestion(theGame.sequence.shift());
-      console.log("curr = " + theGame.currentAns);
-      ansFlag.classList.remove("q-tip", "q-tip-animation");
-      ansFlag.classList.add("q-disabled");
-    } else if (theGame.guesses === 4) {
-      theGame.guesses = 0;
-      theGame.score -= 9;
-      ansFlag.classList.add("q-tip", "q-tip-animation");
+      quizz.Score += Math.floor(12 / (quizz.Guess || 1));
+      quizz.Guess = 0;
+      quizz.Ans = getNewQuestion(quizz.Sequence.shift());
+      //console.log("curr = " + quizz.Ans);
+      d_ansFlag.classList.remove("q-tip", "q-tip-animation");
+      d_ansFlag.classList.add("q-disabled");
+    } else if (quizz.Guess === 4) {
+      quizz.Score -= 9;
+      quizz.Guess = 0;
+      d_ansFlag.classList.add("q-tip", "q-tip-animation");
     } else {
-      theGame.score -= 1;
+      quizz.Score -= 1;
     }
-    theGame.guesses++;
-    if (theGame.score < 0) {
+    if (quizz.Score < 0) {
       reset();
     }
-    score.innerHTML = ` ${theGame.score}`;
+    quizz.Guess++;
+    d_score.innerHTML = ` ${quizz.Score}`;
+    anim.showScoreAnimation(d_score);
   }
 
   function endGame(): void {
     document.getElementById("q-question").textContent = `Fim de jogo`;
   }
-
-  function createAnimation(flag: any) {
-    const options = document.querySelectorAll(".q-flag");
-
-    options.forEach((option) => {
-      option.addEventListener("click", () => {
-        option.classList.add("pulse");
-        setTimeout(() => {
-          option.classList.remove("pulse");
-        }, 1000); // Tempo de duração da animação em milissegundos
-      });
-    });
-    //ufs.long
-
-    console.log(flag);
-    if (!document.getElementById(`${flag.id}-tooltip`)) {
-      const tooltip = document.createElement("span");
-      tooltip.className = "bg-black absolute z-10 text-white";
-      tooltip.textContent = `${flag.id}`;
-      tooltip.id = `${flag.id}-tooltip`;
-      console.log(flag);
-      flag.appendChild(tooltip);
-    }
-  }
-  function animate() {
-    return 0;
-  }
 });
+
+function calcScore() {}

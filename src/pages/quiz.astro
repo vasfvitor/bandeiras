@@ -23,11 +23,7 @@ adicionar listener pra cada bandeira, se for errada, ficar vermelho e/ou treme. 
                     Identifique cada uma das 27 bandeiras!</span
                 >
                 <br /><br />
-                <small>A cada 3 erros será mostrado a resposta.</small>
-                <br />
-                <small
-                    >Você começa com 14 pontos, se chegar em 0 você perde.</small
-                >
+                <small>Você começa com 14 pontos, com 0 o quiz reinicia.</small>
             </p>
         </section>
         <section
@@ -35,30 +31,27 @@ adicionar listener pra cada bandeira, se for errada, ficar vermelho e/ou treme. 
             id="quiz"
         >
             <div
+                id=""
                 class="my-6 w-auto items-center grid md:grid-cols-3 justify-around border rounded"
             >
                 <span class="order-2 md:order-1">
                     Pontuação<span id="q-score"> 0</span>
                 </span>
-                <span class="order-3 md:order-2" id="q-chal"
+                <span class="order-3 md:order-2 relative" id="q-chal"
                     >Clique na bandeira:
                     <br />
+
                     <span
-                        class="font-bold uppercase font-mono underline shadow-inner bg-red-200 block rounded py-px"
+                        class="font-bold z-10 uppercase font-mono underline shadow-inner bg-gray-200 block rounded py-px"
                         id="q-question"></span>
                 </span>
                 <button
                     id="q-restart"
-                    class="order-1 md:order-3 my-4 rounded bg-amarelo mx-8 px-4 py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-80 active:opacity-50"
+                    class="order-1 md:order-3 my-4 rounded-full bg-amarelo mx-12 px-4 py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-70 active:opacity-50"
                     value="Reiniciar">Reiniciar</button
                 >
             </div>
-            <aside
-                id="q-restarting"
-                class="absolute top-20 z-20 inset-x-1/3 self-center bg-gray-800 text-white rounded py-px hidden"
-            >
-                Reiniciando
-            </aside>
+
             <div class="m-0" id="q-bandeiras"></div>
         </section>
     </main>
