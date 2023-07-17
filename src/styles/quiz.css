@@ -3,12 +3,12 @@
 }
 
 .q-tip {
-  @apply scale-[1.1]  border-red-500;
+  @apply scale-[1.1] border-4 border-red-500;
 }
 
 .q-tip-animation {
   animation-name: tip;
-  animation-duration: 800ms;
+  animation-duration: 1000ms;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }
@@ -23,7 +23,7 @@
   }
 
   100% {
-    border-color: transparent;
+    border-color: red;
   }
 }
 

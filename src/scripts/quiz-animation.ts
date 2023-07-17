@@ -34,7 +34,7 @@ export function ResetBtn() {
     }, 1000);
   });
 
-  const d_flag = document.getElementById("q-flags") as HTMLElement;
+  const d_flag = document.getElementById("q-flag-container") as HTMLElement;
   d_flag?.classList.add("animate-pulse", "contrast-0", "brightness-50");
 
   setTimeout(() => {
@@ -77,5 +77,29 @@ export function showScoreAnimation(scoreText: any) {
     scoreText.classList.remove("q-minus-anim");
   }, 600);
 }
+export type SimE = "RIGHT" | "WRONG" | "PARTIAL" | "DEFAULT";
 
-// Exemplo de uso:
+export function Label(label: HTMLElement, i: SimE) {
+  switch (i) {
+    case "RIGHT":
+      label.classList.remove("invisible");
+      label.classList.add("text-green-500");
+      break;
+    case "PARTIAL":
+      label.classList.remove("invisible");
+      label.classList.add("text-yellow-500");
+      break;
+    case "WRONG":
+      label.classList.remove("invisible");
+      label.classList.add("text-red-500");
+      break;
+    default:
+      if (label.classList.contains("invisible")) {
+        label.classList.remove("invisible");
+        setTimeout(() => {
+          label.classList.add("invisible");
+        }, 1000);
+      }
+      break;
+  }
+}
