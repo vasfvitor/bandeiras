@@ -1,6 +1,6 @@
 import * as helper from "~/scripts/quiz-helper";
 import * as anim from "~/scripts/quiz-animation";
-
+import { TIME } from "~/scripts/quiz-animation";
 //
 window.addEventListener("load", function () {
   document.getElementById("q-restart")?.addEventListener("click", reset);
@@ -35,6 +35,13 @@ window.addEventListener("load", function () {
   }
 
   function reset(): void {
+    const score = document.getElementById("q-chal");
+    const end = document.getElementById("q-end");
+    setTimeout(() => {
+      end?.classList.add("hidden");
+      score?.classList.remove("hidden");
+    }, TIME);
+
     anim.ResetBtn();
     init();
     restartFlags();
@@ -73,7 +80,7 @@ window.addEventListener("load", function () {
 
       setTimeout(() => {
         f.addEventListener("click", q_loop);
-      }, 1000);
+      }, TIME);
     });
     const labels = document.querySelectorAll(".uf_label");
     labels.forEach((l) => {
@@ -130,14 +137,21 @@ window.addEventListener("load", function () {
     quizz.tries++;
     //
     updateScore();
-    //console.log(quizz.score, quizz.current_q, quizz.total_tries);
   }
 
-  // fix tihs:
   function updateScore(): void {
-    quizz.score = ((quizz.current_q / quizz.total_tries) * 100).toFixed(1);
+    let score = (quizz.current_q / quizz.total_tries) * 100;
+    console.log(parseFloat(quizz.score), score);
+    if (score >= parseFloat(quizz.score)) {
+      console.log(1);
+      anim.scoreAnimation(d_score, 1);
+    } else {
+      console.log(0);
+      anim.scoreAnimation(d_score);
+    }
+
+    quizz.score = score.toFixed(1);
     d_score.innerHTML = `${quizz.score}%`;
-    anim.scoreAnimation(d_score);
   }
 
   function createFlag(UF: string): HTMLImageElement {
@@ -168,7 +182,7 @@ window.addEventListener("load", function () {
   }
 
   function handleLabel(label: HTMLImageElement) {
-    if (quizz.tries === 1) {
+    if (quizz.tries <= 1) {
       anim.Label(label, "RIGHT");
     } else if (quizz.tries < MAX_TRIES) {
       anim.Label(label, "PARTIAL");
@@ -178,41 +192,31 @@ window.addEventListener("load", function () {
   }
 
   function end(): void {
-    //document.getElementById("q-question").textContent = `Fim de jogo`;
-    document.getElementById("q-chal").innerHTML = `Fim de jogo`;
-    document.getElementById("q-question").innerHTML = "";
-    const flags = document.querySelectorAll(".q-flag");
-    flags.forEach((f) => {
-      f.classList.add("animation-pulse");
-    });
+    const score = document.getElementById("q-chal");
+    const end = document.getElementById("q-end");
+    score?.classList.add("hidden");
+    end?.classList.remove("hidden");
   }
-  //end();
-
-  // Seleciona o elemento alvo
-  const targetElement = document.getElementById("acerto");
-
-  // Cria uma instância do MutationObserver
+  ///*
+  /*
   const observer = new MutationObserver((mutationsList) => {
-    // Verifica as mutações em busca de alterações no innerHTML
     for (const mutation of mutationsList) {
-      if (mutation.type === "childList" && mutation.target === targetElement) {
-        // O innerHTML do elemento foi alterado
-        targetElement.classList.add("vibrate-1");
+      if (mutation.type === "childList" && mutation.target === d_score) {
+        d_score.classList.add("pulse");
+        console.log("innerHTML alterado:", d_score.innerHTML);
         setTimeout(() => {
-          targetElement.classList.remove("vibrate-1");
-        }, 1000);
-        console.log("innerHTML alterado:", targetElement.innerHTML);
+          d_score.classList.remove("pulse");
+        }, TIME);
       }
     }
   });
 
-  // Configura as opções do MutationObserver
   const observerOptions = {
-    childList: true, // Observa alterações nos nós filhos
-    subtree: true, // Observa alterações em toda a subárvore
-    characterData: true, // Observa alterações nos dados do nó
+    childList: true,
+    subtree: true,
+    characterData: true,
   };
 
-  // Inicia a observação do elemento alvo
-  observer.observe(targetElement, observerOptions);
+  observer.observe(d_score, observerOptions);
+  */
 });

@@ -1,5 +1,5 @@
 const TIME = 759;
-
+export { TIME };
 export function ResetBtn() {
   const q = document.getElementById("q-head") as HTMLDivElement;
   const btn = document.getElementById("q-restart") as HTMLButtonElement;
@@ -46,27 +46,30 @@ export function Flags(flag: any) {
       }, TIME / 3);
     });
   });
-  //ufs.long
 
-  //console.log(flag);
   if (!document.getElementById(`${flag.id}-tooltip`)) {
     const tooltip = document.createElement("span");
     tooltip.className = "bg-black absolute z-10 text-white";
     tooltip.textContent = `${flag.id}`;
     tooltip.id = `${flag.id}-tooltip`;
-    //console.log(flag);
-    //flag.appendChild(tooltip);
   }
 }
 export function animate() {
   return 0;
 }
 
-export function scoreAnimation(scoreText: any) {
-  scoreText.classList.add("vibrate-1");
-  setTimeout(() => {
-    scoreText.classList.remove("vibrate-1");
-  }, TIME);
+export function scoreAnimation(scoreText: any, i = 0) {
+  if (i == 1) {
+    scoreText.classList.add("score-plus");
+    setTimeout(() => {
+      scoreText.classList.remove("score-plus");
+    }, TIME);
+  } else {
+    scoreText.classList.add("score-minus");
+    setTimeout(() => {
+      scoreText.classList.remove("score-minus");
+    }, TIME);
+  }
 }
 
 export type SimE = "RIGHT" | "WRONG" | "PARTIAL" | "DEFAULT";

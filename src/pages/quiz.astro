@@ -1,70 +1,58 @@
 ---
 import Layout from "~/layouts/BaseLayout.astro";
 import "../styles/quiz.css";
-//import Quiz from "~/components/Quiz.astro";
-/*
-rascunho:
-
-clicar na bandeira do estado {estado}
-
-adicionar listener pra cada bandeira, se for errada, ficar vermelho e/ou treme. Se for certo, fica verde e depois diminui opacidade, ai atualiza o desafio no topo. Até 3 tentativas antes de resetar ou mostrar a certa.
-
-*/
 ---
 
 <Layout>
-    <main class="font-serif">
-        <section class="prose tracking-widest mx-auto my-8">
-            <h1 class="-mb-6 font-hand text-gray-300 -z-10">
-                Quiz das Bandeiras
-            </h1>
-            <p class="font-sans tracking-tight leading-none">
-                <span class="mt-4 underline">
-                    Identifique cada uma das 27 bandeiras!</span
-                >
-                <br /><br />
-
-                <small
-                    >Ao cometer vários erros a resposta vai ficar em destaque.</small
-                >
-            </p>
-        </section>
-        <hr />
-        <section
-            class="container text-center mx-auto max-w-screen-lg"
-            id="quiz"
+  <main class="font-serif">
+    <section class="prose mx-auto my-8 tracking-widest">
+      <h1 class="-z-10 -mb-6 font-hand text-gray-300">Quiz das Bandeiras</h1>
+      <p class="font-sans leading-none tracking-tight">
+        <span class="mt-4 underline">
+          Identifique cada uma das 27 bandeiras!</span
         >
-            <div
-                id="q-head"
-                class="my-6 bg-gray-100/50 backdrop-blur-sm sticky top-0 z-50 left-0 right-0 w-auto items-center grid md:grid-cols-3 justify-around mx-auto rounded"
-            >
-                <span
-                    id="acerto"
-                    class="order-2 rounded bg-gray-100 w-fit mx-auto px-4 md:order-1"
-                >
-                    Taxa de acerto <span id="q-score">0%</span>
-                </span>
-                <span class="p-2 order-3 md:order-2" id="q-chal"
-                    >Clique na bandeira:
-                    <br />
+        <br /><br />
 
-                    <span
-                        class="font-bold z-10 uppercase font-mono underline shadow-inner bg-gray-200 block rounded py-px"
-                        id="q-question"></span>
-                </span>
-                <button
-                    id="q-restart"
-                    class="order-1 md:order-3 my-4 rounded-full bg-amarelo mx-12 px-4 py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-70 active:opacity-50"
-                    value="Reiniciar">Reiniciar</button
-                >
-            </div>
+        <small>Ao cometer vários erros a resposta vai ficar em destaque.</small>
+      </p>
+    </section>
+    <hr />
 
-            <div
-                class="grid grid-cols-2 text-center [&>*]:transition-all md:inline mx-auto place-items-center"
-                id="q-flag-container"
-            >
-            </div>
-        </section>
-    </main>
-    <script src="~/scripts/quiz.ts"></script>
+    <section class="container mx-auto max-w-screen-lg text-center" id="quiz">
+      <div
+        id="q-head"
+        class="sticky left-0 right-0 top-0 z-30 mx-auto my-6 grid w-auto items-center justify-around rounded bg-gray-100/50 backdrop-blur-sm md:grid-cols-3"
+      >
+        <span class="order-2 mx-auto w-fit rounded bg-gray-100 px-4 md:order-1">
+          Taxa de acerto <span id="q-score">0%</span>
+        </span>
+
+        <span class="order-3 p-2 md:order-2" id="q-chal"
+          >Clique na bandeira:
+          <br />
+
+          <span
+            class="z-10 block rounded bg-gray-200 py-px font-mono font-bold uppercase underline shadow-inner"
+            id="q-question"></span>
+        </span>
+        <span
+          id="q-end"
+          class="animate-end z-[60] order-3 hidden font-hand text-2xl font-black transition-all"
+          >Fim de jogo... ツ
+        </span>
+        <button
+          id="q-restart"
+          class="order-1 mx-12 my-4 rounded-full bg-amarelo px-4 py-2 font-bold uppercase text-black shadow hover:cursor-pointer hover:opacity-70 active:opacity-50 md:order-3"
+          value="Reiniciar">Reiniciar</button
+        >
+      </div>
+
+      <div
+        class="mx-auto grid grid-cols-2 place-items-center text-center md:inline [&>*]:transition-all"
+        id="q-flag-container"
+      >
+      </div>
+    </section>
+  </main>
+  <script src="~/scripts/quiz.ts"></script>
 </Layout>
