@@ -1,74 +1,64 @@
-import db from "~/pages/uf/estados.json";
 import * as helper from "~/scripts/quiz-helper";
 import * as anim from "~/scripts/quiz-animation";
 
-function getUfs(): States {
-  const uf = db?.map((db) => db.UF);
-  const uf_name = db?.map((db) => db.Name);
-  const ufs = { short: uf, long: uf_name };
-  return ufs;
-}
-
-interface States {
-  short: string[];
-  long: string[];
-}
-
 //
 window.addEventListener("load", function () {
-  //window.onload = function () {
   document.getElementById("q-restart")?.addEventListener("click", reset);
 
   const d_score = document.getElementById("q-score");
-  const FLAG_COUNT = 27;
-  const MAX_TRIES = 5;
-  const INITIAL_SCORE = 14;
 
-  let quizz = {
-    Score: INITIAL_SCORE,
-    Guess: 0,
-    Sequence: helper.randomNums(FLAG_COUNT),
-    Ans: 0,
-    Started: false,
+  const INITIAL_SCORE = "0.0";
+  const FLAG_COUNT = 27;
+  const MAX_TRIES = 4;
+
+  const quizz = {
+    loaded: false,
+    answer: 0,
+    tries: 0,
+    total_tries: 0,
+    current_q: 0,
+    score: INITIAL_SCORE,
+    questions: helper.randomNums(FLAG_COUNT),
   };
 
-  function start(): void {
-    let ssFlags = helper.shuffle([...ufs.short]);
+  function load(): void {
+    const ssFlags = helper.shuffle([...ufs.short]);
     placeFlags(ssFlags);
-    initGame();
+    init();
   }
 
   function reset(): void {
     anim.ResetBtn();
-    initGame();
+    init();
     restartFlags();
   }
 
-  function initGame(): void {
-    quizz.Guess = 0;
-    quizz.Score = INITIAL_SCORE;
-    d_score.innerHTML = ` ${quizz.Score}`;
-    quizz.Sequence = helper.randomNums(27);
-    getNewQuestion(quizz.Sequence.shift());
+  function init(): void {
+    quizz.tries = 0;
+    quizz.current_q = 0;
+    quizz.total_tries = 0;
+    quizz.score = INITIAL_SCORE;
+    d_score.innerHTML = `${quizz.score}%`;
+    quizz.questions = helper.randomNums(27);
+    getNewQuestion(quizz.questions.shift());
   }
 
   function placeFlags(shuffledFlags: string[]) {
-    if (!quizz.Started) {
+    if (!quizz.loaded) {
       const d_flag = document.getElementById("q-flag-container") as HTMLElement;
       shuffledFlags.map((UF) => {
-        const div = CreateContainer(UF);
-        const flag = CreateFlag(UF);
+        const div = createContainer(UF);
+        const flag = createFlag(UF);
         anim.Flags(flag);
         div.appendChild(flag);
-        div.appendChild(CreateLabels(UF));
+        div.appendChild(createLabels(UF));
         d_flag.appendChild(div);
       });
-      quizz.Started = true;
+      quizz.loaded = true;
     }
   }
 
   function restartFlags(): void {
-    //let flags = Array.from(document.getElementsByClassName("q-flag"));
     const flags = document.querySelectorAll(".q-flag");
     flags.forEach((f) => {
       f.removeEventListener("click", guess);
@@ -82,74 +72,69 @@ window.addEventListener("load", function () {
     });
   }
 
-  function getNewQuestion(idx: number | undefined) {
-    if (idx === undefined) {
+  function getNewQuestion(i: number | undefined) {
+    if (i === undefined) {
       document.getElementById("q-chal").innerHTML = `Fim de jogo`;
       document.getElementById("q-question").innerHTML = ``;
-      endGame();
+      end();
       return 0;
     }
     const p = document.getElementById("q-question");
-    p.innerHTML = `${ufs.long[idx]}`;
-    quizz.Ans = idx;
+    p.innerHTML = `${ufs.long[i]}`;
+    quizz.answer = i;
   }
   //
   //
-  const ufs = getUfs();
-  start();
+  const ufs = helper.getUfs();
+  load();
   //
   //
 
   function guess(this: HTMLElement): void {
     const tryFlagId = this.id;
-    const ansFlagId = ufs.short[quizz.Ans];
+    const ansFlagId = ufs.short[quizz.answer];
     const d_ansFlag = document.getElementById(ansFlagId) as HTMLImageElement;
     const d_label = document.getElementById(
       `${tryFlagId}_label`
     ) as HTMLImageElement;
     if (tryFlagId === ansFlagId) {
+      quizz.current_q++;
       handleLabel(d_label);
       this.removeEventListener("click", guess);
       this.removeEventListener("click", anim.animate);
       d_ansFlag.classList.remove("q-tip", "q-tip-animation");
       d_ansFlag.classList.add("q-disabled");
       //
-      getNewQuestion(quizz.Sequence.shift());
+      getNewQuestion(quizz.questions.shift());
       //
-      quizz.Score += Math.floor(12 / (quizz.Guess || 1));
-      quizz.Guess = 0;
-    } else if (quizz.Guess === MAX_TRIES) {
-      quizz.Score -= 9;
+      quizz.tries = 0;
+    } else if (quizz.tries === MAX_TRIES) {
       d_ansFlag.classList.add("q-tip", "q-tip-animation");
-    } else {
-      quizz.Score -= 1;
-    }
-    if (quizz.Score < 0) {
-      reset();
     }
     anim.Label(d_label, "DEFAULT");
-    quizz.Guess++;
+    quizz.total_tries++;
+    quizz.tries++;
+    //
     updateScore();
+    console.log(quizz.score, quizz.current_q, quizz.total_tries);
   }
 
   function updateScore(): void {
-    d_score.innerHTML = ` ${quizz.Score}`;
-    anim.showScoreAnimation(d_score);
+    if (false) {
+      quizz.score = INITIAL_SCORE;
+    } else {
+      quizz.score = ((quizz.current_q / quizz.total_tries) * 100).toFixed(1);
+    }
+
+    d_score.innerHTML = `${quizz.score}%`;
+    //anim.scoreAnimation(d_score);
   }
 
-  function endGame(): void {
+  function end(): void {
     document.getElementById("q-question").textContent = `Fim de jogo`;
   }
 
-  function getUFname(uf: string): string | null {
-    const i = ufs.short.indexOf(uf);
-    if (i !== -1) {
-      return ufs.long[i];
-    }
-    return null;
-  }
-
-  function CreateFlag(UF: string): HTMLImageElement {
+  function createFlag(UF: string): HTMLImageElement {
     const f = document.createElement("img");
     f.className =
       "w-1/2 md:w-24 m-4 md:m-5 inline border-4 relative transition-all shadow hover:cursor-pointer q-flag hover:scale-105 active:scale-110";
@@ -161,8 +146,8 @@ window.addEventListener("load", function () {
     return f;
   }
 
-  function CreateLabels(UF: string): HTMLElement {
-    const UF_long = getUFname(UF);
+  function createLabels(UF: string): HTMLElement {
+    const UF_long = helper.getUFname(UF);
     const l = document.createElement("small");
     l.textContent = UF_long;
     l.className =
@@ -171,7 +156,7 @@ window.addEventListener("load", function () {
     return l;
   }
 
-  function CreateContainer(UF: string): HTMLDivElement {
+  function createContainer(UF: string): HTMLDivElement {
     const d = document.createElement("div");
     d.className = `inline-flex flex-col place-items-center text-center`;
     d.id = `${UF}_container`;
@@ -179,12 +164,40 @@ window.addEventListener("load", function () {
   }
 
   function handleLabel(label: HTMLImageElement) {
-    if (quizz.Guess == 0) {
+    if (quizz.tries === 1) {
       anim.Label(label, "RIGHT");
-    } else if (quizz.Guess < MAX_TRIES) {
+    } else if (quizz.tries < MAX_TRIES) {
       anim.Label(label, "PARTIAL");
     } else {
       anim.Label(label, "WRONG");
     }
   }
+
+  // Seleciona o elemento alvo
+  const targetElement = document.getElementById("acerto");
+
+  // Cria uma instância do MutationObserver
+  const observer = new MutationObserver((mutationsList) => {
+    // Verifica as mutações em busca de alterações no innerHTML
+    for (const mutation of mutationsList) {
+      if (mutation.type === "childList" && mutation.target === targetElement) {
+        // O innerHTML do elemento foi alterado
+        targetElement.classList.add("animate-ping");
+        setTimeout(() => {
+          targetElement.classList.remove("animate-ping");
+        }, 1000);
+        console.log("innerHTML alterado:", targetElement.innerHTML);
+      }
+    }
+  });
+
+  // Configura as opções do MutationObserver
+  const observerOptions = {
+    childList: true, // Observa alterações nos nós filhos
+    subtree: true, // Observa alterações em toda a subárvore
+    characterData: true, // Observa alterações nos dados do nó
+  };
+
+  // Inicia a observação do elemento alvo
+  observer.observe(targetElement, observerOptions);
 });

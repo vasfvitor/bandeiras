@@ -71,12 +71,13 @@ export function animate() {
   return 0;
 }
 
-export function showScoreAnimation(scoreText: any) {
-  scoreText.classList.add("q-minus-anim");
+export function scoreAnimation(scoreText: any) {
+  scoreText.classList.add("animate-ping");
   setTimeout(() => {
-    scoreText.classList.remove("q-minus-anim");
-  }, 600);
+    scoreText.classList.remove("animate-ping");
+  }, 1000);
 }
+
 export type SimE = "RIGHT" | "WRONG" | "PARTIAL" | "DEFAULT";
 
 export function Label(label: HTMLElement, i: SimE) {
