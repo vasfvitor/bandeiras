@@ -36,3 +36,17 @@ export function getUFname(uf: string): string | null {
   }
   return null;
 }
+
+
+export function scrollToElement(el) {    
+  let positionX = 0,         
+      positionY = 0;    
+
+  while(el != null){        
+      positionX += el.offsetLeft;        
+      positionY += el.offsetTop;        
+      el = el.offsetParent;        
+      window.scrollTo(positionX, positionY);    
+  }
+}
+

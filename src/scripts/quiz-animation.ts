@@ -1,47 +1,38 @@
+const TIME = 759;
+
 export function ResetBtn() {
-  const q = document.getElementById("q-head");
+  const q = document.getElementById("q-head") as HTMLDivElement;
+  const btn = document.getElementById("q-restart") as HTMLButtonElement;
+  const cntr = document.getElementById("q-flag-container") as HTMLElement;
+  const flags = document.querySelectorAll(".q-flag");
+
+  // randomize flags
+  setTimeout(() => {
+    for (var i = cntr.children.length; i >= 0; i--) {
+      cntr.appendChild(cntr.children[(Math.random() * i) | 0]);
+    }
+  }, TIME);
+
+  //
   q?.classList.add("animate-pulse", "contrast-0", "brightness-50");
   setTimeout(() => {
     q?.classList.remove("animate-pulse", "contrast-0", "brightness-50");
-  }, 1000);
+  }, TIME);
 
-  const btn = document.getElementById("q-restart");
-  btn?.classList.add("disabled");
-  btn?.setAttribute("disabled", "");
+  btn.disabled = true;
+  btn.classList.add("q-reset");
   setTimeout(() => {
-    btn?.classList.remove("disabled");
-    btn?.removeAttribute("disabled");
-  }, 1000);
+    btn?.classList.remove("q-reset");
+    btn.disabled = false;
+  }, TIME);
 
-  const flags = document.querySelectorAll(".q-flag");
   flags.forEach((f) => {
-    f?.classList.add(
-      "animate-pulse",
-      "contrast-0",
-      "brightness-50",
-      "disabled",
-      "q-disabled"
-    );
+    f?.classList.add("animate-pulse", "q-reset");
 
     setTimeout(() => {
-      f?.classList.remove(
-        "animate-pulse",
-        "contrast-0",
-        "brightness-50",
-        "disabled",
-        "q-disabled"
-      );
-    }, 1000);
+      f?.classList.remove("animate-pulse", "q-reset");
+    }, TIME);
   });
-
-  const d_flag = document.getElementById("q-flag-container") as HTMLElement;
-  d_flag?.classList.add("animate-pulse", "contrast-0", "brightness-50");
-
-  setTimeout(() => {
-    d_flag?.classList.remove("disabled");
-    d_flag?.removeAttribute("disabled");
-    d_flag?.classList.remove("animate-pulse", "contrast-0", "brightness-50");
-  }, 1000);
 }
 
 export function Flags(flag: any) {
@@ -52,7 +43,7 @@ export function Flags(flag: any) {
       option.classList.add("pulse");
       setTimeout(() => {
         option.classList.remove("pulse");
-      }, 300);
+      }, TIME / 3);
     });
   });
   //ufs.long
@@ -72,10 +63,10 @@ export function animate() {
 }
 
 export function scoreAnimation(scoreText: any) {
-  scoreText.classList.add("animate-ping");
+  scoreText.classList.add("vibrate-1");
   setTimeout(() => {
-    scoreText.classList.remove("animate-ping");
-  }, 1000);
+    scoreText.classList.remove("vibrate-1");
+  }, TIME);
 }
 
 export type SimE = "RIGHT" | "WRONG" | "PARTIAL" | "DEFAULT";
@@ -99,7 +90,7 @@ export function Label(label: HTMLElement, i: SimE) {
         label.classList.remove("invisible");
         setTimeout(() => {
           label.classList.add("invisible");
-        }, 1000);
+        }, TIME);
       }
       break;
   }
