@@ -7,24 +7,24 @@
 }
 
 .q-tip {
-  @apply scale-[1.1] border-4 border-red-500;
+  @apply scale-[1.1] border-4 border-red-500 transition-all;
 }
 
 .q-tip-animation {
-  animation: tip 1000ms infinite forwards;
+  animation: tip 1200ms infinite forwards;
 }
 
 @keyframes tip {
   0% {
-    border-color: red;
+    @apply scale-[1.0] border-amarelo;
   }
 
   50% {
-    border-color: blue;
+    @apply scale-[1.2] border-verde;
   }
 
   100% {
-    border-color: red;
+    @apply scale-[1.0] border-amarelo;
   }
 }
 

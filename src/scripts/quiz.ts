@@ -115,7 +115,7 @@ window.addEventListener("load", function () {
       getNewQuestion(quizz.questions.shift());
       //
       quizz.tries = 0;
-    } else if (quizz.tries === MAX_TRIES) {
+    } else if (quizz.tries >= MAX_TRIES) {
       d_ansFlag.classList.add("q-tip", "q-tip-animation");
       if (
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
