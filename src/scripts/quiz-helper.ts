@@ -11,9 +11,9 @@ export function shuffle(arr: any[]) {
 
 // Generate array[N] with shuffled values
 export function randomNums(n: number): number[] {
-  let nums = Array(n)
+  const nums = Array(n)
     .fill(0)
-    .map((_: any, i: number) => i);
+    .map((_: number, i: number) => i);
   return shuffle(nums);
 }
 

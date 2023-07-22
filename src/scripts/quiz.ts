@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
   const MAX_TRIES = 4;
 
   // the container wraps flags and labels
-  const container_classes = `inline-flex flex-col place-items-center text-center`;
+  const container_classes = "`inline-flex flex-col place-items-center text-center`";
   const flag_classes =
     "w-1/2 md:w-24 m-4 md:m-5 inline border-4 relative transition-all shadow hover:cursor-pointer q-flag hover:scale-105 active:scale-110";
   const label_classes =
@@ -151,7 +151,7 @@ window.addEventListener("load", function () {
   }
 
   function updateScore(): void {
-    let score = (quizz.current_q / quizz.total_tries) * 100;
+    const score = (quizz.current_q / quizz.total_tries) * 100;
 
     if (score >= parseFloat(quizz.score)) {
       anim.scoreAnimation(d_score, 1);

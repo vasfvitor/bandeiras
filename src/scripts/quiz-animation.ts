@@ -10,7 +10,7 @@ export function ResetBtn() {
 
   // Randomize flags
   setTimeout(() => {
-    for (var i = cntr.children.length; i >= 0; i--) {
+    for (let i = cntr.children.length; i >= 0; i--) {
       cntr.appendChild(cntr.children[(Math.random() * i) | 0]);
     }
   }, TIME);
