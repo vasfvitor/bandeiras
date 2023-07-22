@@ -1,56 +1,13 @@
 ---
 import Layout from "~/layouts/BaseLayout.astro";
-import Maps from "~/components/maps/Brazil.astro";
-import ListUF from "~/components/ListUF.astro";
-/*
-const ufs = [
-  { sigla: "AC", nomePt: "Acre", nomeEn: "Acre" },
-  { sigla: "AL", nomePt: "Alagoas", nomeEn: "Alagoas" },
-  { sigla: "AM", nomePt: "Amazonas", nomeEn: "Amazonas" },
-  { sigla: "AP", nomePt: "Amapá", nomeEn: "Amapá" },
-  { sigla: "BA", nomePt: "Bahia", nomeEn: "Bahia" },
-  { sigla: "CE", nomePt: "Ceará", nomeEn: "Ceará" },
-  { sigla: "DF", nomePt: "Distrito Federal", nomeEn: "Federal District" },
-  { sigla: "ES", nomePt: "Espírito Santo", nomeEn: "Espírito Santo" },
-  { sigla: "GO", nomePt: "Goiás", nomeEn: "Goiás" },
-  { sigla: "MA", nomePt: "Maranhão", nomeEn: "Maranhão" },
-  { sigla: "MG", nomePt: "Minas Gerais", nomeEn: "Minas Gerais" },
-  { sigla: "MS", nomePt: "Mato Grosso do Sul", nomeEn: "Mato Grosso do Sul" },
-  { sigla: "MT", nomePt: "Mato Grosso", nomeEn: "Mato Grosso" },
-  { sigla: "PA", nomePt: "Pará", nomeEn: "Pará" },
-  { sigla: "PB", nomePt: "Paraíba", nomeEn: "Paraíba" },
-  { sigla: "PE", nomePt: "Pernambuco", nomeEn: "Pernambuco" },
-  { sigla: "PI", nomePt: "Piauí", nomeEn: "Piauí" },
-  { sigla: "PR", nomePt: "Paraná", nomeEn: "Paraná" },
-  { sigla: "RJ", nomePt: "Rio de Janeiro", nomeEn: "Rio de Janeiro" },
-  { sigla: "RN", nomePt: "Rio Grande do Norte", nomeEn: "Rio Grande do Norte" },
-  { sigla: "RO", nomePt: "Rondônia", nomeEn: "Rondônia" },
-  { sigla: "RR", nomePt: "Roraima", nomeEn: "Roraima" },
-  { sigla: "RS", nomePt: "Rio Grande do Sul", nomeEn: "Rio Grande do Sul" },
-  { sigla: "SC", nomePt: "Santa Catarina", nomeEn: "Santa Catarina" },
-  { sigla: "SE", nomePt: "Sergipe", nomeEn: "Sergipe" },
-  { sigla: "SP", nomePt: "São Paulo", nomeEn: "São Paulo" },
-  { sigla: "TO", nomePt: "Tocantins", nomeEn: "Tocantins" },
-];
-
-<ul>
-        {
-          ufs.map((ufs) => (
-            <li>
-              <a href={`/uf/${ufs.sigla}/`}>
-                {ufs.nomePt} - {ufs.sigla}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-      */
+import Maps from "~/map/Brazil.astro";
+import SelectUF from "~/components/SelectUF.astro";
 ---
 
 <Layout>
   <main>
     <section class="prose mx-auto text-center">
-      <ListUF />
+      <SelectUF />
       <Maps />
     </section>
   </main>

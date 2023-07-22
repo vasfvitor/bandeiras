@@ -5,7 +5,7 @@ import { TIME } from "~/scripts/quiz-animation";
 window.addEventListener("load", function () {
   document.getElementById("q-restart")?.addEventListener("click", reset);
 
-  const d_score = document.getElementById("q-score");
+  const d_score = document.getElementById("q-score") as HTMLSpanElement;
 
   const INITIAL_SCORE = "0.0";
   const FLAG_COUNT = 27;
@@ -35,11 +35,11 @@ window.addEventListener("load", function () {
   }
 
   function reset(): void {
-    const score = document.getElementById("q-chal");
-    const end = document.getElementById("q-end");
+    const score = document.getElementById("q-chal") as HTMLSpanElement;
+    const end = document.getElementById("q-end") as HTMLSpanElement;
     setTimeout(() => {
-      end?.classList.add("hidden");
-      score?.classList.remove("hidden");
+      end.classList.add("hidden");
+      score.classList.remove("hidden");
     }, TIME);
 
     anim.ResetBtn();
@@ -59,7 +59,9 @@ window.addEventListener("load", function () {
 
   function placeFlags(shuffledFlags: string[]) {
     if (!quizz.loaded) {
-      const d_flag = document.getElementById("q-flag-container") as HTMLElement;
+      const d_flag = document.getElementById(
+        "q-flag-container"
+      ) as HTMLDivElement;
       shuffledFlags.map((UF) => {
         const div = createContainer(UF);
         const flag = createFlag(UF);
@@ -72,6 +74,7 @@ window.addEventListener("load", function () {
     }
   }
 
+  // Remove and add event listeners and classes for all flags
   function restartFlags(): void {
     const flags = document.querySelectorAll(".q-flag");
     flags.forEach((f) => {
@@ -88,22 +91,31 @@ window.addEventListener("load", function () {
     });
   }
 
+  // This function is always called with quizz.questions.shift().
+  // TODO make quizz.questions.shift() inside the function and call it
+  // without any argument
   function getNewQuestion(i: number | undefined) {
+    // i is the current quizz.questions.shift()
     if (i === undefined) {
       end();
       return;
     }
-    const p = document.getElementById("q-question");
+    const p = document.getElementById("q-question") as HTMLSpanElement;
     p.innerHTML = `${ufs.long[i]}`;
     quizz.answer = i;
   }
   //
-  //
+  // initialize quiz
   const ufs = helper.getUfs();
   load();
   //
   //
 
+  // main loop
+  // check if the answer is right
+  // check number of tries
+  // update score
+  // check if mobile to scroll asnwer into view
   function q_loop(this: HTMLElement): void {
     const tryFlagId = this.id;
     const ansFlagId = ufs.short[quizz.answer];
@@ -115,7 +127,6 @@ window.addEventListener("load", function () {
       quizz.current_q++;
       handleLabel(d_label);
       this.removeEventListener("click", q_loop);
-      this.removeEventListener("click", anim.animate);
       d_ansFlag.classList.remove("q-tip", "q-tip-animation");
       d_ansFlag.classList.add("q-disabled");
       //
@@ -141,15 +152,12 @@ window.addEventListener("load", function () {
 
   function updateScore(): void {
     let score = (quizz.current_q / quizz.total_tries) * 100;
-    console.log(parseFloat(quizz.score), score);
+
     if (score >= parseFloat(quizz.score)) {
-      console.log(1);
       anim.scoreAnimation(d_score, 1);
     } else {
-      console.log(0);
       anim.scoreAnimation(d_score);
     }
-
     quizz.score = score.toFixed(1);
     d_score.innerHTML = `${quizz.score}%`;
   }
@@ -161,7 +169,6 @@ window.addEventListener("load", function () {
     f.alt = `Bandeira ${UF}`;
     f.id = UF;
     f.addEventListener("click", q_loop);
-    f.addEventListener("click", anim.animate);
     return f;
   }
 
@@ -192,31 +199,9 @@ window.addEventListener("load", function () {
   }
 
   function end(): void {
-    const score = document.getElementById("q-chal");
-    const end = document.getElementById("q-end");
-    score?.classList.add("hidden");
-    end?.classList.remove("hidden");
+    const score = document.getElementById("q-chal") as HTMLSpanElement;
+    const end = document.getElementById("q-end") as HTMLSpanElement;
+    score.classList.add("hidden");
+    end.classList.remove("hidden");
   }
-  ///*
-  /*
-  const observer = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
-      if (mutation.type === "childList" && mutation.target === d_score) {
-        d_score.classList.add("pulse");
-        console.log("innerHTML alterado:", d_score.innerHTML);
-        setTimeout(() => {
-          d_score.classList.remove("pulse");
-        }, TIME);
-      }
-    }
-  });
-
-  const observerOptions = {
-    childList: true,
-    subtree: true,
-    characterData: true,
-  };
-
-  observer.observe(d_score, observerOptions);
-  */
 });

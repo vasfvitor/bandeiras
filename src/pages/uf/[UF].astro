@@ -1,5 +1,5 @@
 ---
-import Maps from "~/components/maps/Brazil.astro";
+import Maps from "~/map/Brazil.astro";
 import EstadoLayout from "~/layouts/EstadoLayout.astro";
 import db from "./estados.json";
 
@@ -18,7 +18,7 @@ const uf = db[index];
 const bandeira = `/states/${uf.UF}-bandeira.svg`;
 const brasao = `/states/${uf.UF}-brasao.svg`;
 
-import ListUF from "~/components/ListUF.astro";
+import SelectUF from "~/components/SelectUF.astro";
 ---
 
 <EstadoLayout>
@@ -73,7 +73,7 @@ import ListUF from "~/components/ListUF.astro";
       </article>
     </section>
     <section id="selectState">
-      <div class="eblock exl:hidden"><ListUF /></div>
+      <div class="eblock exl:hidden"><SelectUF /></div>
       <div class="ehidden exl:block">
         <Maps />
       </div>

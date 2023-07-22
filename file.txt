@@ -1,0 +1,45 @@
+The file tree below represents relevant files to the project. Thus configuration files are ommited.
+
+├───public -- Files that Astro copy over to distribution
+│   │   BR-map.js
+│   │   flagBrazil.svg
+│   │   
+│   └───states -- Files for each coat of arms and flags
+│           {UF}-bandeira.svg 
+│           {UF}-brasao.svg
+│
+└───src -- Files used by Astro do generate pages
+    │   
+    ├───components
+    │       BaseHead.astro  
+    │       Footer.astro           
+    │       Header.astro           
+    │       HeaderNavigation.astro   
+    │       SelectUF.astro         
+    │     
+    ├───map
+    │       BR.svg
+    │       Brazil.astro
+    │               
+    ├───layouts
+    │       BaseLayout.astro
+    │       EstadoLayout.astro
+    │       
+    ├───pages
+    │   │   index.astro
+    │   │   quiz.astro
+    │   │   
+    │   └───uf
+    │           estados.json   -- Data source for [UF].astro template
+    │           index.astro    -- Main page
+    │           [UF].astro     -- Template to generate each page for 27 states.
+    │           
+    ├───scripts
+    │       quiz-animation.ts
+    │       quiz-helper.ts
+    │       quiz.ts
+    │       
+    └───styles
+            global.css
+            quiz.css
+            

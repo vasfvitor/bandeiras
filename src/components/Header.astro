@@ -1,12 +1,12 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
+import HeaderNavigation from "./HeaderNavigation.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
 <header class="bg-azul py-2 text-center text-gray-400">
   <small>{SITE_TITLE}</small>
-  <nav class="text-start [&>*]:pl-8">
-    <HeaderLink href="/">Página principal</HeaderLink>
-    <HeaderLink href="/quiz">Quiz</HeaderLink>
+  <nav class="text-white bg-blue-800 my-4">
+    <HeaderNavigation href="/">Página principal</HeaderNavigation>
+    <HeaderNavigation href="/quiz">Quiz</HeaderNavigation>
   </nav>
 </header>

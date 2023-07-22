@@ -1,24 +1,27 @@
+// sync timeouts
 const TIME = 759;
 export { TIME };
+
 export function ResetBtn() {
   const q = document.getElementById("q-head") as HTMLDivElement;
   const btn = document.getElementById("q-restart") as HTMLButtonElement;
   const cntr = document.getElementById("q-flag-container") as HTMLElement;
   const flags = document.querySelectorAll(".q-flag");
 
-  // randomize flags
+  // Randomize flags
   setTimeout(() => {
     for (var i = cntr.children.length; i >= 0; i--) {
       cntr.appendChild(cntr.children[(Math.random() * i) | 0]);
     }
   }, TIME);
 
-  //
+  // Hide quiz head
   q?.classList.add("animate-pulse", "contrast-0", "brightness-50");
   setTimeout(() => {
     q?.classList.remove("animate-pulse", "contrast-0", "brightness-50");
   }, TIME);
 
+  // Temp disable reset button
   btn.disabled = true;
   btn.classList.add("q-reset");
   setTimeout(() => {
@@ -26,6 +29,7 @@ export function ResetBtn() {
     btn.disabled = false;
   }, TIME);
 
+  // Animate all flags on reset
   flags.forEach((f) => {
     f?.classList.add("animate-pulse", "q-reset");
 
@@ -35,6 +39,7 @@ export function ResetBtn() {
   });
 }
 
+// Animate flag on click
 export function Flags(flag: any) {
   const options = document.querySelectorAll(".q-flag");
 
@@ -54,10 +59,8 @@ export function Flags(flag: any) {
     tooltip.id = `${flag.id}-tooltip`;
   }
 }
-export function animate() {
-  return 0;
-}
 
+// Animate score on change
 export function scoreAnimation(scoreText: any, i = 0) {
   if (i == 1) {
     scoreText.classList.add("score-plus");
@@ -72,9 +75,10 @@ export function scoreAnimation(scoreText: any, i = 0) {
   }
 }
 
-export type SimE = "RIGHT" | "WRONG" | "PARTIAL" | "DEFAULT";
+export type CURR_GUESS = "RIGHT" | "WRONG" | "PARTIAL" | "DEFAULT";
 
-export function Label(label: HTMLElement, i: SimE) {
+// Show labels on each guess according to CURR_GUESS
+export function Label(label: HTMLElement, i: CURR_GUESS) {
   switch (i) {
     case "RIGHT":
       label.classList.remove("invisible");

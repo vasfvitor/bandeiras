@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"a">;
+
+const { href, ...props } = Astro.props;
+
+const { pathname } = Astro.url;
+const isActive = href === pathname || href === pathname.replace(/\/$/, "");
+---
+
+<a
+  href={href}
+  class={"__highlight group relative inline-flex w-fit text-center flex-row items-center justify-center gap-1 rounded-lg border border-transparent px-2 py-px m-2 " +
+    (isActive
+      ? " pointer-events-none shadow-md md:border-amarelo bg-amarelo text-black"
+      : "")}
+>
+  <slot />
+  <div
+    class="text-center absolute h-full w-full scale-90 rounded-lg border border-black opacity-0 transition-all group-hover:scale-105 group-hover:opacity-100"
+  >
+  </div>
+</a>
