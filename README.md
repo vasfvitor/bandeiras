@@ -29,10 +29,7 @@ The Brazil map `BR.svg` came [from this project](https://github.com/ahuseyn/inte
 
 <br>
 
-
-`code`
-
-The file tree below represents relevant files to the project. Thus configuration files are ommited.
+The file tree below represents relevant files to the project. Configuration files are ommited.
 
 ```
 ├───public -- Files that Astro copy over to distribution
@@ -52,7 +49,7 @@ The file tree below represents relevant files to the project. Thus configuration
     │       HeaderNavigation.astro
     │       SelectUF.astro
     │
-    ├───map
+    ├───map -- Map of Brazil component
     │       BR.svg
     │       Brazil.astro
     │
@@ -61,10 +58,10 @@ The file tree below represents relevant files to the project. Thus configuration
     │       EstadoLayout.astro
     │
     ├───pages
-    │   │   index.astro
-    │   │   quiz.astro
+    │   │   index.astro -- Main page
+    │   │   quiz.astro  -- Quiz page
     │   │
-    │   └───uf
+    │   └───uf          -- /uf route with dynamic generated pages
     │           estados.json   -- Data source for [UF].astro template
     │           index.astro    -- Main page
     │           [UF].astro     -- Template to generate each page for 27 states.
