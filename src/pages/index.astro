@@ -6,5 +6,17 @@ import SelectUF from "~/components/SelectUF.astro";
 
 <Layout>
   <SelectUF />
-  <Brazil />
+
+  <div class="relative max-w-screen-md mx-auto">
+    <Brazil />
+    <div
+      class="text-left md:block md:bottom-48 md:left-32 md:absolute z-20 px-4 md:p-0 -mt-20"
+    >
+      <p class="before:content-['▉'] before:text-[#a99ada]">Norte</p>
+      <p class="before:content-['▉'] before:text-[#fb9a99]">Centro-oeste</p>
+      <p class="before:content-['▉'] before:text-[#eaba66]">Nordeste</p>
+      <p class="before:content-['▉'] before:text-[#77b8cb]">Sudeste</p>
+      <p class="before:content-['▉'] before:text-[#c8dc9a]">Sul</p>
+    </div>
+  </div>
 </Layout>
