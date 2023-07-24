@@ -22,6 +22,7 @@ function loadMap() {
   }
   let active = false;
   let id = 0;
+  /*
   function mobileGone(e) {
     active = true;
     id = setTimeout(() => {
@@ -35,9 +36,9 @@ function loadMap() {
     mouseEntered(e);
     id = setTimeout(() => {
       mouseGone(e);
-    }, 1000);
+    }, 200);
   }
-
+*/
   // Show tooltip on mousemove
   function mouseEntered(e) {
     let target = e.target;
