@@ -49,11 +49,11 @@ div#tooltip {
   @apply pointer-events-none absolute z-[999] rounded border bg-white opacity-100 shadow transition-all duration-500 ease-out;
 }
 
-.tooltip-bew > * {
+.tooltip-mob > * {
   @apply m-0 p-4 font-sans;
 }
 
-.tooltip-bew {
+.tooltip-mob {
   @apply pointer-events-none absolute top-0 z-[999] rounded border bg-white opacity-100 shadow transition-all duration-500 ease-out;
 }
 
