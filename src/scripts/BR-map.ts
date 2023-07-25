@@ -15,7 +15,7 @@ function load_map() {
     )
   ) {
     // Mouse events
-    //map.addEventListener("click", handleClick, false);
+    // map.addEventListener("click", handleClick, false);
     map.addEventListener("mousemove", mouseEntered, false);
     map.addEventListener("mouseout", mouseGone, false);
   } else {
@@ -44,10 +44,29 @@ function load_map() {
     const timeoutId = window.setTimeout(() => {
       mouseGone(e);
     }, 1000);
+    //
     if (!active) {
-      mouseGone(e);
+      //mouseGone(e);
     }
     cardTimeouts[cardId] = timeoutId;
+  }
+  // Remove tooltip on mouseout
+  function mouseGone(e: MouseEvent | TouchEvent) {
+    let target = e.target as SVGPathElement;
+    if (target.nodeName === "path") {
+      target.style.fill = "black";
+      target.style.opacity = "1";
+      toolTip.classList.add("toolTip-hidden");
+      //toolTip.innerHTML = "";
+    }
+  }
+  // Go to uf page onclick
+  function handleClick(e: MouseEvent | TouchEvent) {
+    const target = e.target as SVGPathElement;
+    if (target.nodeName === "path") {
+      const postal = target.getAttribute("postal");
+      window.location.href = `/uf/${postal}`;
+    }
   }
 
   function cancelTimeout(cardId: string) {
@@ -92,24 +111,6 @@ function load_map() {
       toolTip.innerHTML = `
           <p><strong>${name} - ${postal}</strong></p>
       `;
-    }
-  }
-  // Remove tooltip on mouseout
-  function mouseGone(e: MouseEvent | TouchEvent) {
-    let target = e.target as SVGPathElement;
-    if (target.nodeName === "path") {
-      target.style.fill = "black";
-      target.style.opacity = "1";
-      toolTip.classList.add("toolTip-hidden");
-      //toolTip.innerHTML = "";
-    }
-  }
-  // Go to uf page onclick
-  function handleClick(e: MouseEvent | TouchEvent) {
-    const target = e.target as SVGPathElement;
-    if (target.nodeName === "path") {
-      const postal = target.getAttribute("postal");
-      window.location.href = `/uf/${postal}`;
     }
   }
 
