@@ -3,8 +3,16 @@ import BR from "./BR.svg";
 ---
 
 <section class="contente bg-none drop-shadow-lg">
-  <div class="map-wrappere mx-auto w-fit px-4 xl:px-8 xl:py-20">
-    <div id="toolTip" class="toolTip-hidden"></div>
+  <span
+    id="mobile-tip"
+    class="hidden text-gray-500 underline decoration-wavy mb-2 decoration-yellow-400"
+    >Aperte nas regiões do mapa ver o nome de cada estado</span
+  >
+  <div
+    id="map-wrapper"
+    class="relative map-wrappere mx-auto w-fit px-4 xl:px-8 xl:py-20"
+  >
+    <div id="tooltip" class="tooltip-hidden"></div>
     <div id="mobile" class=""></div>
     <object class="" id="map" data={BR} type="image/svg+xml"></object>
   </div>

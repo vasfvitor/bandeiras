@@ -41,15 +41,23 @@ body {
   @apply bg-white;
 }
 
-div#toolTip > * {
+div#tooltip > * {
   @apply m-0 p-4 font-sans;
 }
 
-div#toolTip {
+div#tooltip {
   @apply pointer-events-none absolute z-[999] rounded border bg-white opacity-100 shadow transition-all duration-500 ease-out;
 }
 
-.toolTip-hidden {
+.tooltip-bew > * {
+  @apply m-0 p-4 font-sans;
+}
+
+.tooltip-bew {
+  @apply pointer-events-none absolute top-0 z-[999] rounded border bg-white opacity-100 shadow transition-all duration-500 ease-out;
+}
+
+.tooltip-hidden {
   @apply opacity-0  !important;
 }
 
