@@ -10,11 +10,15 @@ import BR from "./BR.svg";
   >
   <div
     id="map-wrapper"
-    class="relative map-wrappere mx-auto w-fit px-4 xl:px-8 xl:py-20"
+    class="relative map-wrappere h-full m-auto w-fit px-4 xl:px-8 xl:py-20"
   >
     <div id="tooltip" class="tooltip-hidden"></div>
     <div id="mobile" class=""></div>
-    <object class="" id="map" data={BR} type="image/svg+xml"></object>
+    <object
+      class="z-0 w-full h-full relative"
+      id="map"
+      data={BR}
+      type="image/svg+xml"></object>
   </div>
 </section>
 <script src="~/scripts/BR-map.ts"></script>

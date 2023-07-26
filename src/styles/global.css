@@ -54,11 +54,11 @@ div#tooltip {
 }
 
 .tooltip-mob {
-  @apply pointer-events-none absolute top-0 z-[999] rounded border bg-white opacity-100 shadow transition-all duration-500 ease-out;
+  @apply pointer-events-none absolute top-0 rounded border bg-white opacity-100 shadow transition-all duration-100 ease-out;
 }
 
 .tooltip-hidden {
-  @apply opacity-0  !important;
+  @apply opacity-0 !important;
 }
 
 .disabled {
@@ -69,19 +69,6 @@ section.content {
   flex: 1 1 80%;
   padding: 30px;
   position: relative;
-}
-
-.map-wrapper {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-
-object#map {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 998;
 }
 
 @keyframes color-change {
