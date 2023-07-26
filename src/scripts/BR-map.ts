@@ -14,13 +14,13 @@ function load_map() {
     map.addEventListener("mousemove", mouseEntered, false);
     map.addEventListener("mouseout", mouseGone, false);
   } else {
+    // Mobile events
     document.getElementById("mobile-tip")?.classList.remove("hidden");
-    // Touch events
     map.addEventListener("touchstart", touchEnter, false);
-    //map.addEventListener("touchmove", touchEnter, false);
     map.addEventListener("touchend", touchEnd, false);
   }
 
+  // Mobile events
   function touchEnter(e: TouchEvent) {
     const target = e.target as SVGPathElement;
     if (target.nodeName === "path") {
@@ -71,11 +71,11 @@ function load_map() {
     }, 250);
   }
 
-  // MOUSE EVENTS
-  // Remove tooltip on mouseout
+  // Mouse events
+
   function mouseGone(e: MouseEvent | TouchEvent) {
     let target = e.target as SVGPathElement;
-    //const event = e.constructor.name;
+
     if (target.nodeName === "path") {
       target.style.fill = "black";
       target.style.opacity = "1";
@@ -84,9 +84,8 @@ function load_map() {
   }
 
   const tooltip = document.getElementById("tooltip") as HTMLDivElement;
-  // Show tooltip on mousemove
+
   function mouseEntered(e: MouseEvent) {
-    //console.log("E   " + e);
     const target = e.target as SVGPathElement;
     if (target.nodeName === "path") {
       target.style.cursor = "pointer";
@@ -131,5 +130,4 @@ function load_map() {
   }
 }
 
-// Calls init function on window load
 window.addEventListener("load", load_map);
