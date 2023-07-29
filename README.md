@@ -3,10 +3,10 @@
 demo: [bandeiras.pages.dev](https://bandeiras.pages.dev/)
 <br/>
 
-<img src='https://github.com/vasfvitor/bandeiras/samples/sample1.gif' width='300"'>
+<img src='https://github.com/vasfvitor/bandeiras/blob/master/samples/sample1.gif' width='300"'>
 <br/>
 
-<img src='https://github.com/vasfvitor/bandeiras/samples/sample2.gif' width='300"'>
+<img src='https://github.com/vasfvitor/bandeiras/blob/master/samples/sample1.gif' width='300"'>
 <br/>
 ## Made with Astro + Tailwind
 
