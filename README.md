@@ -2,6 +2,10 @@
 
 demo: [bandeiras.pages.dev](https://bandeiras.pages.dev/)
 
+![Brazil on hover](https://github.com/vasfvitor/bandeiras/samples/sample1.gif)
+
+![Quiz about flags](https://github.com/vasfvitor/bandeiras/samples/sample2.gif)
+
 ## Made with Astro + Tailwind
 
 #### Video Demo: <URL HERE>
