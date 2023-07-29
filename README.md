@@ -1,11 +1,13 @@
 # Bandeiras do Brasil
 
 demo: [bandeiras.pages.dev](https://bandeiras.pages.dev/)
+<br/>
 
-![](https://github.com/vasfvitor/bandeiras/samples/sample1.gif)
+<img src='https://github.com/vasfvitor/bandeiras/samples/sample1.gif' width='300"'>
+<br/>
 
-![](https://github.com/vasfvitor/bandeiras/samples/sample2.gif)
-
+<img src='https://github.com/vasfvitor/bandeiras/samples/sample2.gif' width='300"'>
+<br/>
 ## Made with Astro + Tailwind
 
 #### Video Demo: <URL HERE>
