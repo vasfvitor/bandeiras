@@ -20,7 +20,10 @@ function load_map() {
     map.addEventListener("touchend", touchEnd, false);
   }
   
-  const selectUf = document.getElementById("estadoSelect");
+  const estadoSelect = document.getElementById(
+    "estadoSelect"
+  ) as HTMLSelectElement;
+  const estadoSubmit = document.getElementById("submitSel") as HTMLInputElement;
 
   // Mobile events
   function touchEnter(e: TouchEvent) {
@@ -32,7 +35,9 @@ function load_map() {
      
       createTooltip(name, postal);
       paintRegion(region, target);
-      selectUf.value = postal;
+      estadoSelect.value = postal || "";
+      estadoSubmit.disabled = false;
+      estadoSubmit.classList.remove("disabled");
     }
   }
 

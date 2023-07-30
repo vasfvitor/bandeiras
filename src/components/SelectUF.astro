@@ -67,30 +67,33 @@ const ufs = [
   o distrito federal, Brasilía, a capital.
 </p>
 <script>
-  const estadoForm = document.getElementById("estadoForm") as HTMLFormElement;
-  const estadoSelect = document.getElementById(
-    "estadoSelect"
-  ) as HTMLSelectElement;
-  const submit = document.getElementById("submitSel") as HTMLInputElement;
+  window.addEventListener("load", function () {
+    const estadoForm = document.getElementById("estadoForm") as HTMLFormElement;
+    const estadoSelect = document.getElementById(
+      "estadoSelect"
+    ) as HTMLSelectElement;
+    const submit = document.getElementById("submitSel") as HTMLInputElement;
 
-  submit?.addEventListener("click", function (e) {
-    if (submit.disabled == true) {
-      console.log("Error");
-    }
-  });
+    submit?.addEventListener("click", function (e) {
+      if (submit.disabled == true) {
+        console.log("Error");
+      }
+    });
 
-  estadoForm?.addEventListener("change", function (e) {
-    if (estadoSelect.value) {
-      submit.disabled = false;
-      submit.classList.remove("disabled");
-    } else {
-      submit.disabled = true;
-    }
-  });
-  estadoForm?.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const uf = estadoSelect.value;
-    const url = `/uf/${uf}`;
-    window.location.href = url;
+    estadoForm?.addEventListener("change", function (e) {
+      if (estadoSelect.value) {
+        submit.disabled = false;
+        submit.classList.remove("disabled");
+      } else {
+        submit.disabled = true;
+      }
+    });
+    
+    estadoForm?.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const uf = estadoSelect.value;
+      const url = `/uf/${uf}`;
+      window.location.href = url;
+    });
   });
 </script>
