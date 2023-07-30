@@ -8,7 +8,8 @@ demo: [bandeiras.pages.dev](https://bandeiras.pages.dev/)
 
 <img src='https://github.com/vasfvitor/bandeiras/blob/master/samples/sample2.gif' width='480"'>
 <br/>
-## Made with Astro + Tailwind
+
+## Made with Astro + Tailwind 
 
 #### Video Demo: <URL HERE>
 
@@ -84,5 +85,9 @@ The file tree below represents relevant files to the project. Configuration file
             quiz.css
 
 ```
+
+### Improvements Idea
+
+Better touch interaction specially for small touch areas. Perhaps a button to navigate the map from 1 to 27.
 
 

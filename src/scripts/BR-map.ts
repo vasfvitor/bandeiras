@@ -19,6 +19,8 @@ function load_map() {
     map.addEventListener("touchstart", touchEnter, false);
     map.addEventListener("touchend", touchEnd, false);
   }
+  
+  const selectUf = document.getElementById("estadoSelect");
 
   // Mobile events
   function touchEnter(e: TouchEvent) {
@@ -27,10 +29,15 @@ function load_map() {
       const region = target.getAttribute("region");
       const postal = target.getAttribute("postal");
       const name = target.getAttribute("name");
+     
       createTooltip(name, postal);
       paintRegion(region, target);
+      selectUf.value = postal;
     }
   }
+
+
+
   let i = 5;
   function createTooltip(name: string | null, postal: string | null) {
     if (i > 999) {
