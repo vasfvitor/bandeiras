@@ -20,74 +20,24 @@
     "Coat": "A parte superior representa Marechal Deodoro, que foi a cabeça da Comarca, com o nome Alagoas do Sul. Há nessa parte três tainhas que simbolizam as principais lagoas: Mundaú ou Norte, Manguaba ou do Sul e Jequiá. Essas tainhas também lembram que a atividade pesqueira, importante fontes de renda da região.A parte que fica à esquerda do escudo, representa Penedo: um rochedo vermelho, sustentando uma torre também vermelha, sobre o mar azul. E a parteà direita representa Porto Calvo: três morros de cor vermelha para recordar o sangue e a coragem dos habitantes da vila. As quatro faixas onduladas em azul, lembram os quatro rios da região: Mocaitá, Tapamundé, Comandatuba e Manguaba.A cana-de-açúcar e algodão, que sustentam o brasão, representam as duas principais atividades agrícolas.Em cima do escudo está uma estrela de prata, lembrando as estrelas da Bandeira do Brasil e mostrando que Alagoas, ali está representada.Abaixo do escudo, uma fita de cor amarela, com as palavras: “AD BONUM ET PROSPERITATEM”, lembrando as primeiras palavras do decreto que criou a Capitania de Alagoas (para o bem e para a prosperidade). "
   },
   {
-    "id": 7,
-    "UF": "DF",
-    "Name": "Distrito Federal",
-    "Capital": "Brasília",
-    "Region": "Centro-Oeste",
-    "Flag": "A bandeira é composta pela Cruz de Brasília, ao centro, simboliza a herança indígena e a força que emana do centro em todas as direções. O branco representa a paz e o verde representa as matas da região. A faixa governamental do Distrito Federal tem seu feitio baseado na bandeira no Brasil, o brasão significa a cruz do Monte Vera Cruz.",
-    "FlagAspect": null,
-    "Coat": null
-  },
-  {
-    "id": 8,
-    "UF": "ES",
-    "Name": "Espírito Santo",
-    "Capital": "Vitória",
-    "Region": "Sudeste",
-    "Flag": "Mário Martins, escritor brasileiro, afirma que a inscrição tem origem no lema da ordem dos jesuítas: \"Trabalhe como se tudo dependesse de você e confie como se tudo dependesse de Deus\". Apesar de ser uma cor incomum na heráldica, o rosa foi utilizado pelos criadores da bandeira para representar uma tonalidade encontrada no céu capixaba, que, nas tardes de verão, apresenta tons variáveis de rosa misturados ao azul celeste.A bandeira do Espírito Santo data de 1908, mas foi adotada oficialmente em 24 de abril de 1947 pelo governador Carlos Fernando Montero Lindemberg. O azul e o rosa são as cores oficiais do estado, instituídas por Jerónimo Monteiro a 7 de setembro de 1909. Ao que parece eram as cores de um clube abolicionista, assim como as da indumentária da Virgem da Vitória, padroeira da capital do o Estado. O azul representa suavidade e harmonia, o branco paz e o rosa regozijo e felicidade. As palavras Trabalha e Confia são atribuídas ao governador Monteiro. Devem ter sua origem em sua formação religiosa junto à Associação de São Luís do Itu (São Paulo), dirigida pelos padres da Companhia de Jesus (jesuítas) fundada por Santo Inácio de Loyola.Um diagrama assinado (aparentemente pelo então governador e referindo-se ao Decreto original) em março de 1982 indica que a bandeira tem proporções gerais 7:10, no entanto, pelo diagrama podemos notar que as listras estão em proporções de 9-10-9 em vez do que ainda, com o lema contido dentro de um retângulo imaginário igual a 11/20 do comprimento da bandeira por 6/10 da altura da faixa central. As cores exatas ainda permanecem ligeiramente conjecturais, no entanto. A bandeira em http://www.vexilla-mundi.com/brazil_divisions.html é baseada em uma foto de uma bandeira em uso real e as tonalidades são bem mais claras do que mostramos?Isso parece estranho - o decreto-lei de 1947 sobre a bandeira dizia \"A bandeira do Estado terá as dimensões completas para a bandeira nacional, em três campos - azul, branco e rosa - retangulares, longitudinais e iguais ...\" (A bandeira do Estado terá as dimensões estabelecidas para a bandeira nacional, em três campos - azul, branco e rosa - retangular, longitudinal e igual\". Impulso brasileiro de dar as dimensões da bandeira em \"módulos\". Ter um guindaste igual a 28 módulos permitiria afirmar o fly como exatamente 40, mas então pareceria tão fácil afirmar o guindaste como 7+7+7 com o fly igual a 30. Talvez a matemática para o arco e a altura das letras termine em frações dessa maneira?O diagrama oficial dá as proporções gerais de 14 módulos por 20 módulos, depois listras em proporções ridículas de 4,5 módulos, 5 módulos e 4,5 módulos, com 1,5 módulos na parte superior da parte inferior da inscrição e 4,5 módulos na talha e na mosca .",
-    "FlagAspect": null,
-    "Coat": null
-  },
-  {
-    "id": 10,
-    "UF": "MA",
-    "Name": "Maranhão",
-    "Capital": "São Luís",
-    "Region": "Nordeste",
-    "Flag": "Retângulo formado por nove listas em sentido horizontal, intercaladas, sendo quatro brancas, três encarnadas e duas pretas, com um quadrado azul ao canto superior unido à lança e tendo no centro uma estrela branca. O dito quadrado ocupa uma terça parte do comprimento da bandeira e a metade da sua largura.",
-    "FlagAspect": null,
-    "Coat": null
-  },
-  {
-    "id": 11,
-    "UF": "MT",
-    "Name": "Mato Grosso",
-    "Capital": "Cuiabá",
-    "Region": "Centro-Oeste",
-    "Flag": "As cores principais da bandeira (azul, branco, verde e amarelo) são as mesmas da Bandeira do Brasil e são uma representação da integração do estado com o Brasil, separadamente cada cor tem um significado específico:O azul representa o céu;O branco representa a paz;O verde representa a extensão territorial;A estrela amarela simboliza o ideal republicano e as riquezas minerais do estado, que tanto atraíram os primeiros colonizadores.A estrela também remete a Sirius, que na bandeira nacional simboliza o estado; ",
-    "FlagAspect": null,
-    "Coat": null
-  },
-  {
-    "id": 16,
-    "UF": "PR",
-    "Name": "Paraná",
-    "Capital": "Curitiba",
-    "Region": "Sul",
-    "Flag": "A bandeira compõe-se de um quadrilátero verde, atravessado no ângulo superior direito para o inferior esquerdo por uma larga faixa branca contendo a representação da esfera celeste em azul e as cinco estrelas da Constelação do Cruzeiro do Sul em branco. A esfera é atravessada, abaixo da estrela superior do Cruzeiro, por uma faixa branca com a inscrição “PARANÁ” em verde. Circundam a esfera um ramo de Pinho à direita e outro de Mate a esquerda. ",
-    "FlagAspect": null,
-    "Coat": null
-  },
-  {
-    "id": 22,
-    "UF": "RO",
-    "Name": "Rondônia",
-    "Capital": "Porto Velho",
+    "id": 3,
+    "UF": "AP",
+    "Name": "Amapá",
+    "Capital": "Macapá",
     "Region": "Norte",
-    "Flag": "Na bandeira estadual, o verde representa as matas; o amarelo, as riquezas minerais; o azul, o céu; e o branco, a paz. É representado na bandeira do Brasil por Muliphen (γ Canis Majoris). Rondônia também é um estado que adota a faixa governamental, no cerimonial do governo, e a faixa é formatada nas cores da bandeira e do brasão.",
-    "FlagAspect": null,
-    "Coat": null
+    "Flag": "O verde representa as matas; o amarelo, as riquezas minerais; o azul, o céu; e o branco, a paz. O preto simboliza o respeito aos homens que morreram lutando pelo estado. A figura geométrica centralizada no lado esquerdo, representa a Fortaleza de São José de Macapá.Até a criação do território do Amapá, a região foi disputada por franceses e brasileiros, tendo havido, no período, sido criados o Estado Independente do Cunani, a República Independente de Caunany, e a República de Brezet, que apesar de terem criado uma mínima estrutura, a fim de serem reconhecidos internacionalmente, nunca passaram de situações efêmeras, cujos governos do Brasil e da França trataram de extinguir.O Território Federal do Amapá instituiu sua própria bandeira, que foi utilizada após a criação do estado em 5 de outubro de 1988, e instituída pelo do decreto nº 8, de 23 de Abril de 1984. Entretanto, devido à divergências à época, popularmente era utilizada uma versão tripartida da bandeira do estado do Pará, mostrando o forte São José. Tal versão só deixou de ser utilizada durante o governo de Aníbal Barcelos. ",
+    "FlagAspect": "10/7",
+    "Coat": "Adoção \t23 de abril de 1984Timbre \tUma estrela de cinco pontasEscudo \tEscudo prata laureado pelas cores blau e goles; ao centro o mapa do Amapá em ouro e dentro dele, um amapazeiro, com tronco em prata e coroa em verde. A parte superior do escudo tem a forma da fortaleza de S. José de Macapá.Suportes \tGalhos da árvore do Amapazeiro.Lema \t\"AQUI COMEÇA O BRASIL\", em letras pretas em um listel branco em chefe "
   },
   {
-    "id": 18,
-    "UF": "PI",
-    "Name": "Piauí",
-    "Capital": "Teresina",
-    "Region": "Nordeste",
-    "Flag": "s cores principais da bandeira são as mesmas da bandeira do Brasil, e são uma representação da integração do estado com o Brasil. Separadamente cada cor tem um significado específico:O amarelo representa a riqueza mineral;O verde a esperança.Além das cores, outros elementos presentes na bandeira também têm seu simbolismo:A estrela remete a Antares, que na bandeira nacional simboliza o estado do Piauí;A inscrição dentro do retângulo azul \"13 DE MARÇO DE 1823\", que foi introduzida na alteração de 2005, marca o dia da batalha do Jenipapo, ocorrida em território piauiense.",
-    "FlagAspect": null,
-    "Coat": null
+    "id": 4,
+    "UF": "AM",
+    "Name": "Amazonas",
+    "Capital": "Manaus",
+    "Region": "Norte",
+    "Flag": "As 25 estrelas no canto esquerdo superior representam os 25 municípios em que se dividia o estado em 4 de agosto de 1897. A estrela maior representa a capital, Manaus. As duas faixas brancas na horizontal representam esperança e a faixa vermelha, as dificuldades superadas.Na bandeira amazonense, ao branco e azul somou-se o vermelho (que pode ser interpretado em relação à época de preparação da bandeira), exatamente para que fosse levada aos campos de combate em Canudos, no ano de 1897, pelo batalhão militar amazonense (atual Polícia Militar do Estado do Amazonas), que se integrou às forças dos demais estados naquela luta. ",
+    "FlagAspect": "21/15",
+    "Coat": "AGUIA DA AMAZÔNIA: De asas abertas, unhas aduncas e o bico entreaberto, simboliza a grandeza e a força do povo do Estado. \nSOL: Representa a luz, a vida e a justiça. \nA ELIPSE: Significa os rios, Solimões e Negro, na confluência formando a partir deste ponto o rio Amazonas. O CAMPO AZUL: Retrata o céu brasileiro.ESTRELA: Representa a paz e o progresso. \nNA JUNÇÃO DOS RIOS: Um barrete frígio, símbolo da lealdade do Amazonas à República. \nO CAMPO VERDE: Indica as florestas. \nPENAS E SETAS ENTRELAÇADAS: Representam a gênese da nacionalidade e a civilização moderna. \nA CORRENTE DE FERRO, ENVOLVENDO A ELIPSE: Representa estabilidade da autonomia política no Amazonas. \nOS EMBLEMAS DE NAVEGAÇÃO, LIGADOS POR UM LAÇO VERDE COM DUAS PONTAS DOBRADAS, PENDENDO DA CORRENTE NA PARTE DE BAIXO NA PONTA DIREITA - lê-se a inscrição 22 de junho de 1832, data em que a antiga Comarca do Amazonas se proclamou (por armas) como província independente. \nNA PONTA ESQUERDA - 21 de novembro de 1889, dia em que o Estado aderiu à revolução ingente, de 15 de novembro do mesmo ano.\nDo lado direito do escudo: Sobressaem os emblemas da indústria.Do lado esquerdo do escudo: Nascendo da âncora, os emblemas do comércio e agricultura."
   },
   {
     "id": 5,
@@ -110,74 +60,24 @@
     "Coat": "Art. 1. O Brasão do Estado do Ceará será representado por um escudo polônio com campo verde, fendido, figurando na sua parte esquerda sete estrelas, na cor branca, que representam as mesorregiões do Estado, e, sobre o todo, a elipse central, com elementos internos distribuídos em quatro quadrantes, com a linha do horizonte no centro. O primeiro quadrante contém o sol e o farol do Mucuripe; o segundo, a serra e o pássaro; o terceiro, o mar e a jangada; e o quarto, o sertão e a carnaúba, simbolizando os quatros elementos da natureza: fogo, ar, água e terra. Como timbre, a figura de uma fortaleza de construção antiga, cor de ouro, com cinco merlões.(...)§ 2º Tomando-se por base módulo arbitrário “M”, serão observadas, no escudo do Brasão do Estado, as seguintes proporções: a largura corresponderá a sete módulos (7M), a altura a oito módulos (8M), e o conjunto total do Brasão corresponderá a proporção de sete módulos (7M) na largura por nove módulos e cinco décimos (9,5M) na altura, de acordo com o anexo I desta Lei. (Redação dada pela Lei n° 13.897, DE 21.06.07)"
   },
   {
-    "id": 15,
-    "UF": "PB",
-    "Name": "Paraíba",
-    "Capital": "João Pessoa",
-    "Region": "Nordeste",
-    "Flag": "Um terço dela está na cor preta — representando os dias de luto que vigoraram no estado após o assassinato de João Pessoa em Recife, no ano de 1930 — e dois terços restantes na cor vermelha — representando a Aliança Liberal. No meio da parte vermelha, há a inscrição \"NEGO\", na cor branca e em letras maiúsculas, que é a conjugação do verbo \"negar\" no presente do indicativo da primeira pessoa do singular e representa a não aceitação do sucessor à presidência da república indicado pelo presidente brasileiro da época, Washington Luís. Quando a bandeira foi adotada, o vocábulo era escrito com um acento agudo na letra E: \"NÉGO\". ",
+    "id": 7,
+    "UF": "DF",
+    "Name": "Distrito Federal",
+    "Capital": "Brasília",
+    "Region": "Centro-Oeste",
+    "Flag": "A bandeira é composta pela Cruz de Brasília, ao centro, simboliza a herança indígena e a força que emana do centro em todas as direções. O branco representa a paz e o verde representa as matas da região. A faixa governamental do Distrito Federal tem seu feitio baseado na bandeira no Brasil, o brasão significa a cruz do Monte Vera Cruz.",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "O brasão, cujo formato e inspirado em forma de um pilotis da colunata do Palácio da Alvorada, é composto em sinople e ouro. Observando-o, percebemos que as cores, todavia, não são do mesmo tom dos da bandeira nacional, assemelhando-se as utilizadas na bandeira do Distrito Federal. Carrega, ao centro, um escudo quadrangular verde com a chamada Cruz de Brasília, composta de quatro flechas divergentes que simbolizam a ação centrífuga do poder, e encimada por uma mesa de reuniões, a servir de coronel, que indica ser ali o lugar do Congresso Nacional. Abaixo, em latim, o mote do Distrito Federal: venturis ventis (“aos ventos que hão de vir”)."
   },
   {
-    "id": 26,
-    "UF": "SE",
-    "Name": "Sergipe",
-    "Capital": "Aracaju",
-    "Region": "Nordeste",
-    "Flag": "Sua composição, tal como explicitada em lei, é a seguinte:Retângulo, com quatro listas, de cores verde e amarela, alternadamente, tendo o verde na parte superior e, sobre os dois lados do ângulo reto superior da esquerda, um retângulo em fundo azul claro de cobalto, em dimensão proporcional ao retângulo em total, com cinco estrelas brancas de cinco raios cada uma, tauxiadas em cada ângulo do retângulo azul, no lugar geométrico do cruzamento das duas linhas diagonais., representam a integração do estado ao Brasil. As estrelas representam as cinco barras (fozes de rios) existentes em Sergipe: São Francisco; rio Japaratuba; rio Sergipe; rio Vaza-Barris e rio Real.É diferenciada da bandeira de Goiás por ter a estrela central (que representa o Rio Sergipe) maior que as outras quatro no quadrante azul, e por possuir apenas quatro faixas intercaladas em verde e amarelo. ",
-    "FlagAspect": null,
-    "Coat": null
-  },
-  {
-    "id": 27,
-    "UF": "TO",
-    "Name": "Tocantins",
-    "Capital": "Palmas",
+    "id": 8,
+    "UF": "ES",
+    "Name": "Espírito Santo",
+    "Capital": "Vitória",
     "Region": "Sudeste",
-    "Flag": "A faixa azul representa os rios e a amarela, as riquezas do estado. O sol, sobre a faixa branca, significa que ele nasce para todos os cidadãos tocantinenses. É assim a sua atual composição: ⁣Retângulo com as proporções de 20 módulos de comprimento por 14 módulos de largura. Os vértices, superior esquerdo e inferior direito são triângulos retângulos, com catetos de 13 por 9 módulos, nas cores, azul (blau) e amarelo (ouro), respectivamente. A barra resultante desta divisão, em branco, está carregada com um sol estilizado de amarelo (ouro), com 8 pontas maiores e 16 pontas menores, com 4 e 2,3 módulos de raio respectivamente.",
+    "Flag": "Mário Martins, escritor brasileiro, afirma que a inscrição tem origem no lema da ordem dos jesuítas: \"Trabalhe como se tudo dependesse de você e confie como se tudo dependesse de Deus\". Apesar de ser uma cor incomum na heráldica, o rosa foi utilizado pelos criadores da bandeira para representar uma tonalidade encontrada no céu capixaba, que, nas tardes de verão, apresenta tons variáveis de rosa misturados ao azul celeste.A bandeira do Espírito Santo data de 1908, mas foi adotada oficialmente em 24 de abril de 1947 pelo governador Carlos Fernando Montero Lindemberg. O azul e o rosa são as cores oficiais do estado, instituídas por Jerónimo Monteiro a 7 de setembro de 1909. Ao que parece eram as cores de um clube abolicionista, assim como as da indumentária da Virgem da Vitória, padroeira da capital do o Estado. O azul representa suavidade e harmonia, o branco paz e o rosa regozijo e felicidade. As palavras Trabalha e Confia são atribuídas ao governador Monteiro. Devem ter sua origem em sua formação religiosa junto à Associação de São Luís do Itu (São Paulo), dirigida pelos padres da Companhia de Jesus (jesuítas) fundada por Santo Inácio de Loyola.Um diagrama assinado (aparentemente pelo então governador e referindo-se ao Decreto original) em março de 1982 indica que a bandeira tem proporções gerais 7:10, no entanto, pelo diagrama podemos notar que as listras estão em proporções de 9-10-9 em vez do que ainda, com o lema contido dentro de um retângulo imaginário igual a 11/20 do comprimento da bandeira por 6/10 da altura da faixa central. As cores exatas ainda permanecem ligeiramente conjecturais, no entanto. A bandeira em http://www.vexilla-mundi.com/brazil_divisions.html é baseada em uma foto de uma bandeira em uso real e as tonalidades são bem mais claras do que mostramos?Isso parece estranho - o decreto-lei de 1947 sobre a bandeira dizia \"A bandeira do Estado terá as dimensões completas para a bandeira nacional, em três campos - azul, branco e rosa - retangulares, longitudinais e iguais ...\" (A bandeira do Estado terá as dimensões estabelecidas para a bandeira nacional, em três campos - azul, branco e rosa - retangular, longitudinal e igual\". Impulso brasileiro de dar as dimensões da bandeira em \"módulos\". Ter um guindaste igual a 28 módulos permitiria afirmar o fly como exatamente 40, mas então pareceria tão fácil afirmar o guindaste como 7+7+7 com o fly igual a 30. Talvez a matemática para o arco e a altura das letras termine em frações dessa maneira?O diagrama oficial dá as proporções gerais de 14 módulos por 20 módulos, depois listras em proporções ridículas de 4,5 módulos, 5 módulos e 4,5 módulos, com 1,5 módulos na parte superior da parte inferior da inscrição e 4,5 módulos na talha e na mosca .",
     "FlagAspect": null,
-    "Coat": null
-  },
-  {
-    "id": 3,
-    "UF": "AP",
-    "Name": "Amapá",
-    "Capital": "Macapá",
-    "Region": "Norte",
-    "Flag": "O verde representa as matas; o amarelo, as riquezas minerais; o azul, o céu; e o branco, a paz. O preto simboliza o respeito aos homens que morreram lutando pelo estado. A figura geométrica centralizada no lado esquerdo, representa a Fortaleza de São José de Macapá.Até a criação do território do Amapá, a região foi disputada por franceses e brasileiros, tendo havido, no período, sido criados o Estado Independente do Cunani, a República Independente de Caunany, e a República de Brezet, que apesar de terem criado uma mínima estrutura, a fim de serem reconhecidos internacionalmente, nunca passaram de situações efêmeras, cujos governos do Brasil e da França trataram de extinguir.O Território Federal do Amapá instituiu sua própria bandeira, que foi utilizada após a criação do estado em 5 de outubro de 1988, e instituída pelo do decreto nº 8, de 23 de Abril de 1984. Entretanto, devido à divergências à época, popularmente era utilizada uma versão tripartida da bandeira do estado do Pará, mostrando o forte São José. Tal versão só deixou de ser utilizada durante o governo de Aníbal Barcelos. ",
-    "FlagAspect": "10/7",
-    "Coat": "Adoção \t23 de abril de 1984Timbre \tUma estrela de cinco pontasEscudo \tEscudo prata laureado pelas cores blau e goles; ao centro o mapa do Amapá em ouro e dentro dele, um amapazeiro, com tronco em prata e coroa em verde. A parte superior do escudo tem a forma da fortaleza de S. José de Macapá.Suportes \tGalhos da árvore do Amapazeiro.Lema \t\"AQUI COMEÇA O BRASIL\", em letras pretas em um listel branco em chefe "
-  },
-  {
-    "id": 20,
-    "UF": "RN",
-    "Name": "Rio Grande do Norte",
-    "Capital": "Natal",
-    "Region": "Nordeste",
-    "Flag": "O  estudo sobre o seu formato foi definido por Luís da Câmara Cascudo, notório experiente da cultura potiguar. Ela é composta por um retângulo de um metro de altura por um metro e meio de comprimento (proporção 2 por 3), com as cores verde (que ocupa a metade superior da bandeira e representa a esperança), branco (ocupa a metade inferior e representa a paz) e amarelo, cujo campo se apresenta em forma de escudo, servindo ao fundo o brasão do estado.Com uma origem quase que exclusivamente extrativista, o estado do Rio Grande do Norte expõe em sua bandeira o que é e principalmente o que já foi a principal fonte de renda do estado. ",
-    "FlagAspect": null,
-    "Coat": null
-  },
-  {
-    "id": 19,
-    "UF": "RJ",
-    "Name": "Rio de Janeiro",
-    "Capital": "Rio de Janeiro",
-    "Region": "Sudeste",
-    "Flag": "Em 23 de julho de 1975, a nova constituição do Estado do Rio de Janeiro estabeleceu que a bandeira e o escudo do novo estado (que estava absorvendo a Guanabara) seriam os mesmos do antigo estado. O azul e o branco são as cores tradicionais de Portugal.",
-    "FlagAspect": null,
-    "Coat": null
-  },
-  {
-    "id": 4,
-    "UF": "AM",
-    "Name": "Amazonas",
-    "Capital": "Manaus",
-    "Region": "Norte",
-    "Flag": "As 25 estrelas no canto esquerdo superior representam os 25 municípios em que se dividia o estado em 4 de agosto de 1897. A estrela maior representa a capital, Manaus. As duas faixas brancas na horizontal representam esperança e a faixa vermelha, as dificuldades superadas.Na bandeira amazonense, ao branco e azul somou-se o vermelho (que pode ser interpretado em relação à época de preparação da bandeira), exatamente para que fosse levada aos campos de combate em Canudos, no ano de 1897, pelo batalhão militar amazonense (atual Polícia Militar do Estado do Amazonas), que se integrou às forças dos demais estados naquela luta. ",
-    "FlagAspect": "21/15",
-    "Coat": "AGUIA DA AMAZÔNIA: De asas abertas, unhas aduncas e o bico entreaberto, simboliza a grandeza e a força do povo do Estado.SOL: Representa a luz, a vida e a justiça.A ELIPSE: Significa os rios, Solimões e Negro, na confluência formando a partir deste ponto o rio Amazonas.O CAMPO AZUL: Retrata o céu brasileiro.ESTRELA: Representa a paz e o progresso.NA JUNÇÃO DOS RIOS: Um barrete frígio, símbolo da lealdade do Amazonas à República.O CAMPO VERDE: Indica as florestas.PENAS E SETAS ENTRELAÇADAS: Representam a gênese da nacionalidade e a civilização moderna.A CORRENTE DE FERRO, ENVOLVENDO A ELIPSE: Representa estabilidade da autonomia política no Amazonas.OS EMBLEMAS DE NAVEGAÇÃO, LIGADOS POR UM LAÇO VERDE COM DUAS PONTAS DOBRADAS, PENDENDO DA CORRENTE NA PARTE DE BAIXO NA PONTA DIREITA - lê-se a inscrição 22 de junho de 1832, data em que a antiga Comarca do Amazonas se proclamou (por armas) como província independente.NA PONTA ESQUERDA - 21 de novembro de 1889, dia em que o Estado aderiu à revolução ingente, de 15 de novembro do mesmo ano.Do lado direito do escudo: Sobressaem os emblemas da indústria.Do lado esquerdo do escudo: Nascendo da âncora, os emblemas do comércio e agricultura."
+    "Coat": "O atual brasão do estado foi instituído pelo Decreto-Lei, em 24 de julho de 1947, ⁣ e é obrigatoriamente impresso em todos os papéis oficiais do Governo do Estado.\nDescrição heráldica\nOs seus principais elementos e seus significados são: ⁣\nConvento da Penha: Maior monumento histórico e religioso do Estado. Nossa Senhora da Penha é padroeira, a protetora do Espírito Santo;\nRamo de café (à direita): Representa o principal produto agrícola capixaba (desde 1850);\nRamo da cana-de-açúcar (à esquerda): Representa o principal produto agrícola da economia do Estado no passado (até 1850).\n23 de maio de 1535: Dia de chegada de Vasco Fernandes Coutinho ao Espírito Santo e início da colonização do solo espírito-santense;\n12 de junho de 1817: Dia do fuzilamento, na Bahia, de Domingos José Martins, herói capixaba, um dos chefes da Revolução Pernambucana, que visava à independência do Brasil de Portugal;\nTrês estrelas (acima, embaixo e à esquerda): representam os estados vizinhos (Bahia, Rio de Janeiro e Minas Gerais).\nAs cores rosa e azul derivam das cores das vestes da imagem de Nossa Senhora da Penha, como acima já supracitado, padroeira do Estado."
   },
   {
     "id": 9,
@@ -187,7 +87,27 @@
     "Region": "Centro-Oeste",
     "Flag": "É composta por oito listras horizontais, alternadas nas cores verde e amarelo. O verde representa as matas e o amarelo as riquezas minerais. No canto superior esquerdo, temos a representação do Cruzeiro do Sul, através do retângulo azul com cinco estrelas brancas. A constelação foi homenageada por ter inspirado dois dos nomes antigos do Brasil, Ilha de Vera Cruz e Terra de Santa Cruz. ",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "“A figura central é composta de um coração, representando a posição central do Estado no coração do país, cingido por anéis que representam, horizontalmente, as três bacias principais do Estado – Amazônica, Platina e Francisca – e, verticalmente, os 12 principais rios do Estado que correm para o sul:  S. Marcos,  Veríssimo, Corumbá, Meia Ponte, Bois, Claro, Vermelho, Corrente, Aporé, Sucuri, Verde e Pardo. Na parte superior do coração há uma paisagem que representa o meio rural, com a silhueta bovina, denotando o potencial agropecuário goiano. Aliás, a capacidade agrícola é expressa ainda pelos ramos fumo, milho, arroz, café e cana-de-açúcar que ladeiam e encimam a figura central do brasão. A parte inferior é composta pela bateria do garimpeiro e a chama do fogo com a qual Bartolomeu Bueno assustou os índios ameaçando conseguir por fogo nas águas do rio. O cometa de Biela figura na parte inferior esquerda do coração representando o Rio Araguaia e à direita um vermelho sobre campo amarelo, representando por um losango o ouro aqui encontrado.” "
+  },
+  {
+    "id": 10,
+    "UF": "MA",
+    "Name": "Maranhão",
+    "Capital": "São Luís",
+    "Region": "Nordeste",
+    "Flag": "Retângulo formado por nove listas em sentido horizontal, intercaladas, sendo quatro brancas, três encarnadas e duas pretas, com um quadrado azul ao canto superior unido à lança e tendo no centro uma estrela branca. O dito quadrado ocupa uma terça parte do comprimento da bandeira e a metade da sua largura.",
+    "FlagAspect": null,
+    "Coat": "É composto por uma moldura dourada e um círculo central. No centro há quatro partes que representam a bandeira do Maranhão, as cores do Brasil e a instrução através duma pena e um pergaminho. A forma do contorno da superfície do escudo será a mesma do escudo da Confederação Suíça e será limitada por molduras de estilo barroco amoldadas ao contorno; o campo do escudo será dividido em quatro partes — duas, em um dos lados, contendo as cores nacionais, verde e amarelo, e duas, do outro lado, contendo, a de cima, a bandeira do Estado reproduzida, e a de baixo o emblema da Instrução no meio de raios de luz; o escudo será encimado por uma coroa de louros e as molduras, ornatos e a coroa serão da cor dourada."
+  },
+  {
+    "id": 11,
+    "UF": "MT",
+    "Name": "Mato Grosso",
+    "Capital": "Cuiabá",
+    "Region": "Centro-Oeste",
+    "Flag": "As cores principais da bandeira (azul, branco, verde e amarelo) são as mesmas da Bandeira do Brasil e são uma representação da integração do estado com o Brasil, separadamente cada cor tem um significado específico:O azul representa o céu;O branco representa a paz;O verde representa a extensão territorial;A estrela amarela simboliza o ideal republicano e as riquezas minerais do estado, que tanto atraíram os primeiros colonizadores.A estrela também remete a Sirius, que na bandeira nacional simboliza o estado; ",
+    "FlagAspect": null,
+    "Coat": "O Brasão d'Armas do Estado de Mato Grosso compõe-se de um escudo em estilo português, isto é com a ponta redonda, ocupada por um campo de sinople, sobre o qual assenta lado a lado, um morro de ouro com dois cabeços, sendo um no centro do escudo, e outro um pouco mais abaixo, para a sinistra do mesmo. O resto do escudo é um céu de blau, sobre o qual domina, em chefe, a peça heráldica ultimamente consagrada no Brasão da Cidade de São Paulo, como símbolo do bandeirante, símbolo este que consiste em um braço armado a empunhar uma bandeira com a flâmula quadridentada e ornada com a Cruz da Ordem de Cristo, tudo de prata, exceto a cruz que é de goles. O escudo tem por timbre uma fênix de ouro a renascer da sua imortalidade ou fogueira de goles, e por suporte dois ramos floridos, um de seringueira e outro de erva-mate, enlaçados na base por uma fita que traz a legenda: \"Virtute Plusquam Auro\""
   },
   {
     "id": 12,
@@ -197,7 +117,7 @@
     "Region": "Centro-Oeste",
     "Flag": "\"O homem, em uma de suas mais características atitudes, sempre procurou representar seus sonhos, seus ideais, suas mais caras razões de viver, através de uma simbologia que transmitisse, não só a ele, mas também aos que o rodeiam, a magnitude de tais pensamentos.Ideais trabalhados e realidade construída: Bandeira, Flâmula Magna, símbolo máximo a pairar sobre nossa Terra, pois, aparentemente frágil em sua haste, na realidade traduz a força conjunta de toda a população de um Estado.Nosso símbolo é o do equilíbrio, da firmeza e da serenidade. Nós somos a estrela dourada que brilha no céu azul da esperança, a simbolizar a riqueza do nosso labor.As metas e os campos do nosso Estado representam um desafio, mas ao mesmo tempo, a consciência da preservação do nosso verde, de nosso tesouro maior, que é a própria natureza.Nós somos o Estado do equilíbrio, onde chaminés siderúrgicas e áreas florestais coexistirão pacificamente, lado a lado.Entre o verde e o azul, na convergência prática de todas as nossas atitudes, nós somos a faixa branca do porvir, a alvidez serena da amizade entre os povos.\"",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "O brasão de armas do estado de \"Mato Grosso do Sul\" é representado por um escudo peninsular com o interior dividido em duas parte horizontais. A parte superior (chefe do brasão) em blau (azul) com uma estrela em ouro no meio, que é a estrela constante na bandeira do estado, e que simboliza um Estado nascente, cujo futuro se ergue promissor e fecundo. A parte inferior (campo) em sinople (verde), figura uma onça-pintada passante, um dos animais-símbolo do pantanal sul-mato-grossense.\nAs estrelas em volta do escudo representam os municípios do estado. Ladeando o escudo há um ramo de café, à esquerda, e um ramo de erva-mate (Ilex matogrossense, conhecida também como Ilex paraguariensis), à direita, representando as duas culturas que tiveram importância histórica na região. Partindo de trás do escudo e na metade horizontal, estão 9 raios solares; 8 inteiros e um cortado ao meio descendo no horizonte. Repare que os raios solares se iniciam na mesma linha de divisão do interior do escudo.\nUma fita na parte inferior consta a data de criação do Estado (11 de outubro de 1977) e o nome do estado."
   },
   {
     "id": 13,
@@ -207,7 +127,7 @@
     "Region": "Sudeste",
     "Flag": "Há controvérsias a respeito da cor original do triângulo, pois alguns historiadores julgam ser verde originalmente. O vermelho, contudo, acabou sendo adotado como símbolo-mor das revoluções. O triângulo equilátero simboliza a Santíssima Trindade.O lema LIBERTAS QUÆ SERA TAMEN. (muitas vezes traduzido como \"Liberdade ainda que tardia\") teria sido cunhado pelo inconfidente Alvarenga Peixoto a partir de um verso das Bucólicas (1.27) do poeta latino Virgílio, em que se lê Libertas quae sera tamen respexit inertem, que pode ser traduzido por \"Liberdade, a qual, embora tarde, (me) viu inerte\". Há quem sustente, contudo, que a tradução correta do dístico seria \"Liberdade ainda que tardia, todavia...\", o que não faz sentido. Para esses, a frase correta a ser usada na bandeira para ter o sentido desejado deveria ser Libertas quae sera. ",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "Devido à falta de elementos convencionais que compõem um Brasão, como a presença de um escudo e obediência às convenções da Heráldica, é mais conveniente referir-se ao emblema como Selo do Estado, sendo esta a forma referida na própria legislação que o instituiu. \n O brasão é constituído por uma estrela de cinco pontas, contornada por filetes de cor vermelha, tendo à frente duas picaretas e um candeeiro usados em mineração. De cada lado da estrela, há dois ramos grandes de café, na parte exterior, e dois ramos pequenos de fumo, a partir dos vértices de baixo da estrela, de cor verde e com flores vermelhas e arroxeadas.\nNa parte inferior do escudo, corre uma faixa com o nome do Estado de Minas Gerais, e, em um laço, abaixo dela, a data de 15 de junho de 1891.\nContornando a ponta superior da estrela, a divisa: Libertas Quæ Sera Tamen.\nOs ramos de café, as picaretas e o candeeiro têm por função representar o que foram, ao longo dos anos, duas das principais atividades econômicas do Estado: A mineração e a agricultura.\nA frase Libertas Quæ Sera Tamen, bastante conhecida e também presente na bandeira do Estado, provêm do movimento separatista da Inconfidência Mineira, do século XVIII, significando \"Liberdade ainda que tardia\".\nA estrela, vermelha, segue a cor que acabou se tornando a cor principal dos símbolos estaduais, o vermelho, o mesmo do triângulo central da bandeira de Minas Gerais. Seu emprego se deve, talvez, à sua utilização, desde o início, pelos mais diversos movimentos revolucionários, incluindo-se a Revolução Francesa."
   },
   {
     "id": 14,
@@ -217,7 +137,27 @@
     "Region": "Norte",
     "Flag": "A faixa branca é a faixa planetária e representa o Zodíaco \"projetada como um espelho horizontal\". Lembra tanto a linha do equador quanto o Rio Amazonas.A estrela simboliza o estado, que na bandeira nacional corresponde a Espiga, a estrela alfa de primeira grandeza da constelação de Virgem. No pavilhão brasileiro, é a única estrela acima da faixa com o dístico \"Ordem e Progresso\" porque, à época da proclamação da República, era o Estado cuja capital, Belém, era a mais setentrional do país. Outra afirmação do porquê a estrela é solitária foi porque o estado foi a última província a aceitar a independência do Brasil de Portugal.[carece de fontes]O vermelho é a força do sangue paraense, que corre nas veias como um verdadeiro espírito de luta harmonizada, dando provas da dedicação dos patriotas nas causas da adesão do Pará à Independência e à República, realizadas em 15 de agosto de 1823 e 16 de novembro de 1889, respectivamente. ",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "O mote: Sub lege progrediamur, latim para \"Sob a lei progridamos\".\nA estrela solitária: faz menção ao Pará como unidade da República Federativa do Brasil - à época da proclamação da República, única unidade federativa cuja capital situava-se acima da linha do Equador, fato esse representado na bandeira nacional por Espiga, figurada acima da linha do azimute.\nAs cores: vermelho faz menção à República e ao sangue derramado dos paraenses nas diversas lutas em defesa pela soberania da pátria.\nA banda: branco faz menção à linha imaginária do Equador, que corta o estado ao Norte.\nOs ramos: de cacaueiro e seringueira, fazem menção às principais produções agrícolas à época.\nA águia: guianense faz menção à altivez, nobreza e realeza do povo do Estado."
+  },
+  {
+    "id": 15,
+    "UF": "PB",
+    "Name": "Paraíba",
+    "Capital": "João Pessoa",
+    "Region": "Nordeste",
+    "Flag": "Um terço dela está na cor preta — representando os dias de luto que vigoraram no estado após o assassinato de João Pessoa em Recife, no ano de 1930 — e dois terços restantes na cor vermelha — representando a Aliança Liberal. No meio da parte vermelha, há a inscrição \"NEGO\", na cor branca e em letras maiúsculas, que é a conjugação do verbo \"negar\" no presente do indicativo da primeira pessoa do singular e representa a não aceitação do sucessor à presidência da república indicado pelo presidente brasileiro da época, Washington Luís. Quando a bandeira foi adotada, o vocábulo era escrito com um acento agudo na letra E: \"NÉGO\". ",
+    "FlagAspect": null,
+    "Coat": "É formado por quatro ângulos (três na parte superior e um na parte inferior). As estrelas contidas respeitam a divisão administrativa do estado. No alto, há uma estrela de tamanho maior de cinco pontas e com um círculo em sua parte central. No interior desse círculo há um barrete frígio, que significa \"liberdade\". No meio do brasão, há um escudo com um desenho de homem guiando um rebanho, que representa o sertão, e um sol ao amanhecer, representando o litoral. À direita desse escudo, há o desenho de um ramo de algodão e, à esquerda, uma rama de cana-de-açúcar. Na parte inferior do brasão, há um laço que \"prende\" os ramos de algodão e cana-de-açúcar e, dentro dele, uma inscrição mostrando a data de fundação da Paraíba: 5 de agosto de 1585.\nA faixa governamental da Paraíba tem o brasão no fronte"
+  },
+  {
+    "id": 16,
+    "UF": "PR",
+    "Name": "Paraná",
+    "Capital": "Curitiba",
+    "Region": "Sul",
+    "Flag": "A bandeira compõe-se de um quadrilátero verde, atravessado no ângulo superior direito para o inferior esquerdo por uma larga faixa branca contendo a representação da esfera celeste em azul e as cinco estrelas da Constelação do Cruzeiro do Sul em branco. A esfera é atravessada, abaixo da estrela superior do Cruzeiro, por uma faixa branca com a inscrição “PARANÁ” em verde. Circundam a esfera um ramo de Pinho à direita e outro de Mate a esquerda. ",
+    "FlagAspect": null,
+    "Coat": "O escudo tem ao centro um Lavrador, que é a representação expressiva de nossas condições mesológicas historicamente demonstradas na destinação de nossa atividade agrícola. Como timbre, tem o escudo o falcão Nhapecani, Thrasactus harpya, L., que von Iherting diz ser \"a maior águia da América, que seria bem digna de figurar nas armas do Brasil\". Era o totem dos guaranis. Sua presença nas aldeias propicia a sorte das tribos. Sob as azas abertas do falcão, tem o escudo as Montanhas agrupadas em três picos, significando os três terraços do planalto paranaense — o Oriental de Curitiba, o Central de Campos Gerais e o Ocidental de Guarapuava - e ao mesmo tempo lembrando e simbolizando as três raças de nossa formação étnica. Ao fundo o sol que é o símbolo americano. Nele e desde a mais remota antiguidade ameríndia, os povos do Novo Mundo vêm homenageando a fonte da vida e representando os nossos ideais a grandeza e a cultura e para as nossas conquistas o incitamento e o brilho. De um lado e de outro do escudo, dois ramos de mate e pinho, representativos das nossas riquezas naturais. O campo do escudo é vermelho, tendo em chefe de azul os três picos em prata e o sol em ouro."
   },
   {
     "id": 17,
@@ -227,7 +167,37 @@
     "Region": "Nordeste",
     "Flag": "A flâmula de Pernambuco surgiu antes da independência brasileira, e foi concebida para ser a bandeira do Brasil sob um regime republicano de cunho liberal. No pavilhão da efêmera república pernambucana de 1817, a cor azul simbolizava o céu; a cor branca representava a nação que se fundava em um desejo de paz; o arco-íris, inicialmente vermelho, amarelo e branco, assinalava o início de uma nova era, de paz, amizade e união, que a confederação oferecia aos portugueses europeus e aos povos de todas as nações que viessem pacificamente aos seus portos ou porventura residissem aqui; as três estrelas representavam Pernambuco, Paraíba e Rio Grande do Norte — e outras estrelas seriam inseridas em volta do arco-íris ao passo que outras capitanias brasileiras aderissem oficialmente à confederação, o que demonstrava o caráter federalista do movimento —; a cruz era uma referência à denominação do Brasil em seus primórdios (Terra de Santa Cruz ou Ilha da Vera Cruz); e o Sol iluminava o futuro, simbolizando que os habitantes de Pernambuco são filhos do sol e vivem sob ele, sob a mesma justiça que torna todos iguais. O criador da bandeira foi o padre e revolucionário João Ribeiro Pessoa de Melo Montenegro e ela foi executada em tela pelo pintor Antônio Alvares.Na bandeira atual, adotada em 1917, a cor azul do retângulo superior simboliza a grandeza do céu pernambucano; a cor branca representa a paz; o arco-íris simboliza a união de todos os pernambucanos; a estrela caracteriza o estado no conjunto da Federação, que na bandeira nacional é representado por Denebakrab; o Sol é a força e a energia de Pernambuco; e, finalmente, a cruz representa a fé na justiça e no entendimento. As únicas modificações da bandeira original foram a retirada de duas das três estrelas inseridas acima do arco-íris e a troca da última faixa do arco-íris de branco para verde. ",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "A lei 75/1895, em seu artigo primeiro, assim descreve o brasão: \n\n\"O escudo que deve servir como sello do Estado de Pernambuco, para authenticar os actos officiaes, conterá uma facha estreita elliptica, ornada de tantas estrellas quantos forem os Municípios do Estado e cercando o desenho ao extremo norte do Recife, que confronta a Capital com o pharol e o fortim da barra, destacando-se ao longe a cidade de Olinda e à direita o sol erguendo-se sobre o oceano. Encimando o escudo, ver-se-ha o Leão em repouso, à esquerda e aos lados a canna de asssucar e o algodoeiro em flor, enlaçados, na extremidade inferior, por uma fita azul e branca, tendo as datas 1710, 1817, 1824 e 1889.\"."
+  },
+  {
+    "id": 18,
+    "UF": "PI",
+    "Name": "Piauí",
+    "Capital": "Teresina",
+    "Region": "Nordeste",
+    "Flag": "s cores principais da bandeira são as mesmas da bandeira do Brasil, e são uma representação da integração do estado com o Brasil. Separadamente cada cor tem um significado específico:O amarelo representa a riqueza mineral;O verde a esperança.Além das cores, outros elementos presentes na bandeira também têm seu simbolismo:A estrela remete a Antares, que na bandeira nacional simboliza o estado do Piauí;A inscrição dentro do retângulo azul \"13 DE MARÇO DE 1823\", que foi introduzida na alteração de 2005, marca o dia da batalha do Jenipapo, ocorrida em território piauiense.",
+    "FlagAspect": null,
+    "Coat": "a) um escudo néo-classico cortado, contendo, sobre o campo superior de oiro velho, esmaltados em sinopla, uma lado da outra e equidistantes, as tres palmeiras nativas do Piauhy - carnnahuba (Arrudaria cerifera), à dextra lembrando a phase nomade e pastoril de penetração pelos Bandeirantes do território virgem; Burity (Mauricia vinifera), ao centro marcando a epoca subsequente de fixação e estabelecimento dos núcleos de população e do amanho das tarras, e Babassú ( ), à sinistra, assignalando a evolução da economia; ao campo inferior do escudo, de fundo branco estriado de coticas em faixa de cor azul cobalto, sobre poem-se, dispostos em roquete, três piáus de pratas representando os maiores rios do Piauhy - Parnahyba, Canindé e Poty. As coticas azues, em número de sete, correspondem aos principais affluentes à margem direita do rio Parnahyba. Separando os campos e delimitando o escudo ha ainda um filete e uma bordadura de esmalte goles, ambos estreitos.\nb) uma estrella de prata com cinco pontas, ao alto do chefe do escudo, symbolisando aspiração de progresso.\nc) um par de ramos, em sinopla, oiro e prata, respectivamente de algodoeiro, à direita e canna de assucar à esquerda do escudo, figurando as duas principais producções agricolas do Estado, atados em cruz de Santo André por uma flammula azul cobalto farpada em ambas as pontas e tendo inscriptas em letras de oiro a legenda que se adopta para o Estado - Impavidum ferient ruinae - e a data de 24 de Janeiro de 1823, da proclamação de sua Independencia"
+  },
+  {
+    "id": 19,
+    "UF": "RJ",
+    "Name": "Rio de Janeiro",
+    "Capital": "Rio de Janeiro",
+    "Region": "Sudeste",
+    "Flag": "Em 23 de julho de 1975, a nova constituição do Estado do Rio de Janeiro estabeleceu que a bandeira e o escudo do novo estado (que estava absorvendo a Guanabara) seriam os mesmos do antigo estado. O azul e o branco são as cores tradicionais de Portugal.",
+    "FlagAspect": null,
+    "Coat": "O brasão de armas tem a forma tradicional dos escudos adotados pelo clero, oval – simbolizando os anseios cristãos do povo fluminense - cortado. A primeira seção, ocupando a metade superior, é azul, representando o céu e simbolizando a justiça, a verdade e a lealdade, com a silhueta da Serra dos Órgãos, destacando-se o pico Dedo de Deus; a segunda seção, ocupando um quarto da altura do escudo, é verde, representando a Baixada Fluminense; e a terceira seção, ocupando a quarta parte inferior, é, novamente, azul, lembrando o mar de suas praias.\nO escudo é circundado por uma corda de ouro, simbolizando a união dos fluminenses.\nColocado brocante, uma águia de cor natural, com asas abertas, na atitude de alçar voo, representando o governo forte, honesto e justo, portador de mensagem de confiança e de esperança aos mais longínquos rincões de nosso estado; assente em um escudo redondo de azul, faixado e orlado de prata, respectivamente com as inscrições: \"9 abril 1892\", que figura na faixa, lembrando a promulgação da primeira constituição do estado do Rio de Janeiro, e Recte Rempublicam Gerere (\"Gerir a coisa pública com retidão\"), incluída na orla, traduzindo a preocupação constante do homem público do estado e coroado de uma estrela de 5 pontas de prata, representando a capital.\nComo apoios, uma haste de cana e um ramo de cafeeiro frutado, de cor natural, colocados, respectivamente, à esquerda e à direita do escudo, representando os principais produtos da terra.\nListel de prata com a inscrição – \"ESTADO do RIO de JANEIRO\", em sable.\nO timbre é a estrela Beta Crucis, de prata, representante do estado do Rio de Janeiro na Bandeira Nacional"
+  },
+  {
+    "id": 20,
+    "UF": "RN",
+    "Name": "Rio Grande do Norte",
+    "Capital": "Natal",
+    "Region": "Nordeste",
+    "Flag": "O  estudo sobre o seu formato foi definido por Luís da Câmara Cascudo, notório experiente da cultura potiguar. Ela é composta por um retângulo de um metro de altura por um metro e meio de comprimento (proporção 2 por 3), com as cores verde (que ocupa a metade superior da bandeira e representa a esperança), branco (ocupa a metade inferior e representa a paz) e amarelo, cujo campo se apresenta em forma de escudo, servindo ao fundo o brasão do estado.Com uma origem quase que exclusivamente extrativista, o estado do Rio Grande do Norte expõe em sua bandeira o que é e principalmente o que já foi a principal fonte de renda do estado. ",
+    "FlagAspect": null,
+    "Coat": "O brasão de armas do Estado do Rio Grande do Norte é um escudo de campo aberto, dividido a dois terços de altura, tendo no plano inferior o mar, onde navega uma jangada de pescadores, que representam as industrias do sal e da pesca. No terço superior, em campo de prata, duas flores aos lados e ao centro dois capulhos de algodoeiro. Ladeiam o escudo, em toda sua altura, um coqueiro à esquerda e uma carnaubeira à direita, tendo os troncos ligados por duas canas de açúcar, presas por um laço com as côres nacionaes. Tanto os móveis do escudo, como os emblemas, em cores naturais, representam a flora principal do Estado. Cobre o escudo uma estrella branca, simbolizando o Rio Grande do Norte na União Brasileira. "
   },
   {
     "id": 21,
@@ -237,7 +207,17 @@
     "Region": "Sul",
     "Flag": "Algumas das características da bandeira do Rio Grande do Sul são de evidente inspiração maçônica, como as duas colunas que ladeiam o losango invertido são idênticas às encontradas em todos os Templos maçônicos. O lema da bandeira é Liberdade, Igualdade e Humanidade. Não há um consenso sobre o significado das cores da bandeira riograndense. Uma versão, possivelmente mais próxima da real, dá conta que a faixa verde representa a mata dos pampas, a vermelha simboliza o ideal revolucionário e a coragem do povo, e a cor amarela representa as riquezas nacionais do território gaúcho. Todavia, algumas fontes alegam que as cores simbolizariam o auriverde do Brasil separado pelo vermelho da guerra. Já outras mencionam que o vermelho representaria o ideal republicano.",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "Possui uma elipse vertical em pano branco, onde está inserido o brasão. Circundado por um lenço nas cores do Estado. Sob o brasão, Lê-se o lema \"Liberdade, Igualdade, Humanidade\". Lema esse que tem origem na Maçonaria e na Revolução Francesa. No centro está um barrete frígio, um símbolo republicano desde a Queda da Bastilha. "
+  },
+  {
+    "id": 22,
+    "UF": "RO",
+    "Name": "Rondônia",
+    "Capital": "Porto Velho",
+    "Region": "Norte",
+    "Flag": "Na bandeira estadual, o verde representa as matas; o amarelo, as riquezas minerais; o azul, o céu; e o branco, a paz. É representado na bandeira do Brasil por Muliphen (γ Canis Majoris). Rondônia também é um estado que adota a faixa governamental, no cerimonial do governo, e a faixa é formatada nas cores da bandeira e do brasão.",
+    "FlagAspect": null,
+    "Coat": "As laterais, os ramos ou folhagens representam a produção de Cacau e Café em Rondônia em grande escala na década de 70 com a implantação dos projetos de colonização. A Espada significa a presença dos bandeirantes e sertanistas que estiveram na região a partir do século XVII. No centro o formato principal do brasão, temos a planta ou forma arquitetônica do Real Forte Príncipe da Beira construído em 1776 na região do Guaporé. No centro deste desenho a estrela que representa a criação do Estado de Rondônia como o vigésimo terceiro estado da Federação. Os trilhos abaixo lembram a construção da Estrada de Ferro Madeira Mamoré iniciada em 1872 na região de Santo Antônio. Na faixa abaixo da composição principal foram evidenciados dois anos importantes para nossa história, 1943 foi o ano de criação do Território Federal do Guaporé por Getúlio Vargas e 1981 momento da criação do Estado de Rondônia pelo presidente João Batista Figueiredo."
   },
   {
     "id": 23,
@@ -247,7 +227,7 @@
     "Region": "Norte",
     "Flag": "As principais cores da bandeira (verde, amarelo, azul e branco) são uma representação da integração do estado com o Brasil, separadamente cada cor tem um significado específico:O verde representa as densas matas e cerrados;O amarelo (na estrela), representa a farta riqueza mineral;O branco, a paz; e o azul, o céu e os puros ares de Roraima;A fina faixa vermelha simboliza a linha do equador;A estrela amarela representa Wezen, estrela da constelação de Cão Maior, que na bandeira nacional representa o estado de Roraima.",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "Foi escolhido de forma democrática, por meio de concurso público e instituído pelo governo do estado e é de autoria de Antônio Barbosa Melo. \nO heraldista autor assim o descreveu:\nArroz: produto de exportação;\nArma indígena: homenagem às tribos do estado;\nGarimpeiro: homenagem às riquezas minerais;\nMonte Roraima: serra que originou o nome do estado;\nGarça: ave típica do lugar."
   },
   {
     "id": 24,
@@ -257,7 +237,7 @@
     "Region": "Sul",
     "Flag": "O barrete frígio simboliza as forças republicanas que nos regem; O ramo de trigo simboliza a lavoura da terra; O ramo de café simboliza a lavoura do litoral; O escudo contém a data da implantação da República em Santa Catarina em 17 de novembro de 1889; A chave lembra que Santa Catarina é ponto estratégico de Primeira Ordem; A águia representa as forças produtoras. ",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "A Estrela simboliza na Heráldica Brasileira os novos Estados da Federação;\nO Barrete frígio simboliza as forças republicanas que nos regem;\nO Ramo de Café simboliza a lavoura do litoral;\nA Chave lembra que Santa Catarina é ponto estratégico de Primeira Ordem;\nA Âncora simboliza local com segurança conforme as tradições navais;\nA Águia representa as forças produtoras;\nO Escudo polonês contém a data da implantação da República em Santa Catarina, em 17 de novembro de 1889;\nO Ramo de Trigo simboliza as lavouras do interior."
   },
   {
     "id": 25,
@@ -267,6 +247,26 @@
     "Region": "Sudeste",
     "Flag": "A bandeira possui treze listras variando entre branco e preto, começando e terminando na faixa preta, para que fique delimitado o começo e o final da bandeira, sem que haja nenhuma dúvida. As faixas pretas e brancas representam os dias e as noites que os bandeirantes lutaram pelo bem do estado. Não há consenso sobre o porquê do total de treze listras. As hipóteses são a de uma mera adequação estética (já que a original possuía 15 listras), a de uma referência às treze colônias originais dos Estados Unidos da América e a de uma alusão a Paulo, décimo terceiro apóstolo de Cristo, mas o mais certo é que o total de treze listras se consagrou pelo poema Nossa Bandeira, de Guilherme de Almeida.Possui um retângulo vermelho na horizontal, que segundo algumas fontes, buscaria representar o sangue que os \"paulistas\" estariam dispostos a derramar dia (branco) e noite (preto das listras) pelo seu estado. Há fontes ainda menos críveis que atribuem esse sangue e pujança aos bandeirantes. Acontece que essa bandeira não foi originalmente criada para São Paulo, mas para a República — para todo o país, em 1888 (ano da idealização da flâmula).Segundo o criador da bandeira, Júlio Ribeiro, em texto de O Rebate de 16 de julho de 1888, as cores preta, branca e vermelha simbolizam, respectivamente, as três raças formadoras do povo brasileiro: africanos, europeus e indígenas. Faz referência à tese de Carl Friedrich Philipp von Martius, escrita em Como se deve escrever a história do Brasil (1840) e premiada pelo Instituto Histórico e Geográfico Brasileiro. A tese das três raças de von Martius influenciaria na criação de outras bandeiras brasileiras, como a do estado do Maranhão. Ainda segundo Ribeiro em O Rebate, as quatro estrelas amarelas representam a constelação do Cruzeiro do Sul.Há também quatro estrelas amarelas na parte interna dos quatro cantos do retângulo. Segundo o criador, \"As quatro estrelas a rodear um globo, em que se vê o perfil geográfico do país, representam o Cruzeiro do Sul, constelação indicadora da nossa latitude austral\". No verso da bandeira, a única diferença é que o retângulo fica alinhado no topo à direita, porém o mapa do Brasil continua idêntico à parte da frente como mostram as figuras do artigo. ",
     "FlagAspect": null,
-    "Coat": null
+    "Coat": "O decreto 5.656 de 1932 assim descreve a significação do brasão:\nescudo português: como convém a descendentes de portugueses e de acordo com o uso já consagrado no Brasil. O vermelho, esmalte representativo da altivez, da audácia e da glória, perpetua o valor do povo paulista, que jamais trepidou em afrontar as asperezas da luta e a derramar o seu sangue pelo Brasil e pela liberdade. A prata, metal simbólico da lealdade e da nobreza, alude também ao tope branco usado tradicionalmente pelos partidários da Constituição, desde os tempos coloniais, e adotado como distintivo dos soldados constitucionalistas no atual movimento revolucionário. Diz bem do carácter ordeiro da nossa gente, que somente quer viver sob o regime da lei e das garantias jurídicas, pelo qual ainda agora se bate.\niniciais S P: significam que o próprio nome de São Paulo evoca melhor o seu valor e as suas glorias do que quaisquer símbolos ou emblemas.\nespada romana, usada pelo apostolo São Paulo, evoca o padroeiro do Estado. Lembra ainda o gesto de Amador Bueno, a epopeia das Bandeiras, Pedro I proclamando a Independência na colina do Ipiranga e, finalmente a espada que, na hora atual, foi \"desembainhada em continência á Lei.\"\nramos de louro e carvalho: consagram o valor militar de São Paulo, que desde os tempos coloniais tem sabido enobrecer as tradições de bravura do povo brasileiro, e o seu valor cívico, sempre à frente das grandes iniciativas tendentes a criar para o Brasil uma situação proeminente no concerto dos povos cultos.\nestrela de prata (timbre): indica que São Paulo é uma das unidades da Federação Brasileira, simbolizadas por 21 estrelas nas armas federais.\ndivisa: \"PRO BRASILIA FIANT EXIMIA\" \"PELO BRASIL FAÇAM-SE GRANDES COUSAS\" afirma o profundo sentimento de brasilidade do Povo Paulista. Lembra o esforço de que sempre se mostraram capazes os filhos deste Estado quando a Nação exigiu deles o maximo de sacrificios, como ainda agora está acontecendo."
+  },
+  {
+    "id": 26,
+    "UF": "SE",
+    "Name": "Sergipe",
+    "Capital": "Aracaju",
+    "Region": "Nordeste",
+    "Flag": "Sua composição, tal como explicitada em lei, é a seguinte:Retângulo, com quatro listas, de cores verde e amarela, alternadamente, tendo o verde na parte superior e, sobre os dois lados do ângulo reto superior da esquerda, um retângulo em fundo azul claro de cobalto, em dimensão proporcional ao retângulo em total, com cinco estrelas brancas de cinco raios cada uma, tauxiadas em cada ângulo do retângulo azul, no lugar geométrico do cruzamento das duas linhas diagonais., representam a integração do estado ao Brasil. As estrelas representam as cinco barras (fozes de rios) existentes em Sergipe: São Francisco; rio Japaratuba; rio Sergipe; rio Vaza-Barris e rio Real.É diferenciada da bandeira de Goiás por ter a estrela central (que representa o Rio Sergipe) maior que as outras quatro no quadrante azul, e por possuir apenas quatro faixas intercaladas em verde e amarelo. ",
+    "FlagAspect": null,
+    "Coat": "Sua simbologia está representada pelo índio Serigi embarcando em um balão; em seu centro a palavra \"Porvir\" - o futuro. Abaixo do cesto do balão a legenda em latim Sub Lege Libertas - Sob a Lei a Liberdade. Encerrando a faixa a data da primeira Constituição do Estado - 18 de maio de 1892. O índio representa o passado e o balão o futuro e a civilização."
+  },
+  {
+    "id": 27,
+    "UF": "TO",
+    "Name": "Tocantins",
+    "Capital": "Palmas",
+    "Region": "Sudeste",
+    "Flag": "A faixa azul representa os rios e a amarela, as riquezas do estado. O sol, sobre a faixa branca, significa que ele nasce para todos os cidadãos tocantinenses. É assim a sua atual composição: ⁣Retângulo com as proporções de 20 módulos de comprimento por 14 módulos de largura. Os vértices, superior esquerdo e inferior direito são triângulos retângulos, com catetos de 13 por 9 módulos, nas cores, azul (blau) e amarelo (ouro), respectivamente. A barra resultante desta divisão, em branco, está carregada com um sol estilizado de amarelo (ouro), com 8 pontas maiores e 16 pontas menores, com 4 e 2,3 módulos de raio respectivamente.",
+    "FlagAspect": null,
+    "Coat": "O Brasão de Armas do Estado do Tocantins, constituído de um escudo elíptico cortado, na metade superior, em chefe de azul (blau), carregado com a metade de um sol de ouro estilizado do qual se vêm 5 (cinco) raios maiores de 8 (oito) menores, limitado na linha divisória. A metade inferior, o termo ou campanha, uma asna de azul (blau), ladeada nos flancos destro e sinistro de branco e no termo de amarelo (ouro), sob o escudo, um listel de azul (blau) com a inscrição \"Estado do Tocantins\" e a data \"1º de JAN 1989\" em letras brancas. Em timbre uma estrela de amarelo ouro, com bordadura de azul (blau), encimada pela divisa em Tupi \"CO YVY ORE RETAMA\" — Esta Terra é Nossa — em letras brancas sobre listel de azul (blau). Como suporte uma coroa de louros estilizada em sinople (verde), como consta do Memorial Justificativo e arte (I - Representação Policromática; II - Cores Convencionais Heráldicas; III - Construção Modular). "
   }
 ]
