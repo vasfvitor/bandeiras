@@ -86,8 +86,12 @@ The file tree below represents relevant files to the project. Configuration file
 
 ```
 
-### Improvements Idea
+### Improvements Ideas
 
 Better touch interaction specially for small touch areas. Perhaps a button to navigate the map from 1 to 27.
+
+### Contributing
+
+If you have any idea, suggestions or find any bugs, feel free to open an issue or create a pull request. I would be happy to listen and take action.
 
 
