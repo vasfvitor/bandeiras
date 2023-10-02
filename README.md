@@ -1,5 +1,9 @@
 # Bandeiras do Brasil
 
+#### Why?
+
+This project was done as the final project to the [CS50x course.](https://cs50.harvard.edu/x/2023/project/).
+
 demo: [bandeiras.pages.dev](https://bandeiras.pages.dev/)
 <br/>
 
