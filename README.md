@@ -13,7 +13,7 @@ demo: [bandeiras.pages.dev](https://bandeiras.pages.dev/)
 <img src='https://github.com/vasfvitor/bandeiras/blob/master/samples/sample2.gif' width='480"'>
 <br/>
 
-## Made with Astro + Tailwind 
+## Made with Astro + Tailwind + Typescript
 
 #### Video Demo: <[VIDEO](https://youtu.be/nzZ-GWVJp7E)>
 
